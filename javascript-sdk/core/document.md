@@ -1,46 +1,37 @@
-# Core SDK
+# Core
 
-SkyWay を使うために必要な基本的な要素（Channel, Member, Stream, ...）を提供する SDK です。
+SkyWay を使うために必要な基本的な要素（Channel, Member, Stream, ...）を提供する ライブラリ です。
 Room SDK でカバーできないような、SkyWay によって提供される機能をより細かに制御し最大限に利用したいユースケースに向いています。
 
 # インストール方法
 
 ```sh
-npm i @skyway-nv/core
+npm i @skyway-sdk/core
 ```
-
 # 概要
 
-アプリケーションのクライアントはメディア通信を開始するまでに次のようなフローをたどります。
+クライアントアプリケーションは通信を開始するまでに以下のフローをたどります。
 
-**1. Token を入手する**
+**1. SkyWay Auth Token を取得（生成）する**
 
-SkyWay サービスはユーザの認証認可に独自の JWT Token を使用しています。
-この Token は 2 種類の方法で入手することができます。
-
-- アプリケーションサーバサイドで生成したトークンをクライアントで使用する
-- クライアント上でトークンを生成して使用する
-
-後者の方法だと正しく権限の制限をすることができないので前者の方法を取ることを推奨します。
+[SkyWay Auth Tokenについて](https://beta.skyway.ntt.com/auth-token.html)
 
 **2. Channel を作成する**
 
 メディア通信を行うグループの単位を Channel と呼びます。
-メディア通信を開始するにはまず Channel を作る権限を持った Token を用いて Channel を作成する必要があります。
+メディア通信を開始するにはまず Channel を作る権限を持った SkyWay Auth Token を用いて Channel を作成する必要があります。
 
 **3. クライアントが Channel に Join して Channel の Member となる**
 
-この際に Channel に参加する権限を持った Token とともに Channel に Join する必要があります
-
-**4. メディアの Stream を Channel 内に Publish および Subscribe する**
+**4. Stream を Channel 内に Publish および Subscribe する**
 
 Member が Stream を Publish すると Channel 上に Stream の情報である Publication というリソースが生成されます。
 
-他の Member はこの Publication を Subscribe すると Subscription というリソースが Channel 上に生成され、Subscription に対応する Stream を受信し、メディア通信が開始できます。
+他の Member はこの Publication を Subscribe すると Subscription というリソースが Channel 上に生成され、Subscription に対応する Stream を受信し、通信を開始できます。
 
 # 用語解説
 
-Core SDK の用語、仕様について説明します。
+Core ライブラリ の用語、仕様について説明します。
 
 ## Channel
 
@@ -48,15 +39,11 @@ Core SDK の用語、仕様について説明します。
 
 それぞれの Member は Channel 内にいる他の Member と映像/音声/データの送受信が出来ます。
 
-### Channel ID
+Channel は 一意な識別子である ID と、オプショナルな値である Name を持ちます。
 
-Channel ID は SkyWay サービスによって設定される Channel を一意に識別するための ID です。
+ID は Channel 作成時に自動的に払い出される値であり、Name はユーザが Channel を作成する際に指定することができる任意の値です。
 
-### Channel Name
-
-Channel Name はユーザが Channel を作成する際に指定することができる任意の値です。
-
-アプリケーション内で重複した Channel Name を指定することはできません。
+また、アプリケーション内で重複した Name を指定することはできません。
 
 ## Member
 
@@ -64,25 +51,21 @@ Member は他のクライアントとの通信を管理するエージェント�
 
 映像や音声を送信したり、受信したりすることが出来ます。
 
+Member は 一意な識別子である ID と、オプショナルな値である Name を持ちます。
+
+ID は Member 作成時に自動的に払い出される値であり、Name はクライアントが Channel に Join する際に指定することができる任意の値です。
+
+Channel 内で重複した Name を指定することはできません。
+
 Member は大きく Person と Bot の 2 種類に分類されます。
 
 **Person**
 
-Person は Core SDK を使って Channel に参加し通信を行う Member です。
+Person は Core ライブラリ を使って Channel に参加し通信を行う Member です。
 
 **Bot**
 
 Bot は SFU Bot や Recording Bot といった SkyWay サービス側が提供する特殊な Member です。Bot は個別のプラグインパッケージとして提供され、利用できます。
-
-### Member ID
-
-Member ID は SkyWay サービスによって設定される Member を一意に識別するための ID です。
-
-### Member Name
-
-Member Name はクライアントが Channel に Join する際に指定することができる任意の値です。
-
-Channel 内で重複した Member Name を指定することはできません。
 
 ## Stream
 
@@ -123,7 +106,7 @@ Plugin はこの Sfu Bot や Recording Bot などの Bot を利用するため�
 # クラス一覧
 
 - SkyWayContext
-- Channel
+- SkyWayChannel
 - LocalPerson
 - SkyWayMediaDevices
 - Publication
@@ -163,10 +146,10 @@ Member の参加する Channel の作成/取得を行います。
 新しい Channel を作成します。
 
 ```ts
-import { SkyWayContext, Channel } from '@skyway-nv/core';
+import { SkyWayContext, SkyWayChannel } from '@skyway-nv/core';
 
 const context = await SkyWayContext.Create(tokenString);
-const channel = await Channel.Create(context, {
+const channel = await SkyWayChannel.Create(context, {
   name: 'something',
   metadata: 'something',
 });
@@ -180,10 +163,10 @@ const channel = await Channel.Create(context, {
 既存の Channel を取得します。
 
 ```ts
-import { SkyWayContext, Channel } from '@skyway-nv/core';
+import { SkyWayContext, SkyWayChannel } from '@skyway-nv/core';
 
 const context = await SkyWayContext.Create(tokenString);
-const channel = await Channel.Find(context, {
+const channel = await SkyWayChannel.Find(context, {
   id: 'uuid',
   name: 'something',
 });
@@ -196,10 +179,10 @@ id か name を使って Channel を探すことができます。
 Channel の取得を試み、存在しなければ作成します。
 
 ```ts
-import { SkyWayContext, Channel } from '@skyway-nv/core';
+import { SkyWayContext, SkyWayChannel } from '@skyway-nv/core';
 
 const context = await SkyWayContext.Create(tokenString);
-const channel = await Channel.FindOrCreate(context, { name: 'channelName' });
+const channel = await SkyWayChannel.FindOrCreate(context, { name: 'channelName' });
 ```
 
 ### Channel に LocalPerson を追加する
@@ -249,7 +232,7 @@ Stream の Publish、Subscribe などを行うことが出来ます。
 Channel に Stream を Publish することができます。
 
 ```ts
-import { SkyWayMediaDevices } from '@skyway-nv/channel';
+import { SkyWayMediaDevices } from '@skyway-nv/core';
 
 ...
 

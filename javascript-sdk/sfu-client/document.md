@@ -1,45 +1,47 @@
-# SFU Client SDK
+# SFU Client
 
-SkyWay Core SDK で SFU Bot を利用するためのプラグイン です。
+SkyWay Core ライブラリ で SFU Bot を利用するためのライブラリです。
+
+** 本ページを読む場合、事前に Core ライブラリの README を読むことをおすすめします。 **
 
 # インストール方法
 
 ```sh
-npm i @skyway-nv/sfu-client
+npm i @skyway-sdk/sfu-client
 ```
 
-# SFU Bot のしくみ
+# SFU Bot の仕組み
 
-P2P での WebRTC は、各 PersonMember が通信したい各 PersonMember に対してそれぞれデータの配信を行う必要があるので、 PersonMember 数が増えてくると各 PersonMember の上りのトラフィックコストとメディアのエンコード処理がボトルネックになります。
+P2P Channel では、各 Person が通信相手すべてに対して映像/音声/データの配信を行います。そのため、 Person の数が多い場合、上りトラフィックの量と、クライアントの音声/映像エンコードにかかる処理負荷が大きくなります。
 
-SFU Bot は、 PersonMember から一本の上りトラフィックを受信し、代わりに他の PersonMember に対してそれを配信することで、クライアントの負荷を軽減し、大規模な WebRTC 利用を可能にします。
+SFU Bot は、 各 Person から一本の上りトラフィックを受信し、他の Person に対して配信します。これにより、クライアントの負荷は軽減し、大規模な双方向通信が可能となります。
 
 # 利用方法
 
 ## プラグインの登録
 
-Core SDK で SFU 機能を有効化するために Plugin を Core SDK に登録する必要があります。
+Core ライブラリ にて SFU 機能を有効化するため、Plugin を Core ライブラリ に登録します。
 
 ```ts
 import { SkyWayContext } from '@skyway-nv/core';
 import { registerSfuPlugin } from '@skyway-nv/sfu-client';
 
-const context = await SkyWayContext.Create('token');
+const context = await SkyWayContext.Create(tokenString);
 const plugin = new SfuClientPlugin();
 context.registerPlugin(plugin);
 ```
 
 ## SFU Bot の呼び出し
 
-Channel で SFU Bot を利用するために、対象の Channel に SFU Bot を呼び出す必要があります。
+Channel で SFU Bot を利用するため、対象の Channel 内に SFU Bot を作成します。
 
 ```ts
-const context = await SkyWayContext.Create('token');
+const context = await SkyWayContext.Create(tokenString);
 const plugin = new SfuClientPlugin();
 context.registerPlugin(plugin);
 
-const channel = await Channel.FindOrCreate(context, { name: 'test' });
-// SFU BotをChannelに呼び出す。
+const channel = await Channel.FindOrCreate(context);
+// SFU BotをChannel内に作成する。
 const bot = await plugin.createBot(channel);
 ```
 
@@ -47,7 +49,7 @@ const bot = await plugin.createBot(channel);
 
 SFU Bot に Channel 上の Publication を Forwarding させます。
 
-これにより、SFU Bot は、 PersonMember から一本の上りトラフィックを受信し、代わりに他の PersonMember に対してそれを配信します。
+これにより、SFU Bot は、 Person から一本の上りトラフィックを受信し、他の Person に対してそれを配信します。
 
 ```ts
 const person = await channel.join();
@@ -55,17 +57,17 @@ const person = await channel.join();
 const stream = await MediaDevices.createCameraVideoStream();
 const publication = await person.publish(stream);
 
-// PersonMemberがPublishしたStreamのPublicationをSFU BotにForwardingさせる
+// personのpublicationをSFU BotにForwardingさせる
 const forwarding = await bot.startForwarding(publication);
 ```
 
-PersonMember は SFU Bot が Forwarding している Publication を Subscribe することで、SFU 経由で Stream を受け取ることができます。
+Person は、 SFU Bot が Forwarding している Publication を Subscribe することで、SFU 経由で Stream を受け取ることができます。
 
-## Publication の種類の見分け方
+## SFU Bot が配信している Publication の識別方法
 
-SFU Bot を利用する場合、Channel 上には PersonMember が Publish した Publication と SFU Bot がその Publication を Forwarding している Publication の 2 種類の Publication が存在します。
+SFU Bot を利用する場合、Channel 上には Person が Publish した Publication と SFU Bot がその Publication を Forwarding している Publication の 2 種類の Publication が存在します。
 
-PersonMember が SFU Bot 経由で配信されている Publication だけを Subscribe する方法について説明します。
+SFU Bot 経由で配信されている Publication を識別するには、Publication の Publisher の SubType を確認することで識別できます。
 
 ```ts
 channel.onStreamPublished.add(({ publication }) => {
@@ -75,5 +77,3 @@ channel.onStreamPublished.add(({ publication }) => {
   }
 });
 ```
-
-Publication の Publisher の SubType から Publication の Publisher の種類を識別できます。
