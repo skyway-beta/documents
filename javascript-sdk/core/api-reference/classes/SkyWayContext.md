@@ -116,7 +116,7 @@ ___
 
 ### Create
 
-▸ `Static` **Create**(`authTokenString`, `config?`): `Promise`<[`SkyWayContext`](SkyWayContext.md)\>
+▸ `Static` **Create**(`authTokenString`, `configOptions?`): `Promise`<[`SkyWayContext`](SkyWayContext.md)\>
 
 **`description`** {japanese} Contextの作成
 
@@ -125,7 +125,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `authTokenString` | `string` |
-| `config` | `Partial`<[`SkyWayConfigOptions`](../interfaces/SkyWayConfigOptions.md)\> |
+| `configOptions` | `Partial`<[`SkyWayConfigOptions`](../interfaces/SkyWayConfigOptions.md)\> |
 
 #### Returns
 

@@ -1,10 +1,6 @@
-[@skyway-sdk/core](../README.md) / [Exports](../modules.md) / SkyWayConfigOptions
+[@skyway-sdk/room](../README.md) / [Exports](../modules.md) / SkyWayConfigOptions
 
 # Interface: SkyWayConfigOptions
-
-## Implemented by
-
-- [`SkyWayConfig`](../classes/SkyWayConfig.md)
 
 ## Table of contents
 

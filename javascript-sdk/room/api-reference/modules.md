@@ -38,6 +38,7 @@
 - [RoomSubscription](interfaces/RoomSubscription.md)
 - [SfuRoom](interfaces/SfuRoom.md)
 - [SfuRoomPublicationOptions](interfaces/SfuRoomPublicationOptions.md)
+- [SkyWayConfigOptions](interfaces/SkyWayConfigOptions.md)
 - [StreamPublishedEvent](interfaces/StreamPublishedEvent.md)
 - [StreamSubscribedEvent](interfaces/StreamSubscribedEvent.md)
 - [StreamUnpublishedEvent](interfaces/StreamUnpublishedEvent.md)
