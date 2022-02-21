@@ -15,6 +15,7 @@
 - [messageService](SkyWayConfig.md#messageservice)
 - [rtcApi](SkyWayConfig.md#rtcapi)
 - [rtcConfig](SkyWayConfig.md#rtcconfig)
+- [token](SkyWayConfig.md#token)
 
 ### Accessors
 
@@ -74,6 +75,16 @@ ___
 
 [SkyWayConfigOptions](../interfaces/SkyWayConfigOptions.md).[rtcConfig](../interfaces/SkyWayConfigOptions.md#rtcconfig)
 
+___
+
+### token
+
+• **token**: `Required`<{ `updateReminderSec?`: `number`  }\>
+
+#### Implementation of
+
+[SkyWayConfigOptions](../interfaces/SkyWayConfigOptions.md).[token](../interfaces/SkyWayConfigOptions.md#token)
+
 ## Accessors
 
 ### get
@@ -88,7 +99,7 @@ ___
 
 ### initialize
 
-▸ `Static` **initialize**(`options?`): `void`
+▸ `Static` **initialize**(`options?`): [`SkyWayConfig`](SkyWayConfig.md)
 
 #### Parameters
 
@@ -98,4 +109,4 @@ ___
 
 #### Returns
 
-`void`
+[`SkyWayConfig`](SkyWayConfig.md)
