@@ -1,48 +1,45 @@
-[@skyway-sdk/room](../README.md) / [Exports](../modules.md) / LocalRoomMember
+[@skyway-sdk/room](../README.md) / [Exports](../modules.md) / LocalP2PRoomMember
 
-# Interface: LocalRoomMember
+# Interface: LocalP2PRoomMember
 
 ## Hierarchy
 
-- [`RoomMember`](RoomMember.md)
+- [`LocalRoomMember`](LocalRoomMember.md)
 
-  ↳ **`LocalRoomMember`**
-
-  ↳↳ [`LocalP2PRoomMember`](LocalP2PRoomMember.md)
-
-  ↳↳ [`LocalSFURoomMember`](LocalSFURoomMember.md)
+  ↳ **`LocalP2PRoomMember`**
 
 ## Table of contents
 
 ### Properties
 
-- [id](LocalRoomMember.md#id)
-- [metadata](LocalRoomMember.md#metadata)
-- [name](LocalRoomMember.md#name)
-- [onLeft](LocalRoomMember.md#onleft)
-- [onMetadataUpdated](LocalRoomMember.md#onmetadataupdated)
-- [onPublicationChanged](LocalRoomMember.md#onpublicationchanged)
-- [onStreamPublished](LocalRoomMember.md#onstreampublished)
-- [onStreamSubscribed](LocalRoomMember.md#onstreamsubscribed)
-- [onStreamUnpublished](LocalRoomMember.md#onstreamunpublished)
-- [onStreamUnsubscribed](LocalRoomMember.md#onstreamunsubscribed)
-- [onSubscriptionChanged](LocalRoomMember.md#onsubscriptionchanged)
-- [publications](LocalRoomMember.md#publications)
-- [room](LocalRoomMember.md#room)
-- [roomId](LocalRoomMember.md#roomid)
-- [roomName](LocalRoomMember.md#roomname)
-- [roomType](LocalRoomMember.md#roomtype)
-- [side](LocalRoomMember.md#side)
-- [status](LocalRoomMember.md#status)
-- [subscriptions](LocalRoomMember.md#subscriptions)
+- [id](LocalP2PRoomMember.md#id)
+- [metadata](LocalP2PRoomMember.md#metadata)
+- [name](LocalP2PRoomMember.md#name)
+- [onLeft](LocalP2PRoomMember.md#onleft)
+- [onMetadataUpdated](LocalP2PRoomMember.md#onmetadataupdated)
+- [onPublicationChanged](LocalP2PRoomMember.md#onpublicationchanged)
+- [onStreamPublished](LocalP2PRoomMember.md#onstreampublished)
+- [onStreamSubscribed](LocalP2PRoomMember.md#onstreamsubscribed)
+- [onStreamUnpublished](LocalP2PRoomMember.md#onstreamunpublished)
+- [onStreamUnsubscribed](LocalP2PRoomMember.md#onstreamunsubscribed)
+- [onSubscriptionChanged](LocalP2PRoomMember.md#onsubscriptionchanged)
+- [publications](LocalP2PRoomMember.md#publications)
+- [room](LocalP2PRoomMember.md#room)
+- [roomId](LocalP2PRoomMember.md#roomid)
+- [roomName](LocalP2PRoomMember.md#roomname)
+- [roomType](LocalP2PRoomMember.md#roomtype)
+- [side](LocalP2PRoomMember.md#side)
+- [status](LocalP2PRoomMember.md#status)
+- [subscriptions](LocalP2PRoomMember.md#subscriptions)
 
 ### Methods
 
-- [leave](LocalRoomMember.md#leave)
-- [subscribe](LocalRoomMember.md#subscribe)
-- [unpublish](LocalRoomMember.md#unpublish)
-- [unsubscribe](LocalRoomMember.md#unsubscribe)
-- [updateMetadata](LocalRoomMember.md#updatemetadata)
+- [leave](LocalP2PRoomMember.md#leave)
+- [publish](LocalP2PRoomMember.md#publish)
+- [subscribe](LocalP2PRoomMember.md#subscribe)
+- [unpublish](LocalP2PRoomMember.md#unpublish)
+- [unsubscribe](LocalP2PRoomMember.md#unsubscribe)
+- [updateMetadata](LocalP2PRoomMember.md#updatemetadata)
 
 ## Properties
 
@@ -52,7 +49,7 @@
 
 #### Inherited from
 
-[RoomMember](RoomMember.md).[id](RoomMember.md#id)
+[LocalRoomMember](LocalRoomMember.md).[id](LocalRoomMember.md#id)
 
 ___
 
@@ -62,7 +59,7 @@ ___
 
 #### Inherited from
 
-[RoomMember](RoomMember.md).[metadata](RoomMember.md#metadata)
+[LocalRoomMember](LocalRoomMember.md).[metadata](LocalRoomMember.md#metadata)
 
 ___
 
@@ -72,7 +69,7 @@ ___
 
 #### Inherited from
 
-[RoomMember](RoomMember.md).[name](RoomMember.md#name)
+[LocalRoomMember](LocalRoomMember.md).[name](LocalRoomMember.md#name)
 
 ___
 
@@ -84,7 +81,7 @@ ___
 
 #### Inherited from
 
-[RoomMember](RoomMember.md).[onLeft](RoomMember.md#onleft)
+[LocalRoomMember](LocalRoomMember.md).[onLeft](LocalRoomMember.md#onleft)
 
 ___
 
@@ -96,7 +93,7 @@ ___
 
 #### Inherited from
 
-[RoomMember](RoomMember.md).[onMetadataUpdated](RoomMember.md#onmetadataupdated)
+[LocalRoomMember](LocalRoomMember.md).[onMetadataUpdated](LocalRoomMember.md#onmetadataupdated)
 
 ___
 
@@ -106,6 +103,10 @@ ___
 
 **`description`** {japanese} このMemberがStreamをSubscribeしたときに発火するイベント
 
+#### Inherited from
+
+[LocalRoomMember](LocalRoomMember.md).[onPublicationChanged](LocalRoomMember.md#onpublicationchanged)
+
 ___
 
 ### onStreamPublished
@@ -113,6 +114,10 @@ ___
 • **onStreamPublished**: `Event`<{ `publication`: [`RoomPublication`](RoomPublication.md)<[`LocalStream`](../modules.md#localstream)\>  }\>
 
 **`description`** {japanese} このMemberがStreamをPublishしたときに発火するイベント
+
+#### Inherited from
+
+[LocalRoomMember](LocalRoomMember.md).[onStreamPublished](LocalRoomMember.md#onstreampublished)
 
 ___
 
@@ -122,6 +127,10 @@ ___
 
 **`description`** {japanese} このMemberがStreamをSubscribeしたときに発火するイベント
 
+#### Inherited from
+
+[LocalRoomMember](LocalRoomMember.md).[onStreamSubscribed](LocalRoomMember.md#onstreamsubscribed)
+
 ___
 
 ### onStreamUnpublished
@@ -129,6 +138,10 @@ ___
 • **onStreamUnpublished**: `Event`<{ `publication`: [`RoomPublication`](RoomPublication.md)<[`LocalStream`](../modules.md#localstream)\>  }\>
 
 **`description`** {japanese} このMemberがStreamをUnPublishしたときに発火するイベント
+
+#### Inherited from
+
+[LocalRoomMember](LocalRoomMember.md).[onStreamUnpublished](LocalRoomMember.md#onstreamunpublished)
 
 ___
 
@@ -138,11 +151,19 @@ ___
 
 **`description`** {japanese} このMemberがStreamをUnsubscribeしたときに発火するイベント
 
+#### Inherited from
+
+[LocalRoomMember](LocalRoomMember.md).[onStreamUnsubscribed](LocalRoomMember.md#onstreamunsubscribed)
+
 ___
 
 ### onSubscriptionChanged
 
 • **onSubscriptionChanged**: `Event`<`void`\>
+
+#### Inherited from
+
+[LocalRoomMember](LocalRoomMember.md).[onSubscriptionChanged](LocalRoomMember.md#onsubscriptionchanged)
 
 ___
 
@@ -154,13 +175,17 @@ ___
 
 #### Inherited from
 
-[RoomMember](RoomMember.md).[publications](RoomMember.md#publications)
+[LocalRoomMember](LocalRoomMember.md).[publications](LocalRoomMember.md#publications)
 
 ___
 
 ### room
 
 • **room**: [`Room`](Room.md)
+
+#### Inherited from
+
+[LocalRoomMember](LocalRoomMember.md).[room](LocalRoomMember.md#room)
 
 ___
 
@@ -170,7 +195,7 @@ ___
 
 #### Inherited from
 
-[RoomMember](RoomMember.md).[roomId](RoomMember.md#roomid)
+[LocalRoomMember](LocalRoomMember.md).[roomId](LocalRoomMember.md#roomid)
 
 ___
 
@@ -180,7 +205,7 @@ ___
 
 #### Inherited from
 
-[RoomMember](RoomMember.md).[roomName](RoomMember.md#roomname)
+[LocalRoomMember](LocalRoomMember.md).[roomName](LocalRoomMember.md#roomname)
 
 ___
 
@@ -190,13 +215,17 @@ ___
 
 #### Inherited from
 
-[RoomMember](RoomMember.md).[roomType](RoomMember.md#roomtype)
+[LocalRoomMember](LocalRoomMember.md).[roomType](LocalRoomMember.md#roomtype)
 
 ___
 
 ### side
 
 • **side**: ``"local"``
+
+#### Inherited from
+
+[LocalRoomMember](LocalRoomMember.md).[side](LocalRoomMember.md#side)
 
 ___
 
@@ -206,7 +235,7 @@ ___
 
 #### Inherited from
 
-[RoomMember](RoomMember.md).[status](RoomMember.md#status)
+[LocalRoomMember](LocalRoomMember.md).[status](LocalRoomMember.md#status)
 
 ___
 
@@ -218,7 +247,7 @@ ___
 
 #### Inherited from
 
-[RoomMember](RoomMember.md).[subscriptions](RoomMember.md#subscriptions)
+[LocalRoomMember](LocalRoomMember.md).[subscriptions](LocalRoomMember.md#subscriptions)
 
 ## Methods
 
@@ -229,6 +258,35 @@ ___
 #### Returns
 
 `Promise`<`void`\>
+
+#### Inherited from
+
+[LocalRoomMember](LocalRoomMember.md).[leave](LocalRoomMember.md#leave)
+
+___
+
+### publish
+
+▸ **publish**<`T`\>(`stream`, `options?`): `Promise`<[`RoomPublication`](RoomPublication.md)<[`LocalStream`](../modules.md#localstream)\>\>
+
+**`description`** {japanese} StreamをPublishする
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | extends [`LocalStream`](../modules.md#localstream) = [`LocalStream`](../modules.md#localstream) |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `stream` | `T` |
+| `options?` | `PublicationOptions` |
+
+#### Returns
+
+`Promise`<[`RoomPublication`](RoomPublication.md)<[`LocalStream`](../modules.md#localstream)\>\>
 
 ___
 
@@ -254,6 +312,10 @@ ___
 
 `Promise`<{ `stream`: `T` ; `subscription`: [`RoomSubscription`](RoomSubscription.md)<`T`\>  }\>
 
+#### Inherited from
+
+[LocalRoomMember](LocalRoomMember.md).[subscribe](LocalRoomMember.md#subscribe)
+
 ___
 
 ### unpublish
@@ -272,6 +334,10 @@ ___
 
 `Promise`<`void`\>
 
+#### Inherited from
+
+[LocalRoomMember](LocalRoomMember.md).[unpublish](LocalRoomMember.md#unpublish)
+
 ___
 
 ### unsubscribe
@@ -289,6 +355,10 @@ ___
 #### Returns
 
 `Promise`<`void`\>
+
+#### Inherited from
+
+[LocalRoomMember](LocalRoomMember.md).[unsubscribe](LocalRoomMember.md#unsubscribe)
 
 ___
 
@@ -310,4 +380,4 @@ ___
 
 #### Inherited from
 
-[RoomMember](RoomMember.md).[updateMetadata](RoomMember.md#updatemetadata)
+[LocalRoomMember](LocalRoomMember.md).[updateMetadata](LocalRoomMember.md#updatemetadata)

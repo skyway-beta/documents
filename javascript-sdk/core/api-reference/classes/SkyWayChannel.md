@@ -15,6 +15,7 @@
 ### Properties
 
 - [appId](SkyWayChannel.md#appid)
+- [disposed](SkyWayChannel.md#disposed)
 - [id](SkyWayChannel.md#id)
 - [name](SkyWayChannel.md#name)
 - [onClosed](SkyWayChannel.md#onclosed)
@@ -48,6 +49,7 @@
 - [join](SkyWayChannel.md#join)
 - [leave](SkyWayChannel.md#leave)
 - [memberMoveFromOtherChannel](SkyWayChannel.md#membermovefromotherchannel)
+- [toJSON](SkyWayChannel.md#tojson)
 - [updateMetadata](SkyWayChannel.md#updatemetadata)
 - [Create](SkyWayChannel.md#create)
 - [Find](SkyWayChannel.md#find)
@@ -75,6 +77,12 @@
 #### Implementation of
 
 [Channel](../interfaces/Channel.md).[appId](../interfaces/Channel.md#appid)
+
+___
+
+### disposed
+
+• **disposed**: `boolean` = `false`
 
 ___
 
@@ -414,6 +422,26 @@ ___
 #### Implementation of
 
 [Channel](../interfaces/Channel.md).[memberMoveFromOtherChannel](../interfaces/Channel.md#membermovefromotherchannel)
+
+___
+
+### toJSON
+
+▸ **toJSON**(): `Object`
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `appId` | `string` |
+| `id` | `string` |
+| `members` | [`RemoteMember`](../interfaces/RemoteMember.md)[] |
+| `metadata` | `undefined` \| `string` |
+| `name` | `string` |
+| `publications` | [`Publication`](../interfaces/Publication.md)<[`LocalStream`](../modules.md#localstream)\>[] |
+| `subscriptions` | [`Subscription`](../interfaces/Subscription.md)<[`RemoteStream`](../modules.md#remotestream)\>[] |
 
 ___
 

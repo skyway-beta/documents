@@ -54,17 +54,23 @@ ___
 
 • `Readonly` **onLeft**: `Event`<`void`\>
 
+**`description`** {japanese} MemberがRoomから出たときに発火するイベント
+
 ___
 
 ### onMetadataUpdated
 
 • `Readonly` **onMetadataUpdated**: `Event`<`string`\>
 
+**`description`** {japanese} Memberのメタデータが更新された時に発火するイベント
+
 ___
 
 ### publications
 
 • `Readonly` **publications**: [`RoomPublication`](RoomPublication.md)<[`LocalStream`](../modules.md#localstream)\>[]
+
+**`description`** {japanese} Memberが Publish した Publication のリスト
 
 ___
 
@@ -96,11 +102,15 @@ ___
 
 • `Readonly` **subscriptions**: [`RoomSubscription`](RoomSubscription.md)<[`RemoteStream`](../modules.md#remotestream)\>[]
 
+**`description`** {japanese} Memberが Subscribe している Subscription のリスト
+
 ## Methods
 
 ### updateMetadata
 
 ▸ **updateMetadata**(`metadata`): `Promise`<`void`\>
+
+**`description`** {japanese} Memberのメタデータを更新する
 
 #### Parameters
 

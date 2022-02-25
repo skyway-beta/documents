@@ -37,7 +37,6 @@
 
 ### Accessors
 
-- [\_dto](RemotePersonImpl.md#_dto)
 - [metadata](RemotePersonImpl.md#metadata)
 - [publications](RemotePersonImpl.md#publications)
 - [status](RemotePersonImpl.md#status)
@@ -46,6 +45,7 @@
 ### Methods
 
 - [subscribe](RemotePersonImpl.md#subscribe)
+- [toJSON](RemotePersonImpl.md#tojson)
 - [unsubscribe](RemotePersonImpl.md#unsubscribe)
 - [updateMetadata](RemotePersonImpl.md#updatemetadata)
 
@@ -252,24 +252,6 @@ MemberImpl.type
 
 ## Accessors
 
-### \_dto
-
-• `get` **_dto**(): `Member`
-
-#### Returns
-
-`Member`
-
-#### Implementation of
-
-RemotePerson.\_dto
-
-#### Inherited from
-
-MemberImpl.\_dto
-
-___
-
 ### metadata
 
 • `get` **metadata**(): `undefined` \| `string`
@@ -359,6 +341,24 @@ MemberImpl.subscriptions
 #### Implementation of
 
 RemotePerson.subscribe
+
+___
+
+### toJSON
+
+▸ **toJSON**(): `Member`
+
+#### Returns
+
+`Member`
+
+#### Implementation of
+
+RemotePerson.toJSON
+
+#### Inherited from
+
+MemberImpl.toJSON
 
 ___
 

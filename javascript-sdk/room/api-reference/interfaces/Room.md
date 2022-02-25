@@ -14,6 +14,7 @@
 
 ### Properties
 
+- [disposed](Room.md#disposed)
 - [id](Room.md#id)
 - [members](Room.md#members)
 - [metadata](Room.md#metadata)
@@ -47,6 +48,12 @@
 
 ## Properties
 
+### disposed
+
+• `Readonly` **disposed**: `boolean`
+
+___
+
 ### id
 
 • `Readonly` **id**: `string`
@@ -55,7 +62,7 @@ ___
 
 ### members
 
-• `Readonly` **members**: [`RoomMember`](RoomMember.md)[]
+• `Readonly` **members**: [`RemoteRoomMember`](RemoteRoomMember.md)[]
 
 **`description`** {japanese} Roomに参加しているMemberのリスト
 
@@ -225,7 +232,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `memberInit?` | `RoomMemberInit` |
+| `memberInit?` | [`RoomMemberInit`](RoomMemberInit.md) |
 
 #### Returns
 

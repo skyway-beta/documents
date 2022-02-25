@@ -29,6 +29,8 @@
 
 ### Methods
 
+- [subscribe](RemoteRoomMember.md#subscribe)
+- [unsubscribe](RemoteRoomMember.md#unsubscribe)
 - [updateMetadata](RemoteRoomMember.md#updatemetadata)
 
 ## Properties
@@ -67,6 +69,8 @@ ___
 
 • `Readonly` **onLeft**: `Event`<`void`\>
 
+**`description`** {japanese} MemberがRoomから出たときに発火するイベント
+
 #### Inherited from
 
 [RoomMember](RoomMember.md).[onLeft](RoomMember.md#onleft)
@@ -77,6 +81,8 @@ ___
 
 • `Readonly` **onMetadataUpdated**: `Event`<`string`\>
 
+**`description`** {japanese} Memberのメタデータが更新された時に発火するイベント
+
 #### Inherited from
 
 [RoomMember](RoomMember.md).[onMetadataUpdated](RoomMember.md#onmetadataupdated)
@@ -85,19 +91,25 @@ ___
 
 ### onPublicationSubscribed
 
-• **onPublicationSubscribed**: `Event`<{ `subscription`: [`RoomSubscription`](RoomSubscription.md)<[`RemoteStream`](../modules.md#remotestream)\>  }\>
+• `Readonly` **onPublicationSubscribed**: `Event`<{ `subscription`: [`RoomSubscription`](RoomSubscription.md)<[`RemoteStream`](../modules.md#remotestream)\>  }\>
+
+**`description`** {japanese} この RemoteRoomMember がPublicationをSubscribeしたとき
 
 ___
 
 ### onPublicationUnsubscribed
 
-• **onPublicationUnsubscribed**: `Event`<{ `subscription`: [`RoomSubscription`](RoomSubscription.md)<[`RemoteStream`](../modules.md#remotestream)\>  }\>
+• `Readonly` **onPublicationUnsubscribed**: `Event`<{ `subscription`: [`RoomSubscription`](RoomSubscription.md)<[`RemoteStream`](../modules.md#remotestream)\>  }\>
+
+**`description`** {japanese} この RemoteRoomMember がPublicationをUnsubscribeしたとき
 
 ___
 
 ### publications
 
 • `Readonly` **publications**: [`RoomPublication`](RoomPublication.md)<[`LocalStream`](../modules.md#localstream)\>[]
+
+**`description`** {japanese} Memberが Publish した Publication のリスト
 
 #### Inherited from
 
@@ -137,7 +149,7 @@ ___
 
 ### side
 
-• **side**: ``"remote"``
+• `Readonly` **side**: ``"remote"``
 
 ___
 
@@ -155,15 +167,55 @@ ___
 
 • `Readonly` **subscriptions**: [`RoomSubscription`](RoomSubscription.md)<[`RemoteStream`](../modules.md#remotestream)\>[]
 
+**`description`** {japanese} Memberが Subscribe している Subscription のリスト
+
 #### Inherited from
 
 [RoomMember](RoomMember.md).[subscriptions](RoomMember.md#subscriptions)
 
 ## Methods
 
+### subscribe
+
+▸ **subscribe**(`publicationId`): `Promise`<{ `subscription`: [`RoomSubscription`](RoomSubscription.md)<[`RemoteStream`](../modules.md#remotestream)\>  }\>
+
+**`description`** {japanese} この RemoteRoomMember にPublicationをSubscribeさせる
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `publicationId` | `string` |
+
+#### Returns
+
+`Promise`<{ `subscription`: [`RoomSubscription`](RoomSubscription.md)<[`RemoteStream`](../modules.md#remotestream)\>  }\>
+
+___
+
+### unsubscribe
+
+▸ **unsubscribe**(`subscriptionId`): `Promise`<`void`\>
+
+**`description`** {japanese} この RemoteRoomMember にPublicationをUnsubscribeさせる
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `subscriptionId` | `string` |
+
+#### Returns
+
+`Promise`<`void`\>
+
+___
+
 ### updateMetadata
 
 ▸ **updateMetadata**(`metadata`): `Promise`<`void`\>
+
+**`description`** {japanese} Memberのメタデータを更新する
 
 #### Parameters
 

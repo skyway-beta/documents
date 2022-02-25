@@ -9,6 +9,7 @@
 - [\_api](SkyWayContext.md#_api)
 - [appId](SkyWayContext.md#appid)
 - [authToken](SkyWayContext.md#authtoken)
+- [disposed](SkyWayContext.md#disposed)
 - [onTokenExpired](SkyWayContext.md#ontokenexpired)
 - [onTokenUpdateReminder](SkyWayContext.md#ontokenupdatereminder)
 - [plugins](SkyWayContext.md#plugins)
@@ -20,6 +21,7 @@
 
 ### Methods
 
+- [dispose](SkyWayContext.md#dispose)
 - [registerPlugin](SkyWayContext.md#registerplugin)
 - [updateAuthToken](SkyWayContext.md#updateauthtoken)
 - [Create](SkyWayContext.md#create)
@@ -41,6 +43,12 @@ ___
 ### authToken
 
 • **authToken**: [`SkyWayAuthToken`](SkyWayAuthToken.md)
+
+___
+
+### disposed
+
+• **disposed**: `boolean` = `false`
 
 ___
 
@@ -81,6 +89,16 @@ ___
 [`SkyWayConfig`](SkyWayConfig.md)
 
 ## Methods
+
+### dispose
+
+▸ **dispose**(): `void`
+
+#### Returns
+
+`void`
+
+___
 
 ### registerPlugin
 

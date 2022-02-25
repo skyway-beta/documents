@@ -12,6 +12,7 @@
 
 ### Properties
 
+- [disposed](SfuRoom.md#disposed)
 - [id](SfuRoom.md#id)
 - [members](SfuRoom.md#members)
 - [metadata](SfuRoom.md#metadata)
@@ -45,6 +46,16 @@
 
 ## Properties
 
+### disposed
+
+• `Readonly` **disposed**: `boolean`
+
+#### Inherited from
+
+[Room](Room.md).[disposed](Room.md#disposed)
+
+___
+
 ### id
 
 • `Readonly` **id**: `string`
@@ -57,7 +68,7 @@ ___
 
 ### members
 
-• `Readonly` **members**: [`RoomMember`](RoomMember.md)[]
+• `Readonly` **members**: [`RemoteRoomMember`](RemoteRoomMember.md)[]
 
 **`description`** {japanese} Roomに参加しているMemberのリスト
 
@@ -307,17 +318,17 @@ ___
 
 ### join
 
-▸ **join**(`memberInit?`): `Promise`<[`LocalSFURoomMember`](../classes/LocalSFURoomMember.md)\>
+▸ **join**(`memberInit?`): `Promise`<[`LocalSFURoomMember`](LocalSFURoomMember.md)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `memberInit?` | `RoomMemberInit` |
+| `memberInit?` | [`RoomMemberInit`](RoomMemberInit.md) |
 
 #### Returns
 
-`Promise`<[`LocalSFURoomMember`](../classes/LocalSFURoomMember.md)\>
+`Promise`<[`LocalSFURoomMember`](LocalSFURoomMember.md)\>
 
 #### Overrides
 
