@@ -6,8 +6,6 @@
 
 - [LocalAudioStream](classes/LocalAudioStream.md)
 - [LocalDataStream](classes/LocalDataStream.md)
-- [LocalP2PRoomMember](classes/LocalP2PRoomMember.md)
-- [LocalSFURoomMember](classes/LocalSFURoomMember.md)
 - [LocalVideoStream](classes/LocalVideoStream.md)
 - [Logger](classes/Logger.md)
 - [RemoteAudioStream](classes/RemoteAudioStream.md)
@@ -19,7 +17,9 @@
 
 ### Interfaces
 
+- [LocalP2PRoomMember](interfaces/LocalP2PRoomMember.md)
 - [LocalRoomMember](interfaces/LocalRoomMember.md)
+- [LocalSFURoomMember](interfaces/LocalSFURoomMember.md)
 - [MemberJoinedEvent](interfaces/MemberJoinedEvent.md)
 - [MemberLeftEvent](interfaces/MemberLeftEvent.md)
 - [MemberMetadataUpdatedEvent](interfaces/MemberMetadataUpdatedEvent.md)
@@ -33,6 +33,7 @@
 - [RoomClosedEvent](interfaces/RoomClosedEvent.md)
 - [RoomInit](interfaces/RoomInit.md)
 - [RoomMember](interfaces/RoomMember.md)
+- [RoomMemberInit](interfaces/RoomMemberInit.md)
 - [RoomMetadataUpdatedEvent](interfaces/RoomMetadataUpdatedEvent.md)
 - [RoomPublication](interfaces/RoomPublication.md)
 - [RoomSubscription](interfaces/RoomSubscription.md)

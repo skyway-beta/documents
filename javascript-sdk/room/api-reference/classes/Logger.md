@@ -10,7 +10,9 @@
 
 ### Properties
 
+- [id](Logger.md#id)
 - [level](Logger.md#level)
+- [onLog](Logger.md#onlog)
 
 ### Methods
 
@@ -32,9 +34,21 @@
 
 ## Properties
 
+### id
+
+▪ `Static` `Readonly` **id**: `string`
+
+___
+
 ### level
 
 ▪ `Static` **level**: ``"error"`` \| ``"warn"`` \| ``"debug"`` \| ``"disable"``
+
+___
+
+### onLog
+
+▪ `Static` `Readonly` **onLog**: `Event`<{ `id`: `string` ; `level`: `string` ; `message`: `any`[]  }\>
 
 ## Methods
 

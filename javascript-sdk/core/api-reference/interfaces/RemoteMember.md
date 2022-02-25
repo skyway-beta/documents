@@ -26,7 +26,6 @@
 
 ### Accessors
 
-- [\_dto](RemoteMember.md#_dto)
 - [metadata](RemoteMember.md#metadata)
 - [publications](RemoteMember.md#publications)
 - [status](RemoteMember.md#status)
@@ -36,6 +35,7 @@
 
 - [\_getConnection](RemoteMember.md#_getconnection)
 - [\_getOrCreateConnection](RemoteMember.md#_getorcreateconnection)
+- [toJSON](RemoteMember.md#tojson)
 - [updateMetadata](RemoteMember.md#updatemetadata)
 
 ## Properties
@@ -150,20 +150,6 @@ MemberImpl.type
 
 ## Accessors
 
-### \_dto
-
-• `get` **_dto**(): `Member`
-
-#### Returns
-
-`Member`
-
-#### Inherited from
-
-MemberImpl.\_dto
-
-___
-
 ### metadata
 
 • `get` **metadata**(): `undefined` \| `string`
@@ -249,6 +235,20 @@ ___
 #### Returns
 
 [`SkyWayConnection`](SkyWayConnection.md)
+
+___
+
+### toJSON
+
+▸ **toJSON**(): `Member`
+
+#### Returns
+
+`Member`
+
+#### Inherited from
+
+MemberImpl.toJSON
 
 ___
 

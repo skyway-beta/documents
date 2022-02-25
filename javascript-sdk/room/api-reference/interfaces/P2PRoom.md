@@ -12,6 +12,7 @@
 
 ### Properties
 
+- [disposed](P2PRoom.md#disposed)
 - [id](P2PRoom.md#id)
 - [members](P2PRoom.md#members)
 - [metadata](P2PRoom.md#metadata)
@@ -45,6 +46,16 @@
 
 ## Properties
 
+### disposed
+
+• `Readonly` **disposed**: `boolean`
+
+#### Inherited from
+
+[Room](Room.md).[disposed](Room.md#disposed)
+
+___
+
 ### id
 
 • `Readonly` **id**: `string`
@@ -57,7 +68,7 @@ ___
 
 ### members
 
-• `Readonly` **members**: [`RoomMember`](RoomMember.md)[]
+• `Readonly` **members**: [`RemoteRoomMember`](RemoteRoomMember.md)[]
 
 **`description`** {japanese} Roomに参加しているMemberのリスト
 
@@ -307,17 +318,17 @@ ___
 
 ### join
 
-▸ **join**(`memberInit?`): `Promise`<[`LocalP2PRoomMember`](../classes/LocalP2PRoomMember.md)\>
+▸ **join**(`memberInit?`): `Promise`<[`LocalP2PRoomMember`](LocalP2PRoomMember.md)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `memberInit?` | `RoomMemberInit` |
+| `memberInit?` | [`RoomMemberInit`](RoomMemberInit.md) |
 
 #### Returns
 
-`Promise`<[`LocalP2PRoomMember`](../classes/LocalP2PRoomMember.md)\>
+`Promise`<[`LocalP2PRoomMember`](LocalP2PRoomMember.md)\>
 
 #### Overrides
 

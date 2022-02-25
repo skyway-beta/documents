@@ -39,7 +39,6 @@
 
 ### Accessors
 
-- [\_dto](SfuBotMember.md#_dto)
 - [metadata](SfuBotMember.md#metadata)
 - [publications](SfuBotMember.md#publications)
 - [status](SfuBotMember.md#status)
@@ -49,6 +48,7 @@
 
 - [startForwarding](SfuBotMember.md#startforwarding)
 - [stopForwarding](SfuBotMember.md#stopforwarding)
+- [toJSON](SfuBotMember.md#tojson)
 - [updateMetadata](SfuBotMember.md#updatemetadata)
 - [IsSfuBotMember](SfuBotMember.md#issfubotmember)
 
@@ -261,24 +261,6 @@ ___
 
 ## Accessors
 
-### \_dto
-
-• `get` **_dto**(): `Member`
-
-#### Returns
-
-`Member`
-
-#### Implementation of
-
-RemoteMember.\_dto
-
-#### Inherited from
-
-MemberImpl.\_dto
-
-___
-
 ### metadata
 
 • `get` **metadata**(): `undefined` \| `string`
@@ -385,6 +367,24 @@ ___
 #### Returns
 
 `Promise`<`void`\>
+
+___
+
+### toJSON
+
+▸ **toJSON**(): `Member`
+
+#### Returns
+
+`Member`
+
+#### Implementation of
+
+RemoteMember.toJSON
+
+#### Inherited from
+
+MemberImpl.toJSON
 
 ___
 

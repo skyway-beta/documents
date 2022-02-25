@@ -99,7 +99,7 @@ ___
 
 ### ChannelStatus
 
-Ƭ **ChannelStatus**: ``"created"`` \| ``"opened"`` \| ``"closed"`` \| ``"stopped"``
+Ƭ **ChannelStatus**: ``"created"`` \| ``"opened"`` \| ``"closed"``
 
 ___
 
@@ -147,7 +147,7 @@ ___
 
 ### RemotePerson
 
-Ƭ **RemotePerson**: [`RemoteMember`](interfaces/RemoteMember.md) & `Person` & { `onPublicationSubscribed`: [`Event`](classes/Event.md)<{ `stream?`: [`RemoteStream`](modules.md#remotestream) ; `subscription`: [`Subscription`](interfaces/Subscription.md)  }\> ; `onPublicationUnsubscribed`: [`Event`](classes/Event.md)<{ `subscription`: [`Subscription`](interfaces/Subscription.md)  }\> ; `subscribe`: (`publicationId`: `string`) => `Promise`<{ `stream?`: [`RemoteStream`](modules.md#remotestream) ; `subscription`: [`Subscription`](interfaces/Subscription.md)  }\> ; `unsubscribe`: (`subscriptionId`: `string`) => `Promise`<`void`\>  }
+Ƭ **RemotePerson**: [`RemoteMember`](interfaces/RemoteMember.md) & `Person` & `RemotePersonInterface`
 
 ___
 
