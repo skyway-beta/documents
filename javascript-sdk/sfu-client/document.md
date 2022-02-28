@@ -24,7 +24,7 @@ Core ライブラリ にて SFU 機能を有効化するため、Plugin を Core
 
 ```ts
 import { SkyWayContext } from '@skyway-sdk/core';
-import { registerSfuPlugin } from '@skyway-sdk/sfu-client';
+import { registerSfuPlugin, SfuClientPlugin } from '@skyway-sdk/sfu-client';
 
 const context = await SkyWayContext.Create(tokenString);
 const plugin = new SfuClientPlugin();
