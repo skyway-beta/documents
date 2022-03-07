@@ -27,7 +27,9 @@
 
 | Name | Type |
 | :------ | :------ |
-| `url?` | `string` |
+| `domain?` | `string` |
+| `secure?` | `boolean` |
+| `version?` | `number` |
 
 ___
 
@@ -46,21 +48,13 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `domain?` | `string` |
+| `secure?` | `boolean` |
 
 ___
 
 ### rtcApi
 
-• **rtcApi**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `apiVersion?` | `string` |
-| `host?` | `string` |
-| `secure?` | `boolean` |
-| `timeout?` | `number` |
+• **rtcApi**: [`RtcRpcApiConfig`](RtcRpcApiConfig.md)
 
 ___
 

@@ -29,7 +29,7 @@
 
 ### channel
 
-• **channel**: [`SkyWayChannel`](../classes/SkyWayChannel.md)
+• **channel**: `SkyWayChannelImpl`
 
 ___
 

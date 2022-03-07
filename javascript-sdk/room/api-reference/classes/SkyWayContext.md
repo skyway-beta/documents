@@ -47,13 +47,13 @@ ___
 
 ### onTokenExpired
 
-• `Readonly` **onTokenExpired**: `Event`<`void`\>
+• `Readonly` **onTokenExpired**: [`Event`](Event.md)<`void`\>
 
 ___
 
 ### onTokenUpdateReminder
 
-• `Readonly` **onTokenUpdateReminder**: `Event`<`void`\>
+• `Readonly` **onTokenUpdateReminder**: [`Event`](Event.md)<`void`\>
 
 ___
 

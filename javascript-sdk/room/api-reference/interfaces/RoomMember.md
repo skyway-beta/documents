@@ -52,7 +52,7 @@ ___
 
 ### onLeft
 
-• `Readonly` **onLeft**: `Event`<`void`\>
+• `Readonly` **onLeft**: [`Event`](../classes/Event.md)<`void`\>
 
 **`description`** {japanese} MemberがRoomから出たときに発火するイベント
 
@@ -60,7 +60,7 @@ ___
 
 ### onMetadataUpdated
 
-• `Readonly` **onMetadataUpdated**: `Event`<`string`\>
+• `Readonly` **onMetadataUpdated**: [`Event`](../classes/Event.md)<`string`\>
 
 **`description`** {japanese} Memberのメタデータが更新された時に発火するイベント
 

@@ -1,3 +1,5 @@
+@skyway-sdk/sfu-client / [Exports](modules.md)
+
 # SFU Client
 
 SkyWay Core ライブラリ で SFU Bot を利用するためのライブラリです。
@@ -23,8 +25,8 @@ SFU Bot は、 各 Person から一本の上りトラフィックを受信し、
 Core ライブラリ にて SFU 機能を有効化するため、Plugin を Core ライブラリ に登録します。
 
 ```ts
-import { SkyWayContext } from '@skyway-sdk/core';
-import { registerSfuPlugin, SfuClientPlugin } from '@skyway-sdk/sfu-client';
+import { SkyWayContext } from '@skyway-nv/core';
+import { registerSfuPlugin } from '@skyway-nv/sfu-client';
 
 const context = await SkyWayContext.Create(tokenString);
 const plugin = new SfuClientPlugin();
@@ -76,4 +78,21 @@ channel.onStreamPublished.add(({ publication }) => {
     person.subscribe(publication.id);
   }
 });
+```
+
+## Simulcast 機能の利用方法
+
+VideoStream を Publish する際に複数のエンコード設定を指定することで、受信側クライアントデバイスが通信品質に合わせて自動的に最適なエンコード設定の映像を受け取る機能を利用できます。
+
+```ts
+const video = await SkyWayMediaDevices.createCameraVideoStream();
+const publication = await person.publish(video, {
+  encodings: [
+    // 複数のパラメータをセットする
+    { maxBitrate: 10_000, scaleResolutionDownBy: 8 },
+    { maxBitrate: 680_000, scaleResolutionDownBy: 1 },
+  ],
+});
+
+const forwarding = await bot.startForwarding(publication);
 ```

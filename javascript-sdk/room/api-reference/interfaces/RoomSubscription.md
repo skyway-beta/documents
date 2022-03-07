@@ -40,7 +40,7 @@ ___
 
 ### onStreamAttached
 
-• `Readonly` **onStreamAttached**: `Event`<`void`\>
+• `Readonly` **onStreamAttached**: [`Event`](../classes/Event.md)<`void`\>
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 ### status
 
-• **status**: `SubscriptionStatus`
+• **status**: [`SubscriptionStatus`](../modules.md#subscriptionstatus)
 
 ___
 

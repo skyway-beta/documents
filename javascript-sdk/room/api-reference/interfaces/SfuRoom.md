@@ -100,7 +100,7 @@ ___
 
 ### onClosed
 
-• `Readonly` **onClosed**: `Event`<[`RoomClosedEvent`](RoomClosedEvent.md)\>
+• `Readonly` **onClosed**: [`Event`](../classes/Event.md)<[`RoomClosedEvent`](RoomClosedEvent.md)\>
 
 #### Inherited from
 
@@ -110,7 +110,7 @@ ___
 
 ### onMemberJoined
 
-• `Readonly` **onMemberJoined**: `Event`<[`MemberJoinedEvent`](MemberJoinedEvent.md)\>
+• `Readonly` **onMemberJoined**: [`Event`](../classes/Event.md)<[`MemberJoinedEvent`](MemberJoinedEvent.md)\>
 
 **`description`** {japanese} RoomにMemberが参加したときに発火するイベント
 
@@ -122,7 +122,7 @@ ___
 
 ### onMemberLeft
 
-• `Readonly` **onMemberLeft**: `Event`<[`MemberLeftEvent`](MemberLeftEvent.md)\>
+• `Readonly` **onMemberLeft**: [`Event`](../classes/Event.md)<[`MemberLeftEvent`](MemberLeftEvent.md)\>
 
 **`description`** {japanese} RoomからMemberが離脱したときに発火するイベント
 
@@ -134,7 +134,7 @@ ___
 
 ### onMemberMetadataUpdated
 
-• `Readonly` **onMemberMetadataUpdated**: `Event`<[`MemberMetadataUpdatedEvent`](MemberMetadataUpdatedEvent.md)\>
+• `Readonly` **onMemberMetadataUpdated**: [`Event`](../classes/Event.md)<[`MemberMetadataUpdatedEvent`](MemberMetadataUpdatedEvent.md)\>
 
 **`description`** {japanese} Room上のMemberのメタデータが変更されたときに発火するイベント
 
@@ -146,7 +146,7 @@ ___
 
 ### onMembershipChanged
 
-• `Readonly` **onMembershipChanged**: `Event`<[`MembershipChangedEvent`](MembershipChangedEvent.md)\>
+• `Readonly` **onMembershipChanged**: [`Event`](../classes/Event.md)<[`MembershipChangedEvent`](MembershipChangedEvent.md)\>
 
 #### Inherited from
 
@@ -156,7 +156,7 @@ ___
 
 ### onMetadataUpdated
 
-• `Readonly` **onMetadataUpdated**: `Event`<[`RoomMetadataUpdatedEvent`](RoomMetadataUpdatedEvent.md)\>
+• `Readonly` **onMetadataUpdated**: [`Event`](../classes/Event.md)<[`RoomMetadataUpdatedEvent`](RoomMetadataUpdatedEvent.md)\>
 
 #### Inherited from
 
@@ -166,7 +166,7 @@ ___
 
 ### onPublicationChanged
 
-• `Readonly` **onPublicationChanged**: `Event`<[`PublicationChangedEvent`](PublicationChangedEvent.md)\>
+• `Readonly` **onPublicationChanged**: [`Event`](../classes/Event.md)<[`PublicationChangedEvent`](PublicationChangedEvent.md)\>
 
 #### Inherited from
 
@@ -176,7 +176,7 @@ ___
 
 ### onPublicationMetadataUpdated
 
-• `Readonly` **onPublicationMetadataUpdated**: `Event`<[`PublicationMetadataUpdatedEvent`](PublicationMetadataUpdatedEvent.md)\>
+• `Readonly` **onPublicationMetadataUpdated**: [`Event`](../classes/Event.md)<[`PublicationMetadataUpdatedEvent`](PublicationMetadataUpdatedEvent.md)\>
 
 **`description`** {japanese} Room上のPublicationのメタデータが変更されたときに発火するイベント
 
@@ -188,7 +188,7 @@ ___
 
 ### onStreamPublished
 
-• `Readonly` **onStreamPublished**: `Event`<[`StreamPublishedEvent`](StreamPublishedEvent.md)\>
+• `Readonly` **onStreamPublished**: [`Event`](../classes/Event.md)<[`StreamPublishedEvent`](StreamPublishedEvent.md)\>
 
 **`description`** {japanese} RoomにStreamがPublishされたときに発火するイベント
 
@@ -200,7 +200,7 @@ ___
 
 ### onStreamSubscribed
 
-• `Readonly` **onStreamSubscribed**: `Event`<[`StreamSubscribedEvent`](StreamSubscribedEvent.md)\>
+• `Readonly` **onStreamSubscribed**: [`Event`](../classes/Event.md)<[`StreamSubscribedEvent`](StreamSubscribedEvent.md)\>
 
 **`description`** {japanese} Room上のStreamがSubscribeされたときに発火するイベント
 
@@ -212,7 +212,7 @@ ___
 
 ### onStreamUnpublished
 
-• `Readonly` **onStreamUnpublished**: `Event`<[`StreamUnpublishedEvent`](StreamUnpublishedEvent.md)\>
+• `Readonly` **onStreamUnpublished**: [`Event`](../classes/Event.md)<[`StreamUnpublishedEvent`](StreamUnpublishedEvent.md)\>
 
 **`description`** {japanese} RoomからStreamがUnPublishされたときに発火するイベント
 
@@ -224,7 +224,7 @@ ___
 
 ### onStreamUnsubscribed
 
-• `Readonly` **onStreamUnsubscribed**: `Event`<[`StreamUnsubscribedEvent`](StreamUnsubscribedEvent.md)\>
+• `Readonly` **onStreamUnsubscribed**: [`Event`](../classes/Event.md)<[`StreamUnsubscribedEvent`](StreamUnsubscribedEvent.md)\>
 
 **`description`** {japanese} Room上のStreamがUnSubscribeされたときに発火するイベント
 
@@ -236,7 +236,7 @@ ___
 
 ### onSubscriptionChangedEvent
 
-• `Readonly` **onSubscriptionChangedEvent**: `Event`<[`SubscriptionChangedEvent`](SubscriptionChangedEvent.md)\>
+• `Readonly` **onSubscriptionChangedEvent**: [`Event`](../classes/Event.md)<[`SubscriptionChangedEvent`](SubscriptionChangedEvent.md)\>
 
 #### Inherited from
 
@@ -258,7 +258,7 @@ ___
 
 ### status
 
-• `Readonly` **status**: `ChannelStatus`
+• `Readonly` **status**: [`ChannelStatus`](../modules.md#channelstatus)
 
 #### Inherited from
 

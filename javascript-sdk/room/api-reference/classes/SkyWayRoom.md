@@ -32,7 +32,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `Init` | extends [`RoomInit`](../interfaces/RoomInit.md) |
+| `Init` | extends [`RoomInit`](../modules.md#roominit) |
 
 #### Parameters
 
@@ -49,7 +49,7 @@ ___
 
 ### Find
 
-▸ `Static` **Find**<`Type`\>(`context`, `query`, `roomType`): `Promise`<`Type` extends ``"sfu"`` ? [`SfuRoom`](../interfaces/SfuRoom.md) : [`P2PRoom`](../interfaces/P2PRoom.md)\>
+▸ `Static` **Find**<`Type`\>(`context`, `query`, `roomType`, `options?`): `Promise`<`Type` extends ``"sfu"`` ? [`SfuRoom`](../interfaces/SfuRoom.md) : [`P2PRoom`](../interfaces/P2PRoom.md)\>
 
 **`description`** {japanese} 既存のRoomの取得
 
@@ -68,6 +68,7 @@ ___
 | `query.id?` | `string` |
 | `query.name?` | `string` |
 | `roomType` | `Type` |
+| `options?` | `Type` extends ``"sfu"`` ? `Partial`<[`SfuClientPluginOptions`](../modules.md#sfuclientpluginoptions)\> : `void` |
 
 #### Returns
 
@@ -85,7 +86,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `Init` | extends [`RoomInit`](../interfaces/RoomInit.md) |
+| `Init` | extends [`RoomInit`](../modules.md#roominit) |
 
 #### Parameters
 

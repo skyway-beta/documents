@@ -48,7 +48,7 @@ ___
 
 ### onLog
 
-▪ `Static` `Readonly` **onLog**: [`Event`](Event.md)<{ `id`: `string` ; `level`: `string` ; `message`: `any`[]  }\>
+▪ `Static` `Readonly` **onLog**: [`Event`](Event.md)<{ `id`: `string` ; `level`: `string` ; `message`: `any`[] ; `timestamp`: `string`  }\>
 
 ## Methods
 

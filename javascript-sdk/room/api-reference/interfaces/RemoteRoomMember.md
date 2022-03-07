@@ -67,7 +67,7 @@ ___
 
 ### onLeft
 
-• `Readonly` **onLeft**: `Event`<`void`\>
+• `Readonly` **onLeft**: [`Event`](../classes/Event.md)<`void`\>
 
 **`description`** {japanese} MemberがRoomから出たときに発火するイベント
 
@@ -79,7 +79,7 @@ ___
 
 ### onMetadataUpdated
 
-• `Readonly` **onMetadataUpdated**: `Event`<`string`\>
+• `Readonly` **onMetadataUpdated**: [`Event`](../classes/Event.md)<`string`\>
 
 **`description`** {japanese} Memberのメタデータが更新された時に発火するイベント
 
@@ -91,7 +91,7 @@ ___
 
 ### onPublicationSubscribed
 
-• `Readonly` **onPublicationSubscribed**: `Event`<{ `subscription`: [`RoomSubscription`](RoomSubscription.md)<[`RemoteStream`](../modules.md#remotestream)\>  }\>
+• `Readonly` **onPublicationSubscribed**: [`Event`](../classes/Event.md)<{ `subscription`: [`RoomSubscription`](RoomSubscription.md)<[`RemoteStream`](../modules.md#remotestream)\>  }\>
 
 **`description`** {japanese} この RemoteRoomMember がPublicationをSubscribeしたとき
 
@@ -99,7 +99,7 @@ ___
 
 ### onPublicationUnsubscribed
 
-• `Readonly` **onPublicationUnsubscribed**: `Event`<{ `subscription`: [`RoomSubscription`](RoomSubscription.md)<[`RemoteStream`](../modules.md#remotestream)\>  }\>
+• `Readonly` **onPublicationUnsubscribed**: [`Event`](../classes/Event.md)<{ `subscription`: [`RoomSubscription`](RoomSubscription.md)<[`RemoteStream`](../modules.md#remotestream)\>  }\>
 
 **`description`** {japanese} この RemoteRoomMember がPublicationをUnsubscribeしたとき
 

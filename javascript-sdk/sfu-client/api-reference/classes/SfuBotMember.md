@@ -64,7 +64,7 @@
 | :------ | :------ |
 | `args` | `Object` |
 | `args.api` | `SfuRestApiClient` |
-| `args.channel` | `SkyWayChannel` |
+| `args.channel` | `SkyWayChannelImpl` |
 | `args.context` | `SkyWayContext` |
 | `args.id` | `string` |
 | `args.metadata?` | `string` |
@@ -99,7 +99,7 @@ ___
 
 ### channel
 
-• `Readonly` **channel**: `SkyWayChannel`
+• `Readonly` **channel**: `SkyWayChannelImpl`
 
 #### Implementation of
 

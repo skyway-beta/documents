@@ -42,7 +42,7 @@
 
 ### \_events
 
-• `Readonly` **\_events**: `Events`
+• `Readonly` **\_events**: [`Events`](../classes/Events.md)
 
 #### Inherited from
 
@@ -52,7 +52,7 @@ ___
 
 ### channel
 
-• `Readonly` **channel**: [`SkyWayChannel`](../classes/SkyWayChannel.md)
+• `Readonly` **channel**: `SkyWayChannelImpl`
 
 #### Inherited from
 

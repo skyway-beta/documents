@@ -1,3 +1,5 @@
+@skyway-sdk/room / [Exports](modules.md)
+
 # Room
 
 複数人で通信をするアプリケーションを作るための ライブラリ です。
@@ -15,7 +17,7 @@ npm i @skyway-sdk/room
 
 **1. SkyWay Auth Token を取得（生成）する**
 
-[SkyWay Auth Tokenについて](https://beta.skyway.ntt.com/auth-token.html)
+[SkyWay Auth Token について](https://beta.skyway.ntt.com/auth-token.html)
 
 **2. Room を作成する**
 
@@ -38,7 +40,7 @@ Room ライブラリ の用語、仕様について説明します。
 
 複数の Member が通信するグループの単位です。
 
-それぞれの Member は Room 内にいる他の Member と映像/音声/データの送受信が出来ます。（なお、SFU Roomの場合はデータの送受信ができません。）
+それぞれの Member は Room 内にいる他の Member と映像/音声/データの送受信が出来ます。（なお、SFU Room の場合はデータの送受信ができません。）
 
 通信方式を P2P と SFU の 2 種類から選択可能です。
 
@@ -111,13 +113,13 @@ import { SkyWayContext } from '@skyway-sdk/room';
 const context = await SkyWayContext.Create(tokenString);
 ```
 
-事前にSkyWay Auth Tokenの取得が必要になります。
+事前に SkyWay Auth Token の取得が必要になります。
 
-### SkyWay Auth Tokenの取得方法
+### SkyWay Auth Token の取得方法
 
 SkyWay Auth Token は、仕様に基づいて自身で作成するか、`@skyway-sdk/token`ライブラリを使って作成することができます。
 
-`@skyway-sdk/token`ライブラリは Node.js サーバとブラウザで動作しますが、SkyWay Auth Tokenでユーザの行動を認可したい場合は必ずサーバ側で作成して下さい。
+`@skyway-sdk/token`ライブラリは Node.js サーバとブラウザで動作しますが、SkyWay Auth Token でユーザの行動を認可したい場合は必ずサーバ側で作成して下さい。
 
 ```ts
 import { SkyWayAuthToken } from '@skyway-sdk/token';
@@ -130,7 +132,7 @@ const tokenString = token.encode('secret');
 
 Member の参加する Room の作成/取得を行います。
 
-**作成**
+### 作成
 
 新しい Room を作成します。
 
@@ -151,7 +153,7 @@ Room 作成時に、RoomType を指定する必要があります。
 
 Room 作成時に、任意の RoomId を指定することができます。
 
-**取得**
+### 取得
 
 既存の Room を取得します。
 
@@ -162,7 +164,7 @@ const context = await SkyWayContext.Create(tokenString);
 const room = await SkyWayRoom.Find(context, roomId, roomType);
 ```
 
-**取得もしくは作成**
+### 取得もしくは作成
 
 任意の Room の取得を試みて、存在しなければ作成します。
 
@@ -191,7 +193,7 @@ Room に参加すると LocalRoomMember インスタンスを取得できます�
 
 ### Room の情報にアクセスする
 
-**Member**
+#### Member
 
 Stream の Member の情報のリストを参照することが出来ます。
 
@@ -199,7 +201,7 @@ Stream の Member の情報のリストを参照することが出来ます。
 const members = room.members;
 ```
 
-**Publication**
+#### Publication
 
 Stream の Publication のリストを参照することが出来ます。
 
@@ -207,7 +209,7 @@ Stream の Publication のリストを参照することが出来ます。
 const publications = room.publications;
 ```
 
-**Subscription**
+#### Subscription
 
 Stream の Subscription のリストを参照することが出来ます。
 
@@ -234,7 +236,7 @@ const publication = await member.publish(video,options);
 
 Room の種類によって Publish 時に指定できる Option が異なります。
 
-**P2P**
+#### P2P
 
 ```ts
 interface Option {
@@ -244,7 +246,7 @@ interface Option {
 }
 ```
 
-**SFU**
+#### SFU
 
 ```ts
 interface Option {
@@ -257,12 +259,15 @@ interface Option {
 
 maxSubscribers では Publish した Stream を Subscribe できる数の上限値を指定できます。指定しない場合、maxSubscribers には 10 がセットされます。
 
-なお、SkyWay Beta提供中は以下の制限があります。制限値は50人での双方向通信を想定した値に基づいております。
-- maxSubscribers の最大値: 49
-- アプリケーションにおける、AudioPublication の maxSubscribers の合計値: 2450 (49人 x 50人)　
-- アプリケーションにおける、VideoPublication の maxSubscribers の合計値: 2450 (49人 x 50人)
+なお、SkyWay Beta 提供中は以下の制限があります。制限値は 50 人での双方向通信を想定した値に基づいております。
 
-Simulcast を利用する場合は encodings に複数のパラメータをセットします
+- maxSubscribers の最大値: 49
+- アプリケーションにおける、AudioPublication の maxSubscribers の合計値: 2450 (49 人 x 50 人)
+- アプリケーションにおける、VideoPublication の maxSubscribers の合計値: 2450 (49 人 x 50 人)
+
+##### Simulcast 機能の利用方法
+
+VideoStream を Publish する際に複数のエンコード設定を指定することで、受信側クライアントデバイスが通信品質に合わせて自動的に最適なエンコード設定の映像を受け取る機能を利用できます。
 
 ```ts
 const video = await SkyWayMediaDevices.createCameraVideoStream();
@@ -312,19 +317,19 @@ await member.updateMetadata('metadata');
 
 各種 Stream の取得が出来ます。
 
-**マイク**
+### マイク
 
 ```ts
 const audio = await SkyWayMediaDevices.createMicrophoneAudioStream(options);
 ```
 
-**カメラ**
+### カメラ
 
 ```ts
 const video = await SkyWayMediaDevices.createCameraVideoStream(options);
 ```
 
-**DataChannel**
+### DataChannel
 
 ※SFU Room では使用できません。
 
@@ -336,7 +341,7 @@ const data = await SkyWayMediaDevices.createDataStream();
 
 SkyWay の Stream を Html で再生する方法が 2 種類あります。
 
-**element に適用する**
+#### element に適用する
 
 HtmlAudioElement / HtmlVideoElement に Stream を適用することが出来ます。
 
@@ -353,7 +358,7 @@ skywayStream.attach(localVideo);
 await localVideo.play();
 ```
 
-**MediaStream を作る**
+#### MediaStream を作る
 
 MediaStream を作成して使うことが出来ます。
 
