@@ -14,13 +14,8 @@
 
 ## Table of contents
 
-### Constructors
-
-- [constructor](SfuBotMember.md#constructor)
-
 ### Properties
 
-- [\_context](SfuBotMember.md#_context)
 - [\_events](SfuBotMember.md#_events)
 - [channel](SfuBotMember.md#channel)
 - [id](SfuBotMember.md#id)
@@ -52,44 +47,11 @@
 - [updateMetadata](SfuBotMember.md#updatemetadata)
 - [IsSfuBotMember](SfuBotMember.md#issfubotmember)
 
-## Constructors
-
-### constructor
-
-• **new SfuBotMember**(`args`)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `args` | `Object` |
-| `args.api` | `SfuRestApiClient` |
-| `args.channel` | `SkyWayChannelImpl` |
-| `args.context` | `SkyWayContext` |
-| `args.id` | `string` |
-| `args.metadata?` | `string` |
-| `args.name?` | `string` |
-| `args.plugin` | [`SfuClientPlugin`](SfuClientPlugin.md) |
-
-#### Overrides
-
-MemberImpl.constructor
-
 ## Properties
-
-### \_context
-
-• `Readonly` **\_context**: `SkyWayContext`
-
-___
 
 ### \_events
 
 • `Readonly` **\_events**: `Events`
-
-#### Implementation of
-
-RemoteMember.\_events
 
 #### Inherited from
 
@@ -377,10 +339,6 @@ ___
 #### Returns
 
 `Member`
-
-#### Implementation of
-
-RemoteMember.toJSON
 
 #### Inherited from
 

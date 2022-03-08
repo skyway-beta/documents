@@ -48,7 +48,7 @@
 
 ### channel
 
-• **channel**: `SkyWayChannelImpl`
+• **channel**: [`Channel`](Channel.md)
 
 #### Inherited from
 

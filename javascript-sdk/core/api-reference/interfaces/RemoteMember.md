@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- `MemberImpl`
+- [`Member`](Member.md)
 
   ↳ **`RemoteMember`**
 
@@ -12,111 +12,114 @@
 
 ### Properties
 
-- [\_events](RemoteMember.md#_events)
 - [channel](RemoteMember.md#channel)
 - [id](RemoteMember.md#id)
+- [metadata](RemoteMember.md#metadata)
 - [name](RemoteMember.md#name)
 - [onJoined](RemoteMember.md#onjoined)
 - [onLeft](RemoteMember.md#onleft)
 - [onMembershipChanged](RemoteMember.md#onmembershipchanged)
 - [onMetadataUpdated](RemoteMember.md#onmetadataupdated)
+- [publications](RemoteMember.md#publications)
 - [side](RemoteMember.md#side)
+- [status](RemoteMember.md#status)
+- [subscriptions](RemoteMember.md#subscriptions)
 - [subtype](RemoteMember.md#subtype)
 - [type](RemoteMember.md#type)
 
-### Accessors
-
-- [metadata](RemoteMember.md#metadata)
-- [publications](RemoteMember.md#publications)
-- [status](RemoteMember.md#status)
-- [subscriptions](RemoteMember.md#subscriptions)
-
 ### Methods
 
-- [\_getConnection](RemoteMember.md#_getconnection)
-- [\_getOrCreateConnection](RemoteMember.md#_getorcreateconnection)
-- [toJSON](RemoteMember.md#tojson)
 - [updateMetadata](RemoteMember.md#updatemetadata)
 
 ## Properties
 
-### \_events
-
-• `Readonly` **\_events**: [`Events`](../classes/Events.md)
-
-#### Inherited from
-
-MemberImpl.\_events
-
-___
-
 ### channel
 
-• `Readonly` **channel**: `SkyWayChannelImpl`
+• **channel**: [`Channel`](Channel.md)
 
 #### Inherited from
 
-MemberImpl.channel
+[Member](Member.md).[channel](Member.md#channel)
 
 ___
 
 ### id
 
-• `Readonly` **id**: `string`
+• **id**: `string`
 
 #### Inherited from
 
-MemberImpl.id
+[Member](Member.md).[id](Member.md#id)
+
+___
+
+### metadata
+
+• `Optional` **metadata**: `string`
+
+#### Inherited from
+
+[Member](Member.md).[metadata](Member.md#metadata)
 
 ___
 
 ### name
 
-• `Optional` `Readonly` **name**: `string`
+• `Optional` **name**: `string`
 
 #### Inherited from
 
-MemberImpl.name
+[Member](Member.md).[name](Member.md#name)
 
 ___
 
 ### onJoined
 
-• `Readonly` **onJoined**: [`Event`](../classes/Event.md)<`void`\>
+• **onJoined**: [`Event`](../classes/Event.md)<`void`\>
 
 #### Inherited from
 
-MemberImpl.onJoined
+[Member](Member.md).[onJoined](Member.md#onjoined)
 
 ___
 
 ### onLeft
 
-• `Readonly` **onLeft**: [`Event`](../classes/Event.md)<`void`\>
+• **onLeft**: [`Event`](../classes/Event.md)<`void`\>
 
 #### Inherited from
 
-MemberImpl.onLeft
+[Member](Member.md).[onLeft](Member.md#onleft)
 
 ___
 
 ### onMembershipChanged
 
-• `Readonly` **onMembershipChanged**: [`Event`](../classes/Event.md)<`void`\>
+• **onMembershipChanged**: [`Event`](../classes/Event.md)<`void`\>
 
 #### Inherited from
 
-MemberImpl.onMembershipChanged
+[Member](Member.md).[onMembershipChanged](Member.md#onmembershipchanged)
 
 ___
 
 ### onMetadataUpdated
 
-• `Readonly` **onMetadataUpdated**: [`Event`](../classes/Event.md)<`string`\>
+• **onMetadataUpdated**: [`Event`](../classes/Event.md)<`string`\>
 
 #### Inherited from
 
-MemberImpl.onMetadataUpdated
+[Member](Member.md).[onMetadataUpdated](Member.md#onmetadataupdated)
+
+___
+
+### publications
+
+• **publications**: [`Publication`](Publication.md)<[`LocalStream`](../modules.md#localstream)\>[]
+
+#### Inherited from
+
+[Member](Member.md).[publications](Member.md#publications)
 
 ___
 
@@ -126,135 +129,55 @@ ___
 
 #### Overrides
 
-MemberImpl.side
-
-___
-
-### subtype
-
-• `Readonly` **subtype**: `string`
-
-#### Inherited from
-
-MemberImpl.subtype
-
-___
-
-### type
-
-• `Readonly` **type**: [`MemberType`](../modules.md#membertype)
-
-#### Inherited from
-
-MemberImpl.type
-
-## Accessors
-
-### metadata
-
-• `get` **metadata**(): `undefined` \| `string`
-
-#### Returns
-
-`undefined` \| `string`
-
-#### Inherited from
-
-MemberImpl.metadata
-
-___
-
-### publications
-
-• `get` **publications**(): [`Publication`](Publication.md)<[`LocalStream`](../modules.md#localstream)\>[]
-
-#### Returns
-
-[`Publication`](Publication.md)<[`LocalStream`](../modules.md#localstream)\>[]
-
-#### Inherited from
-
-MemberImpl.publications
+[Member](Member.md).[side](Member.md#side)
 
 ___
 
 ### status
 
-• `get` **status**(): [`MemberStatus`](../modules.md#memberstatus)
-
-#### Returns
-
-[`MemberStatus`](../modules.md#memberstatus)
+• **status**: [`MemberStatus`](../modules.md#memberstatus)
 
 #### Inherited from
 
-MemberImpl.status
+[Member](Member.md).[status](Member.md#status)
 
 ___
 
 ### subscriptions
 
-• `get` **subscriptions**(): [`Subscription`](Subscription.md)<[`RemoteStream`](../modules.md#remotestream)\>[]
-
-#### Returns
-
-[`Subscription`](Subscription.md)<[`RemoteStream`](../modules.md#remotestream)\>[]
+• **subscriptions**: [`Subscription`](Subscription.md)<[`RemoteStream`](../modules.md#remotestream)\>[]
 
 #### Inherited from
 
-MemberImpl.subscriptions
+[Member](Member.md).[subscriptions](Member.md#subscriptions)
+
+___
+
+### subtype
+
+• **subtype**: `string`
+
+#### Inherited from
+
+[Member](Member.md).[subtype](Member.md#subtype)
+
+___
+
+### type
+
+• **type**: [`MemberType`](../modules.md#membertype)
+
+#### Inherited from
+
+[Member](Member.md).[type](Member.md#type)
 
 ## Methods
-
-### \_getConnection
-
-▸ **_getConnection**(`localPersonId`): `undefined` \| [`SkyWayConnection`](SkyWayConnection.md)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `localPersonId` | `string` |
-
-#### Returns
-
-`undefined` \| [`SkyWayConnection`](SkyWayConnection.md)
-
-___
-
-### \_getOrCreateConnection
-
-▸ **_getOrCreateConnection**(`localPersonId`): [`SkyWayConnection`](SkyWayConnection.md)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `localPersonId` | `string` |
-
-#### Returns
-
-[`SkyWayConnection`](SkyWayConnection.md)
-
-___
-
-### toJSON
-
-▸ **toJSON**(): `Member`
-
-#### Returns
-
-`Member`
-
-#### Inherited from
-
-MemberImpl.toJSON
-
-___
 
 ### updateMetadata
 
 ▸ **updateMetadata**(`metadata`): `Promise`<`void`\>
+
+**`description`** {japanese} metadataを更新する
 
 #### Parameters
 
@@ -268,4 +191,4 @@ ___
 
 #### Inherited from
 
-MemberImpl.updateMetadata
+[Member](Member.md).[updateMetadata](Member.md#updatemetadata)

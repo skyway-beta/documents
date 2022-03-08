@@ -11,7 +11,6 @@
 - [disposed](SkyWayContext.md#disposed)
 - [onTokenExpired](SkyWayContext.md#ontokenexpired)
 - [onTokenUpdateReminder](SkyWayContext.md#ontokenupdatereminder)
-- [plugins](SkyWayContext.md#plugins)
 
 ### Accessors
 
@@ -54,12 +53,6 @@ ___
 ### onTokenUpdateReminder
 
 • `Readonly` **onTokenUpdateReminder**: [`Event`](Event.md)<`void`\>
-
-___
-
-### plugins
-
-• **plugins**: `SkyWayPlugin`[]
 
 ## Accessors
 

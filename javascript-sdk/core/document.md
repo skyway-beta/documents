@@ -10,13 +10,14 @@ Room SDK でカバーできないような、SkyWay によって提供される�
 ```sh
 npm i @skyway-sdk/core
 ```
+
 # 概要
 
 クライアントアプリケーションは通信を開始するまでに以下のフローをたどります。
 
 **1. SkyWay Auth Token を取得（生成）する**
 
-[SkyWay Auth Tokenについて](https://beta.skyway.ntt.com/auth-token.html)
+[SkyWay Auth Token について](https://beta.skyway.ntt.com/auth-token.html)
 
 **2. Channel を作成する**
 
@@ -119,7 +120,7 @@ Plugin はこの Sfu Bot や Recording Bot などの Bot を利用するため�
 アプリケーションの設定を行います。
 
 ```ts
-import { SkyWayContext } from '@skyway-nv/core';
+import { SkyWayContext } from '@skyway-sdk/core';
 
 const context = await SkyWayContext.Create(tokenString);
 ```
@@ -128,12 +129,12 @@ const context = await SkyWayContext.Create(tokenString);
 
 ### トークンの取得方法
 
-SkyWay サービスの JWT トークンはトークンの仕様に基づいて自身で作成するか、`@skyway-nv/token`ライブラリを使って作成することができます。
+SkyWay サービスの JWT トークンはトークンの仕様に基づいて自身で作成するか、`@skyway-sdk/token`ライブラリを使って作成することができます。
 
-`@skyway-nv/token`ライブラリは Node.js サーバとブラウザで動作しますが、トークンでユーザの行動を制限したい場合は必ずサーバ側でトークンを作成して下さい。
+`@skyway-sdk/token`ライブラリは Node.js サーバとブラウザで動作しますが、トークンでユーザの行動を制限したい場合は必ずサーバ側でトークンを作成して下さい。
 
 ```ts
-import { SkyWayAuthToken } from '@skyway-nv/token';
+import { SkyWayAuthToken } from '@skyway-sdk/token';
 
 const token = new SkyWayAuthToken(parameters);
 const tokenString = token.encode('secret');
@@ -148,7 +149,7 @@ Member の参加する Channel の作成/取得を行います。
 新しい Channel を作成します。
 
 ```ts
-import { SkyWayContext, SkyWayChannel } from '@skyway-nv/core';
+import { SkyWayContext, SkyWayChannel } from '@skyway-sdk/core';
 
 const context = await SkyWayContext.Create(tokenString);
 const channel = await SkyWayChannel.Create(context, {
@@ -165,7 +166,7 @@ const channel = await SkyWayChannel.Create(context, {
 既存の Channel を取得します。
 
 ```ts
-import { SkyWayContext, SkyWayChannel } from '@skyway-nv/core';
+import { SkyWayContext, SkyWayChannel } from '@skyway-sdk/core';
 
 const context = await SkyWayContext.Create(tokenString);
 const channel = await SkyWayChannel.Find(context, {
@@ -181,10 +182,12 @@ id か name を使って Channel を探すことができます。
 Channel の取得を試み、存在しなければ作成します。
 
 ```ts
-import { SkyWayContext, SkyWayChannel } from '@skyway-nv/core';
+import { SkyWayContext, SkyWayChannel } from '@skyway-sdk/core';
 
 const context = await SkyWayContext.Create(tokenString);
-const channel = await SkyWayChannel.FindOrCreate(context, { name: 'channelName' });
+const channel = await SkyWayChannel.FindOrCreate(context, {
+  name: 'channelName',
+});
 ```
 
 ### Channel に LocalPerson を追加する
@@ -234,7 +237,7 @@ Stream の Publish、Subscribe などを行うことが出来ます。
 Channel に Stream を Publish することができます。
 
 ```ts
-import { SkyWayMediaDevices } from '@skyway-nv/core';
+import { SkyWayMediaDevices } from '@skyway-sdk/core';
 
 ...
 

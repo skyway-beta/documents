@@ -17,7 +17,6 @@
 - [SkyWayConfig](classes/SkyWayConfig.md)
 - [SkyWayContext](classes/SkyWayContext.md)
 - [SkyWayMediaDeviceManager](classes/SkyWayMediaDeviceManager.md)
-- [SkyWayPlugin](classes/SkyWayPlugin.md)
 
 ### Interfaces
 
