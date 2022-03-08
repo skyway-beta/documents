@@ -6,6 +6,8 @@
 
 - [`LocalAudioStream`](../classes/LocalAudioStream.md)
 - [`LocalVideoStream`](../classes/LocalVideoStream.md)
+- [`RemoteAudioStream`](../classes/RemoteAudioStream.md)
+- [`RemoteVideoStream`](../classes/RemoteVideoStream.md)
 
 ## Table of contents
 

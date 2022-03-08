@@ -12,6 +12,9 @@
 - [Logger](classes/Logger.md)
 - [MediaDevice](classes/MediaDevice.md)
 - [P2PConnection](classes/P2PConnection.md)
+- [RemoteAudioStream](classes/RemoteAudioStream.md)
+- [RemoteDataStream](classes/RemoteDataStream.md)
+- [RemoteVideoStream](classes/RemoteVideoStream.md)
 - [SkyWayAuthToken](classes/SkyWayAuthToken.md)
 - [SkyWayChannel](classes/SkyWayChannel.md)
 - [SkyWayConfig](classes/SkyWayConfig.md)
@@ -146,7 +149,7 @@ ___
 
 ### RemoteStream
 
-Ƭ **RemoteStream**: `RemoteDataStream` \| `RemoteAudioStream` \| `RemoteVideoStream`
+Ƭ **RemoteStream**: [`RemoteDataStream`](classes/RemoteDataStream.md) \| [`RemoteAudioStream`](classes/RemoteAudioStream.md) \| [`RemoteVideoStream`](classes/RemoteVideoStream.md)
 
 ___
 
