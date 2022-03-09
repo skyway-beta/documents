@@ -2,10 +2,6 @@
 
 # Interface: Channel
 
-## Implemented by
-
-- [`SkyWayChannel`](../classes/SkyWayChannel.md)
-
 ## Table of contents
 
 ### Properties

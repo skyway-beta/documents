@@ -8,13 +8,14 @@ Room SDK でカバーできないような、SkyWay によって提供される�
 ```sh
 npm i @skyway-sdk/core
 ```
+
 # 概要
 
 クライアントアプリケーションは通信を開始するまでに以下のフローをたどります。
 
 **1. SkyWay Auth Token を取得（生成）する**
 
-[SkyWay Auth Tokenについて](https://beta.skyway.ntt.com/auth-token.html)
+[SkyWay Auth Token について](https://beta.skyway.ntt.com/auth-token.html)
 
 **2. Channel を作成する**
 
@@ -117,7 +118,7 @@ Plugin はこの Sfu Bot や Recording Bot などの Bot を利用するため�
 アプリケーションの設定を行います。
 
 ```ts
-import { SkyWayContext } from '@skyway-sdk/core';
+import { SkyWayContext } from "@skyway-sdk/core";
 
 const context = await SkyWayContext.Create(tokenString);
 ```
@@ -131,10 +132,10 @@ SkyWay サービスの JWT トークンはトークンの仕様に基づいて�
 `@skyway-sdk/token`ライブラリは Node.js サーバとブラウザで動作しますが、トークンでユーザの行動を制限したい場合は必ずサーバ側でトークンを作成して下さい。
 
 ```ts
-import { SkyWayAuthToken } from '@skyway-sdk/token';
+import { SkyWayAuthToken } from "@skyway-sdk/token";
 
 const token = new SkyWayAuthToken(parameters);
-const tokenString = token.encode('secret');
+const tokenString = token.encode("secret");
 ```
 
 ## Channel
@@ -146,12 +147,12 @@ Member の参加する Channel の作成/取得を行います。
 新しい Channel を作成します。
 
 ```ts
-import { SkyWayContext, SkyWayChannel } from '@skyway-sdk/core';
+import { SkyWayContext, SkyWayChannel } from "@skyway-sdk/core";
 
 const context = await SkyWayContext.Create(tokenString);
 const channel = await SkyWayChannel.Create(context, {
-  name: 'something',
-  metadata: 'something',
+  name: "something",
+  metadata: "something",
 });
 ```
 
@@ -163,12 +164,12 @@ const channel = await SkyWayChannel.Create(context, {
 既存の Channel を取得します。
 
 ```ts
-import { SkyWayContext, SkyWayChannel } from '@skyway-sdk/core';
+import { SkyWayContext, SkyWayChannel } from "@skyway-sdk/core";
 
 const context = await SkyWayContext.Create(tokenString);
 const channel = await SkyWayChannel.Find(context, {
-  id: 'uuid',
-  name: 'something',
+  id: "uuid",
+  name: "something",
 });
 ```
 
@@ -179,18 +180,20 @@ id か name を使って Channel を探すことができます。
 Channel の取得を試み、存在しなければ作成します。
 
 ```ts
-import { SkyWayContext, SkyWayChannel } from '@skyway-sdk/core';
+import { SkyWayContext, SkyWayChannel } from "@skyway-sdk/core";
 
 const context = await SkyWayContext.Create(tokenString);
-const channel = await SkyWayChannel.FindOrCreate(context, { name: 'channelName' });
+const channel = await SkyWayChannel.FindOrCreate(context, {
+  name: "channelName",
+});
 ```
 
 ### Channel に LocalPerson を追加する
 
 ```ts
 const person: LocalPerson = await channel.join({
-  name: 'something',
-  metadata: 'something',
+  name: "something",
+  metadata: "something",
 });
 ```
 
@@ -280,7 +283,7 @@ await person.unsubscribe(subscription.id);
 Member に紐付いた Metadata を更新することができます
 
 ```ts
-await person.updateMetadata('metadata');
+await person.updateMetadata("metadata");
 ```
 
 ## SkyWayMediaDevices
@@ -314,12 +317,12 @@ const data: LocalDataStream = await SkyWayMediaDevices.createDataStream();
 ```ts
 const displayStream = await navigator.mediaDevices.getDisplayMedia();
 const [displayTrack] = displayStream.getVideoTracks();
-const stream = new LocalVideoStream('label', displayTrack);
+const stream = new LocalVideoStream("label", displayTrack);
 
 const [audioTrack] = (
   await navigator.mediaDevices.getUserMedia({ audio: true })
 ).getTracks();
-const stream = new LocalAudioStream('label', audioTrack);
+const stream = new LocalAudioStream("label", audioTrack);
 ```
 
 ### AudioStream / VideoStream の利用方法
@@ -332,7 +335,7 @@ HtmlAudioElement / HtmlVideoElement に Stream を適用することが出来ま
 
 ```ts
 const localVideo = document.getElementById(
-  'js-local-stream'
+  "js-local-stream"
 ) as HTMLVideoElement;
 localVideo.muted = true;
 localVideo.playsInline = true;
@@ -363,7 +366,7 @@ Publication の情報の参照と Publication の操作ができます
 Publication に紐付いた Metadata を更新することができます
 
 ```ts
-await publication.updateMetadata('metadata');
+await publication.updateMetadata("metadata");
 ```
 
 ## Subscription
@@ -377,7 +380,7 @@ Subscription から映像/音声/データの Stream を参照できます。
 
 ```ts
 const stream = subscription.stream;
-if (stream.contentType === 'data') {
+if (stream.contentType === "data") {
   stream.onData.add((data) => {
     console.log(data);
   });

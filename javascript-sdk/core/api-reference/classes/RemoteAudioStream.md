@@ -14,10 +14,6 @@
 
 ## Table of contents
 
-### Constructors
-
-- [constructor](RemoteAudioStream.md#constructor)
-
 ### Properties
 
 - [contentType](RemoteAudioStream.md#contenttype)
@@ -30,24 +26,6 @@
 
 - [attach](RemoteAudioStream.md#attach)
 - [detach](RemoteAudioStream.md#detach)
-
-## Constructors
-
-### constructor
-
-• **new RemoteAudioStream**(`id`, `label`, `track`)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-| `label` | `string` |
-| `track` | `MediaStreamTrack` |
-
-#### Overrides
-
-RemoteStreamBase.constructor
 
 ## Properties
 

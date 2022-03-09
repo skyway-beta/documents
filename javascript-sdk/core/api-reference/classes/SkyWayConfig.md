@@ -29,7 +29,7 @@
 
 ### iceParamServer
 
-• **iceParamServer**: `Required`<{ `url?`: `string`  }\>
+• **iceParamServer**: `Required`<{ `domain?`: `string` ; `secure?`: `boolean` ; `version?`: `number`  }\>
 
 #### Implementation of
 
@@ -49,7 +49,7 @@ ___
 
 ### messageService
 
-• **messageService**: `Required`<{ `domain?`: `string`  }\>
+• **messageService**: `Required`<{ `domain?`: `string` ; `secure?`: `boolean`  }\>
 
 #### Implementation of
 
@@ -59,7 +59,7 @@ ___
 
 ### rtcApi
 
-• **rtcApi**: `Required`<{ `apiVersion?`: `string` ; `host?`: `string` ; `secure?`: `boolean` ; `timeout?`: `number`  }\>
+• **rtcApi**: `Required`<[`RtcRpcApiConfig`](../interfaces/RtcRpcApiConfig.md)\>
 
 #### Implementation of
 

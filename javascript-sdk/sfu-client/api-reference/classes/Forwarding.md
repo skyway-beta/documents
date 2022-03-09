@@ -20,6 +20,7 @@
 ### Methods
 
 - [stop](Forwarding.md#stop)
+- [toJSON](Forwarding.md#tojson)
 
 ## Constructors
 
@@ -81,3 +82,20 @@ ___
 #### Returns
 
 `void`
+
+___
+
+### toJSON
+
+▸ **toJSON**(): `Object`
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `configure` | [`ForwardingConfigure`](../interfaces/ForwardingConfigure.md) |
+| `id` | `string` |
+| `originPublication` | `Publication`<`LocalStream`\> |
+| `relayingPublication` | `Publication`<`LocalStream`\> |

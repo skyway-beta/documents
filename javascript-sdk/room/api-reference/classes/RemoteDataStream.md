@@ -10,10 +10,6 @@
 
 ## Table of contents
 
-### Constructors
-
-- [constructor](RemoteDataStream.md#constructor)
-
 ### Properties
 
 - [\_datachannel](RemoteDataStream.md#_datachannel)
@@ -22,24 +18,6 @@
 - [label](RemoteDataStream.md#label)
 - [onData](RemoteDataStream.md#ondata)
 - [side](RemoteDataStream.md#side)
-
-## Constructors
-
-### constructor
-
-• **new RemoteDataStream**(`id`, `label`, `_datachannel`)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-| `label` | `string` |
-| `_datachannel` | `RTCDataChannel` |
-
-#### Overrides
-
-RemoteStreamBase.constructor
 
 ## Properties
 
@@ -81,7 +59,7 @@ ___
 
 ### onData
 
-• `Readonly` **onData**: `Event`<`Record`<`string`, `any`\>\>
+• `Readonly` **onData**: [`Event`](Event.md)<`Record`<`string`, `any`\>\>
 
 ___
 

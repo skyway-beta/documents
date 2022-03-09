@@ -20,6 +20,7 @@
 - [\_onContextAttached](SfuClientPlugin.md#_oncontextattached)
 - [\_whenCreateLocalPerson](SfuClientPlugin.md#_whencreatelocalperson)
 - [\_whenDisposeLocalPerson](SfuClientPlugin.md#_whendisposelocalperson)
+- [options](SfuClientPlugin.md#options)
 - [subtype](SfuClientPlugin.md#subtype)
 
 ### Methods
@@ -38,7 +39,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `_options` | [`SfuClientPluginOptions`](../interfaces/SfuClientPluginOptions.md) |
+| `_options` | `Partial`<[`SfuClientPluginOptions`](../modules.md#sfuclientpluginoptions)\> |
 
 #### Overrides
 
@@ -111,6 +112,12 @@ ___
 #### Inherited from
 
 SkyWayPlugin.\_whenDisposeLocalPerson
+
+___
+
+### options
+
+• `Readonly` **options**: [`SfuClientPluginOptions`](../modules.md#sfuclientpluginoptions)
 
 ___
 

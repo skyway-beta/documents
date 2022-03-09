@@ -5,22 +5,21 @@
 ### Classes
 
 - [Event](classes/Event.md)
+- [Events](classes/Events.md)
 - [LocalAudioStream](classes/LocalAudioStream.md)
 - [LocalDataStream](classes/LocalDataStream.md)
 - [LocalVideoStream](classes/LocalVideoStream.md)
 - [Logger](classes/Logger.md)
 - [MediaDevice](classes/MediaDevice.md)
-- [MediaDevicesImpl](classes/MediaDevicesImpl.md)
 - [P2PConnection](classes/P2PConnection.md)
 - [RemoteAudioStream](classes/RemoteAudioStream.md)
 - [RemoteDataStream](classes/RemoteDataStream.md)
-- [RemotePersonImpl](classes/RemotePersonImpl.md)
 - [RemoteVideoStream](classes/RemoteVideoStream.md)
 - [SkyWayAuthToken](classes/SkyWayAuthToken.md)
 - [SkyWayChannel](classes/SkyWayChannel.md)
 - [SkyWayConfig](classes/SkyWayConfig.md)
 - [SkyWayContext](classes/SkyWayContext.md)
-- [SkyWayPlugin](classes/SkyWayPlugin.md)
+- [SkyWayMediaDeviceManager](classes/SkyWayMediaDeviceManager.md)
 
 ### Interfaces
 
@@ -46,6 +45,7 @@
 - [PublicationMetadataUpdatedEvent](interfaces/PublicationMetadataUpdatedEvent.md)
 - [PublicationOptions](interfaces/PublicationOptions.md)
 - [RemoteMember](interfaces/RemoteMember.md)
+- [RtcRpcApiConfig](interfaces/RtcRpcApiConfig.md)
 - [SignalEvent](interfaces/SignalEvent.md)
 - [SkyWayConfigOptions](interfaces/SkyWayConfigOptions.md)
 - [SkyWayConnection](interfaces/SkyWayConnection.md)
@@ -70,6 +70,7 @@
 - [PublicationStatus](modules.md#publicationstatus)
 - [RemotePerson](modules.md#remoteperson)
 - [RemoteStream](modules.md#remotestream)
+- [RtcApiConfig](modules.md#rtcapiconfig)
 - [StreamSide](modules.md#streamside)
 - [SubscriptionStatus](modules.md#subscriptionstatus)
 - [TurnCredential](modules.md#turncredential)
@@ -82,11 +83,6 @@
 
 ### Functions
 
-- [createLocalPerson](modules.md#createlocalperson)
-- [createPublication](modules.md#createpublication)
-- [createRemoteStream](modules.md#createremotestream)
-- [createSubscription](modules.md#createsubscription)
-- [isRemoteMember](modules.md#isremotemember)
 - [uuidV4](modules.md#uuidv4)
 
 ## Type aliases
@@ -157,6 +153,12 @@ ___
 
 ___
 
+### RtcApiConfig
+
+Ƭ **RtcApiConfig**: [`RtcRpcApiConfig`](interfaces/RtcRpcApiConfig.md)
+
+___
+
 ### StreamSide
 
 Ƭ **StreamSide**: ``"remote"`` \| ``"local"``
@@ -198,103 +200,9 @@ ___
 
 ### SkyWayMediaDevices
 
-• **SkyWayMediaDevices**: [`MediaDevicesImpl`](classes/MediaDevicesImpl.md)
+• **SkyWayMediaDevices**: [`SkyWayMediaDeviceManager`](classes/SkyWayMediaDeviceManager.md)
 
 ## Functions
-
-### createLocalPerson
-
-▸ **createLocalPerson**(`context`, `channel`, `memberDto`, `__namedParameters?`): `Promise`<`LocalPersonImpl`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `context` | [`SkyWayContext`](classes/SkyWayContext.md) |
-| `channel` | [`SkyWayChannel`](classes/SkyWayChannel.md) |
-| `memberDto` | `Member` |
-| `__namedParameters` | `Object` |
-| `__namedParameters.keepaliveIntervalSec?` | ``null`` \| `number` |
-
-#### Returns
-
-`Promise`<`LocalPersonImpl`\>
-
-___
-
-### createPublication
-
-▸ **createPublication**<`T`\>(`channel`, `__namedParameters`): `PublicationImpl`<`T`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `T` | extends [`LocalStream`](modules.md#localstream) |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `channel` | [`SkyWayChannel`](classes/SkyWayChannel.md) |
-| `__namedParameters` | `Publication` & { `stream?`: `T`  } |
-
-#### Returns
-
-`PublicationImpl`<`T`\>
-
-___
-
-### createRemoteStream
-
-▸ `Const` **createRemoteStream**(`id`, `label`, `media`): [`RemoteStream`](modules.md#remotestream)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-| `label` | `string` |
-| `media` | `MediaStreamTrack` \| `RTCDataChannel` |
-
-#### Returns
-
-[`RemoteStream`](modules.md#remotestream)
-
-___
-
-### createSubscription
-
-▸ **createSubscription**(`channel`, `__namedParameters`): `SubscriptionImpl`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `channel` | [`SkyWayChannel`](classes/SkyWayChannel.md) |
-| `__namedParameters` | `Subscription` |
-
-#### Returns
-
-`SubscriptionImpl`
-
-___
-
-### isRemoteMember
-
-▸ **isRemoteMember**(`member`): member is RemoteMember
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `member` | [`Member`](interfaces/Member.md) \| `MemberImpl` |
-
-#### Returns
-
-member is RemoteMember
-
-___
 
 ### uuidV4
 

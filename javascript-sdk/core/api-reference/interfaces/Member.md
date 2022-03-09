@@ -2,6 +2,12 @@
 
 # Interface: Member
 
+## Hierarchy
+
+- **`Member`**
+
+  ↳ [`RemoteMember`](RemoteMember.md)
+
 ## Table of contents
 
 ### Properties
@@ -29,7 +35,7 @@
 
 ### channel
 
-• **channel**: [`SkyWayChannel`](../classes/SkyWayChannel.md)
+• **channel**: [`Channel`](Channel.md)
 
 ___
 

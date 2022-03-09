@@ -1,33 +1,23 @@
-[@skyway-sdk/core](../README.md) / [Exports](../modules.md) / MediaDevicesImpl
+[@skyway-sdk/core](../README.md) / [Exports](../modules.md) / SkyWayMediaDeviceManager
 
-# Class: MediaDevicesImpl
+# Class: SkyWayMediaDeviceManager
 
 ## Table of contents
 
-### Constructors
-
-- [constructor](MediaDevicesImpl.md#constructor)
-
 ### Properties
 
-- [onDeviceChange](MediaDevicesImpl.md#ondevicechange)
+- [onDeviceChange](SkyWayMediaDeviceManager.md#ondevicechange)
 
 ### Methods
 
-- [createCameraVideoStream](MediaDevicesImpl.md#createcameravideostream)
-- [createDataStream](MediaDevicesImpl.md#createdatastream)
-- [createMicrophoneAudioAndCameraStream](MediaDevicesImpl.md#createmicrophoneaudioandcamerastream)
-- [createMicrophoneAudioStream](MediaDevicesImpl.md#createmicrophoneaudiostream)
-- [enumerateDevices](MediaDevicesImpl.md#enumeratedevices)
-- [enumerateInputAudioDevices](MediaDevicesImpl.md#enumerateinputaudiodevices)
-- [enumerateInputVideoDevices](MediaDevicesImpl.md#enumerateinputvideodevices)
-- [enumerateOutputAudioDevices](MediaDevicesImpl.md#enumerateoutputaudiodevices)
-
-## Constructors
-
-### constructor
-
-• **new MediaDevicesImpl**()
+- [createCameraVideoStream](SkyWayMediaDeviceManager.md#createcameravideostream)
+- [createDataStream](SkyWayMediaDeviceManager.md#createdatastream)
+- [createMicrophoneAudioAndCameraStream](SkyWayMediaDeviceManager.md#createmicrophoneaudioandcamerastream)
+- [createMicrophoneAudioStream](SkyWayMediaDeviceManager.md#createmicrophoneaudiostream)
+- [enumerateDevices](SkyWayMediaDeviceManager.md#enumeratedevices)
+- [enumerateInputAudioDevices](SkyWayMediaDeviceManager.md#enumerateinputaudiodevices)
+- [enumerateInputVideoDevices](SkyWayMediaDeviceManager.md#enumerateinputvideodevices)
+- [enumerateOutputAudioDevices](SkyWayMediaDeviceManager.md#enumerateoutputaudiodevices)
 
 ## Properties
 

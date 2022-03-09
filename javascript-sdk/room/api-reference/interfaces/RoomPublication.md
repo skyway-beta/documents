@@ -67,31 +67,31 @@ ___
 
 ### onMetadataUpdated
 
-• `Readonly` **onMetadataUpdated**: `Event`<`string`\>
+• `Readonly` **onMetadataUpdated**: [`Event`](../classes/Event.md)<`string`\>
 
 ___
 
 ### onSubscribed
 
-• `Readonly` **onSubscribed**: `Event`<`void`\>
+• `Readonly` **onSubscribed**: [`Event`](../classes/Event.md)<`void`\>
 
 ___
 
 ### onSubscriptionChanged
 
-• `Readonly` **onSubscriptionChanged**: `Event`<`void`\>
+• `Readonly` **onSubscriptionChanged**: [`Event`](../classes/Event.md)<`void`\>
 
 ___
 
 ### onUnpublished
 
-• `Readonly` **onUnpublished**: `Event`<`void`\>
+• `Readonly` **onUnpublished**: [`Event`](../classes/Event.md)<`void`\>
 
 ___
 
 ### onUnsubscribed
 
-• `Readonly` **onUnsubscribed**: `Event`<`void`\>
+• `Readonly` **onUnsubscribed**: [`Event`](../classes/Event.md)<`void`\>
 
 ___
 
@@ -103,7 +103,7 @@ ___
 
 ### status
 
-• **status**: `PublicationStatus`
+• **status**: [`PublicationStatus`](../modules.md#publicationstatus)
 
 ___
 

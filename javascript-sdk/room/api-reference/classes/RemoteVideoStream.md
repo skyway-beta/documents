@@ -14,10 +14,6 @@
 
 ## Table of contents
 
-### Constructors
-
-- [constructor](RemoteVideoStream.md#constructor)
-
 ### Properties
 
 - [contentType](RemoteVideoStream.md#contenttype)
@@ -30,24 +26,6 @@
 
 - [attach](RemoteVideoStream.md#attach)
 - [detach](RemoteVideoStream.md#detach)
-
-## Constructors
-
-### constructor
-
-• **new RemoteVideoStream**(`id`, `label`, `track`)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-| `label` | `string` |
-| `track` | `MediaStreamTrack` |
-
-#### Overrides
-
-RemoteStreamBase.constructor
 
 ## Properties
 

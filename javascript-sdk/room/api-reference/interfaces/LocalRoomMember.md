@@ -78,7 +78,7 @@ ___
 
 ### onLeft
 
-• `Readonly` **onLeft**: `Event`<`void`\>
+• `Readonly` **onLeft**: [`Event`](../classes/Event.md)<`void`\>
 
 **`description`** {japanese} MemberがRoomから出たときに発火するイベント
 
@@ -90,7 +90,7 @@ ___
 
 ### onMetadataUpdated
 
-• `Readonly` **onMetadataUpdated**: `Event`<`string`\>
+• `Readonly` **onMetadataUpdated**: [`Event`](../classes/Event.md)<`string`\>
 
 **`description`** {japanese} Memberのメタデータが更新された時に発火するイベント
 
@@ -102,7 +102,7 @@ ___
 
 ### onPublicationChanged
 
-• **onPublicationChanged**: `Event`<`void`\>
+• **onPublicationChanged**: [`Event`](../classes/Event.md)<`void`\>
 
 **`description`** {japanese} このMemberがStreamをSubscribeしたときに発火するイベント
 
@@ -110,7 +110,7 @@ ___
 
 ### onStreamPublished
 
-• **onStreamPublished**: `Event`<{ `publication`: [`RoomPublication`](RoomPublication.md)<[`LocalStream`](../modules.md#localstream)\>  }\>
+• **onStreamPublished**: [`Event`](../classes/Event.md)<{ `publication`: [`RoomPublication`](RoomPublication.md)<[`LocalStream`](../modules.md#localstream)\>  }\>
 
 **`description`** {japanese} このMemberがStreamをPublishしたときに発火するイベント
 
@@ -118,7 +118,7 @@ ___
 
 ### onStreamSubscribed
 
-• **onStreamSubscribed**: `Event`<{ `stream`: [`RemoteStream`](../modules.md#remotestream) ; `subscription`: [`RoomSubscription`](RoomSubscription.md)<[`RemoteStream`](../modules.md#remotestream)\>  }\>
+• **onStreamSubscribed**: [`Event`](../classes/Event.md)<{ `stream`: [`RemoteStream`](../modules.md#remotestream) ; `subscription`: [`RoomSubscription`](RoomSubscription.md)<[`RemoteStream`](../modules.md#remotestream)\>  }\>
 
 **`description`** {japanese} このMemberがStreamをSubscribeしたときに発火するイベント
 
@@ -126,7 +126,7 @@ ___
 
 ### onStreamUnpublished
 
-• **onStreamUnpublished**: `Event`<{ `publication`: [`RoomPublication`](RoomPublication.md)<[`LocalStream`](../modules.md#localstream)\>  }\>
+• **onStreamUnpublished**: [`Event`](../classes/Event.md)<{ `publication`: [`RoomPublication`](RoomPublication.md)<[`LocalStream`](../modules.md#localstream)\>  }\>
 
 **`description`** {japanese} このMemberがStreamをUnPublishしたときに発火するイベント
 
@@ -134,7 +134,7 @@ ___
 
 ### onStreamUnsubscribed
 
-• **onStreamUnsubscribed**: `Event`<{ `subscription`: [`RoomSubscription`](RoomSubscription.md)<[`RemoteStream`](../modules.md#remotestream)\>  }\>
+• **onStreamUnsubscribed**: [`Event`](../classes/Event.md)<{ `subscription`: [`RoomSubscription`](RoomSubscription.md)<[`RemoteStream`](../modules.md#remotestream)\>  }\>
 
 **`description`** {japanese} このMemberがStreamをUnsubscribeしたときに発火するイベント
 
@@ -142,7 +142,7 @@ ___
 
 ### onSubscriptionChanged
 
-• **onSubscriptionChanged**: `Event`<`void`\>
+• **onSubscriptionChanged**: [`Event`](../classes/Event.md)<`void`\>
 
 ___
 

@@ -6,13 +6,11 @@
 
 ### Properties
 
-- [\_api](SkyWayContext.md#_api)
 - [appId](SkyWayContext.md#appid)
 - [authToken](SkyWayContext.md#authtoken)
 - [disposed](SkyWayContext.md#disposed)
 - [onTokenExpired](SkyWayContext.md#ontokenexpired)
 - [onTokenUpdateReminder](SkyWayContext.md#ontokenupdatereminder)
-- [plugins](SkyWayContext.md#plugins)
 
 ### Accessors
 
@@ -27,12 +25,6 @@
 - [Create](SkyWayContext.md#create)
 
 ## Properties
-
-### \_api
-
-• `Readonly` **\_api**: `RtcApiClient`
-
-___
 
 ### appId
 
@@ -61,12 +53,6 @@ ___
 ### onTokenUpdateReminder
 
 • `Readonly` **onTokenUpdateReminder**: [`Event`](Event.md)<`void`\>
-
-___
-
-### plugins
-
-• **plugins**: [`SkyWayPlugin`](SkyWayPlugin.md)[] = `[]`
 
 ## Accessors
 
@@ -108,7 +94,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `plugin` | [`SkyWayPlugin`](SkyWayPlugin.md) |
+| `plugin` | `SkyWayPlugin` |
 
 #### Returns
 
