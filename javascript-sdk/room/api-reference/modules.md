@@ -10,12 +10,12 @@
 - [LocalDataStream](classes/LocalDataStream.md)
 - [LocalVideoStream](classes/LocalVideoStream.md)
 - [Logger](classes/Logger.md)
+- [MediaDeviceManager](classes/MediaDeviceManager.md)
 - [RemoteAudioStream](classes/RemoteAudioStream.md)
 - [RemoteDataStream](classes/RemoteDataStream.md)
 - [RemoteVideoStream](classes/RemoteVideoStream.md)
 - [SkyWayAuthToken](classes/SkyWayAuthToken.md)
 - [SkyWayContext](classes/SkyWayContext.md)
-- [SkyWayMediaDeviceManager](classes/SkyWayMediaDeviceManager.md)
 - [SkyWayRoom](classes/SkyWayRoom.md)
 
 ### Interfaces
@@ -177,7 +177,13 @@ ___
 
 ### SfuRoomOptions
 
-Ƭ **SfuRoomOptions**: `Partial`<[`SfuClientPluginOptions`](modules.md#sfuclientpluginoptions)\>
+Ƭ **SfuRoomOptions**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `sfu` | `Partial`<[`SfuClientPluginOptions`](modules.md#sfuclientpluginoptions)\> |
 
 ___
 
@@ -195,7 +201,7 @@ ___
 
 ### SkyWayMediaDevices
 
-• **SkyWayMediaDevices**: [`SkyWayMediaDeviceManager`](classes/SkyWayMediaDeviceManager.md)
+• **SkyWayMediaDevices**: [`MediaDeviceManager`](classes/MediaDeviceManager.md)
 
 ___
 

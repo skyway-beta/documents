@@ -68,7 +68,7 @@ ___
 | `query.id?` | `string` |
 | `query.name?` | `string` |
 | `roomType` | `Type` |
-| `options?` | `Type` extends ``"sfu"`` ? `Partial`<[`SfuClientPluginOptions`](../modules.md#sfuclientpluginoptions)\> : `void` |
+| `options?` | `Type` extends ``"sfu"`` ? [`SfuRoomOptions`](../modules.md#sfuroomoptions) : `void` |
 
 #### Returns
 

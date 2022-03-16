@@ -41,7 +41,7 @@ ___
 
 ### options
 
-• `Optional` **options**: `Partial`<[`SfuClientPluginOptions`](../modules.md#sfuclientpluginoptions)\>
+• `Optional` **options**: `Partial`<[`SfuRoomOptions`](../modules.md#sfuroomoptions)\>
 
 ___
 

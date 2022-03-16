@@ -388,3 +388,11 @@ if (stream.contentType === "data") {
   const track = stream.track;
 }
 ```
+
+# Tips
+
+## Member
+
+### リモート/遠隔の Member に Publication を Subscribe させる方法
+
+ホストとゲストに Member のロールが別れているようなユースケースでホストメンバーがゲストメンバーに特定の Publication を Subscribe させたり逆に Unsubscribe させたい場合に取る方法

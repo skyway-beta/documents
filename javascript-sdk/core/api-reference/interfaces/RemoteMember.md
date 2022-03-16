@@ -16,9 +16,7 @@
 - [id](RemoteMember.md#id)
 - [metadata](RemoteMember.md#metadata)
 - [name](RemoteMember.md#name)
-- [onJoined](RemoteMember.md#onjoined)
 - [onLeft](RemoteMember.md#onleft)
-- [onMembershipChanged](RemoteMember.md#onmembershipchanged)
 - [onMetadataUpdated](RemoteMember.md#onmetadataupdated)
 - [publications](RemoteMember.md#publications)
 - [side](RemoteMember.md#side)
@@ -73,16 +71,6 @@ ___
 
 ___
 
-### onJoined
-
-• **onJoined**: [`Event`](../classes/Event.md)<`void`\>
-
-#### Inherited from
-
-[Member](Member.md).[onJoined](Member.md#onjoined)
-
-___
-
 ### onLeft
 
 • **onLeft**: [`Event`](../classes/Event.md)<`void`\>
@@ -90,16 +78,6 @@ ___
 #### Inherited from
 
 [Member](Member.md).[onLeft](Member.md#onleft)
-
-___
-
-### onMembershipChanged
-
-• **onMembershipChanged**: [`Event`](../classes/Event.md)<`void`\>
-
-#### Inherited from
-
-[Member](Member.md).[onMembershipChanged](Member.md#onmembershipchanged)
 
 ___
 

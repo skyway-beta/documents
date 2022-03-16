@@ -11,6 +11,7 @@
 - [LocalVideoStream](classes/LocalVideoStream.md)
 - [Logger](classes/Logger.md)
 - [MediaDevice](classes/MediaDevice.md)
+- [MediaDeviceManager](classes/MediaDeviceManager.md)
 - [P2PConnection](classes/P2PConnection.md)
 - [RemoteAudioStream](classes/RemoteAudioStream.md)
 - [RemoteDataStream](classes/RemoteDataStream.md)
@@ -19,7 +20,6 @@
 - [SkyWayChannel](classes/SkyWayChannel.md)
 - [SkyWayConfig](classes/SkyWayConfig.md)
 - [SkyWayContext](classes/SkyWayContext.md)
-- [SkyWayMediaDeviceManager](classes/SkyWayMediaDeviceManager.md)
 
 ### Interfaces
 
@@ -200,7 +200,7 @@ ___
 
 ### SkyWayMediaDevices
 
-• **SkyWayMediaDevices**: [`SkyWayMediaDeviceManager`](classes/SkyWayMediaDeviceManager.md)
+• **SkyWayMediaDevices**: [`MediaDeviceManager`](classes/MediaDeviceManager.md)
 
 ## Functions
 
