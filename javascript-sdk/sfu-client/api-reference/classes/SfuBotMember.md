@@ -23,9 +23,7 @@
 - [onForwardingStarted](SfuBotMember.md#onforwardingstarted)
 - [onForwardingStateChanged](SfuBotMember.md#onforwardingstatechanged)
 - [onForwardingStopped](SfuBotMember.md#onforwardingstopped)
-- [onJoined](SfuBotMember.md#onjoined)
 - [onLeft](SfuBotMember.md#onleft)
-- [onMembershipChanged](SfuBotMember.md#onmembershipchanged)
 - [onMetadataUpdated](SfuBotMember.md#onmetadataupdated)
 - [side](SfuBotMember.md#side)
 - [subtype](SfuBotMember.md#subtype)
@@ -119,20 +117,6 @@ ___
 
 ___
 
-### onJoined
-
-• `Readonly` **onJoined**: `Event`<`void`\>
-
-#### Implementation of
-
-RemoteMember.onJoined
-
-#### Inherited from
-
-MemberImpl.onJoined
-
-___
-
 ### onLeft
 
 • `Readonly` **onLeft**: `Event`<`void`\>
@@ -144,20 +128,6 @@ RemoteMember.onLeft
 #### Inherited from
 
 MemberImpl.onLeft
-
-___
-
-### onMembershipChanged
-
-• `Readonly` **onMembershipChanged**: `Event`<`void`\>
-
-#### Implementation of
-
-RemoteMember.onMembershipChanged
-
-#### Inherited from
-
-MemberImpl.onMembershipChanged
 
 ___
 

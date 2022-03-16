@@ -1,3 +1,5 @@
+@skyway-sdk/sfu-client / [Exports](modules.md)
+
 # SFU Client
 
 SkyWay Core ライブラリ で SFU Bot を利用するためのライブラリです。
@@ -23,8 +25,8 @@ SFU Bot は、 各 Person から一本の上りトラフィックを受信し、
 Core ライブラリ にて SFU 機能を有効化するため、Plugin を Core ライブラリ に登録します。
 
 ```ts
-import { SkyWayContext } from "@skyway-sdk/core";
-import { registerSfuPlugin, SfuClientPlugin } from "@skyway-sdk/sfu-client";
+import { SkyWayContext } from '@skyway-sdk/core';
+import { registerSfuPlugin, SfuClientPlugin } from '@skyway-sdk/sfu-client';
 
 const context = await SkyWayContext.Create(tokenString);
 const plugin = new SfuClientPlugin();
@@ -71,8 +73,8 @@ SFU Bot 経由で配信されている Publication を識別するには、Publi
 
 ```ts
 channel.onStreamPublished.add(({ publication }) => {
-  if (publication.publisher.subtype === "sfu") {
-    console.log("published by SFU");
+  if (publication.publisher.subtype === 'sfu') {
+    console.log('published by SFU');
     person.subscribe(publication.id);
   }
 });

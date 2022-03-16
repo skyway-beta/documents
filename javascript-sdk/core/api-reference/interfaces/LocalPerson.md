@@ -17,9 +17,7 @@
 - [keepaliveIntervalSec](LocalPerson.md#keepaliveintervalsec)
 - [metadata](LocalPerson.md#metadata)
 - [name](LocalPerson.md#name)
-- [onJoined](LocalPerson.md#onjoined)
 - [onLeft](LocalPerson.md#onleft)
-- [onMembershipChanged](LocalPerson.md#onmembershipchanged)
 - [onMetadataUpdated](LocalPerson.md#onmetadataupdated)
 - [onPublicationChanged](LocalPerson.md#onpublicationchanged)
 - [onStreamPublished](LocalPerson.md#onstreampublished)
@@ -92,16 +90,6 @@ Person.name
 
 ___
 
-### onJoined
-
-• **onJoined**: [`Event`](../classes/Event.md)<`void`\>
-
-#### Inherited from
-
-Person.onJoined
-
-___
-
 ### onLeft
 
 • **onLeft**: [`Event`](../classes/Event.md)<`void`\>
@@ -109,16 +97,6 @@ ___
 #### Inherited from
 
 Person.onLeft
-
-___
-
-### onMembershipChanged
-
-• **onMembershipChanged**: [`Event`](../classes/Event.md)<`void`\>
-
-#### Inherited from
-
-Person.onMembershipChanged
 
 ___
 

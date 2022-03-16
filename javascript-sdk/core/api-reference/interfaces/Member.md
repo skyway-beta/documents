@@ -16,9 +16,7 @@
 - [id](Member.md#id)
 - [metadata](Member.md#metadata)
 - [name](Member.md#name)
-- [onJoined](Member.md#onjoined)
 - [onLeft](Member.md#onleft)
-- [onMembershipChanged](Member.md#onmembershipchanged)
 - [onMetadataUpdated](Member.md#onmetadataupdated)
 - [publications](Member.md#publications)
 - [side](Member.md#side)
@@ -57,21 +55,9 @@ ___
 
 ___
 
-### onJoined
-
-• **onJoined**: [`Event`](../classes/Event.md)<`void`\>
-
-___
-
 ### onLeft
 
 • **onLeft**: [`Event`](../classes/Event.md)<`void`\>
-
-___
-
-### onMembershipChanged
-
-• **onMembershipChanged**: [`Event`](../classes/Event.md)<`void`\>
 
 ___
 
