@@ -87,9 +87,9 @@ ___
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `timeLimit?` | `number` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `timeLimit?` | `number` | ms |
 
 ##### Returns
 

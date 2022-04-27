@@ -10,6 +10,7 @@
 
 ### Properties
 
+- [debug](SkyWayConfig.md#debug)
 - [iceParamServer](SkyWayConfig.md#iceparamserver)
 - [logLevel](SkyWayConfig.md#loglevel)
 - [messageService](SkyWayConfig.md#messageservice)
@@ -27,6 +28,16 @@
 
 ## Properties
 
+### debug
+
+• **debug**: `Required`<{ `disableDPlane?`: `boolean`  }\>
+
+#### Implementation of
+
+[SkyWayConfigOptions](../interfaces/SkyWayConfigOptions.md).[debug](../interfaces/SkyWayConfigOptions.md#debug)
+
+___
+
 ### iceParamServer
 
 • **iceParamServer**: `Required`<{ `domain?`: `string` ; `secure?`: `boolean` ; `version?`: `number`  }\>
@@ -39,7 +50,7 @@ ___
 
 ### logLevel
 
-• **logLevel**: ``"error"`` \| ``"warn"`` \| ``"debug"`` \| ``"disable"`` = `'error'`
+• **logLevel**: ``"disable"`` \| ``"error"`` \| ``"warn"`` \| ``"debug"`` = `'error'`
 
 #### Implementation of
 

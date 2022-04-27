@@ -5,6 +5,7 @@
 ### Classes
 
 - [Forwarding](classes/Forwarding.md)
+- [SFUConnection](classes/SFUConnection.md)
 - [SfuBotMember](classes/SfuBotMember.md)
 - [SfuClientPlugin](classes/SfuClientPlugin.md)
 

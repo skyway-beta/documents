@@ -1,3 +1,5 @@
+@skyway-sdk/room / [Exports](modules.md)
+
 # Room
 
 複数人で通信をするアプリケーションを作るための ライブラリ です。
@@ -106,7 +108,7 @@ Subscription と紐ついている Publication が Unpublish されると Subscr
 アプリケーションの設定を行います。
 
 ```ts
-import { SkyWayContext } from "@skyway-sdk/room";
+import { SkyWayContext } from '@skyway-sdk/room';
 
 const context = await SkyWayContext.Create(tokenString);
 ```
@@ -120,10 +122,10 @@ SkyWay Auth Token は、仕様に基づいて自身で作成するか、`@skyway
 `@skyway-sdk/token`ライブラリは Node.js サーバとブラウザで動作しますが、SkyWay Auth Token でユーザの行動を認可したい場合は必ずサーバ側で作成して下さい。
 
 ```ts
-import { SkyWayAuthToken } from "@skyway-sdk/token";
+import { SkyWayAuthToken } from '@skyway-sdk/token';
 
 const token = new SkyWayAuthToken(parameters);
-const tokenString = token.encode("secret");
+const tokenString = token.encode('secret');
 ```
 
 ## Room
@@ -135,12 +137,12 @@ Member の参加する Room の作成/取得を行います。
 新しい Room を作成します。
 
 ```ts
-import { SkyWayContext, SkyWayRoom } from "@skyway-sdk/room";
+import { SkyWayContext, SkyWayRoom } from '@skyway-sdk/room';
 
 const context = await SkyWayContext.Create(tokenString);
 const room = await SkyWayRoom.Create(context, {
-  type: "p2p",
-  id: "something",
+  type: 'p2p',
+  id: 'something',
 });
 ```
 
@@ -156,7 +158,7 @@ Room 作成時に、任意の RoomId を指定することができます。
 既存の Room を取得します。
 
 ```ts
-import { SkyWayContext, SkyWayRoom } from "@skyway-sdk/room";
+import { SkyWayContext, SkyWayRoom } from '@skyway-sdk/room';
 
 const context = await SkyWayContext.Create(tokenString);
 const room = await SkyWayRoom.Find(context, roomId, roomType);
@@ -167,12 +169,12 @@ const room = await SkyWayRoom.Find(context, roomId, roomType);
 任意の Room の取得を試みて、存在しなければ作成します。
 
 ```ts
-import { SkyWayContext, SkyWayRoom } from "@skyway-sdk/room";
+import { SkyWayContext, SkyWayRoom } from '@skyway-sdk/room';
 
 const context = await SkyWayContext.Create(tokenString);
 const room = await SkyWayRoom.FindOrCreate(context, {
-  type: "sfu",
-  id: "channelId",
+  type: 'sfu',
+  id: 'channelId',
 });
 ```
 
@@ -308,7 +310,7 @@ await member.unsubscribe(subscription.id);
 Member に紐付いた Metadata を更新することができます
 
 ```ts
-await member.updateMetadata("metadata");
+await member.updateMetadata('metadata');
 ```
 
 ## SkyWayMediaDevices
@@ -335,6 +337,21 @@ const video = await SkyWayMediaDevices.createCameraVideoStream(options);
 const data = await SkyWayMediaDevices.createDataStream();
 ```
 
+### MediaStreamTrack から AudioStream / VideoStream を作成する
+
+任意の MediaStreamTrack から Stream を作成することが出来ます。
+
+```ts
+const displayStream = await navigator.mediaDevices.getDisplayMedia();
+const [displayTrack] = displayStream.getVideoTracks();
+const stream = new LocalVideoStream('label', displayTrack);
+
+const [audioTrack] = (
+  await navigator.mediaDevices.getUserMedia({ audio: true })
+).getTracks();
+const stream = new LocalAudioStream('label', audioTrack);
+```
+
 ### AudioStream / VideoStream の利用方法
 
 SkyWay の Stream を Html で再生する方法が 2 種類あります。
@@ -345,7 +362,7 @@ HtmlAudioElement / HtmlVideoElement に Stream を適用することが出来ま
 
 ```ts
 const localVideo = document.getElementById(
-  "js-local-stream"
+  'js-local-stream'
 ) as HTMLVideoElement;
 localVideo.muted = true;
 localVideo.playsInline = true;
@@ -376,7 +393,7 @@ Publication の情報の参照と Publication の操作ができます
 Publication に紐付いた Metadata を更新することができます
 
 ```ts
-await publication.updateMetadata("metadata");
+await publication.updateMetadata('metadata');
 ```
 
 ## Subscription
@@ -390,7 +407,7 @@ Subscription から映像/音声/データの Stream を参照できます。
 
 ```ts
 const stream = subscription.stream;
-if (stream.contentType === "data") {
+if (stream.contentType === 'data') {
   stream.onData.add((data) => {
     console.log(data);
   });

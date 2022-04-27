@@ -19,6 +19,7 @@
 - [onMetadataUpdated](RemoteRoomMember.md#onmetadataupdated)
 - [onPublicationSubscribed](RemoteRoomMember.md#onpublicationsubscribed)
 - [onPublicationUnsubscribed](RemoteRoomMember.md#onpublicationunsubscribed)
+- [onSubscriptionChanged](RemoteRoomMember.md#onsubscriptionchanged)
 - [publications](RemoteRoomMember.md#publications)
 - [roomId](RemoteRoomMember.md#roomid)
 - [roomName](RemoteRoomMember.md#roomname)
@@ -102,6 +103,12 @@ ___
 • `Readonly` **onPublicationUnsubscribed**: [`Event`](../classes/Event.md)<{ `subscription`: [`RoomSubscription`](RoomSubscription.md)<[`RemoteStream`](../modules.md#remotestream)\>  }\>
 
 **`description`** {japanese} この RemoteRoomMember がPublicationをUnsubscribeしたとき
+
+___
+
+### onSubscriptionChanged
+
+• `Readonly` **onSubscriptionChanged**: [`Event`](../classes/Event.md)<`void`\>
 
 ___
 
