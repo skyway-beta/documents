@@ -275,7 +275,7 @@ MemberImpl.subscriptions
 
 | Name | Type |
 | :------ | :------ |
-| `publication` | `Publication`<`LocalAudioStream` \| `LocalVideoStream`\> |
+| `publication` | `Publication`<`LocalVideoStream` \| `LocalAudioStream`\> |
 | `configure` | [`ForwardingConfigure`](../interfaces/ForwardingConfigure.md) |
 
 #### Returns

@@ -1,4 +1,4 @@
-[@skyway-sdk/room](../README.md) / [Exports](../modules.md) / SkyWayAuthToken
+[@skyway-sdk/token](../README.md) / [Exports](../modules.md) / SkyWayAuthToken
 
 # Class: SkyWayAuthToken
 

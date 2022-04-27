@@ -42,7 +42,7 @@ ___
 
 ### level
 
-▪ `Static` **level**: ``"error"`` \| ``"warn"`` \| ``"debug"`` \| ``"disable"``
+▪ `Static` **level**: ``"disable"`` \| ``"error"`` \| ``"warn"`` \| ``"debug"``
 
 ___
 

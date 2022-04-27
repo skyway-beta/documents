@@ -4,7 +4,7 @@
 
 ## Implements
 
-- `AuthToken`
+- [`AuthToken`](../interfaces/AuthToken.md)
 
 ## Table of contents
 
@@ -35,7 +35,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `props` | `AuthToken` |
+| `props` | [`AuthToken`](../interfaces/AuthToken.md) |
 
 ## Properties
 
@@ -47,7 +47,7 @@ seconds
 
 #### Implementation of
 
-AuthToken.exp
+[AuthToken](../interfaces/AuthToken.md).[exp](../interfaces/AuthToken.md#exp)
 
 ___
 
@@ -59,7 +59,7 @@ seconds
 
 #### Implementation of
 
-AuthToken.iat
+[AuthToken](../interfaces/AuthToken.md).[iat](../interfaces/AuthToken.md#iat)
 
 ___
 
@@ -71,7 +71,7 @@ uuid
 
 #### Implementation of
 
-AuthToken.jti
+[AuthToken](../interfaces/AuthToken.md).[jti](../interfaces/AuthToken.md#jti)
 
 ___
 
@@ -83,11 +83,11 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `app` | `AppScope` |
+| `app` | [`AppScope`](../interfaces/AppScope.md) |
 
 #### Implementation of
 
-AuthToken.scope
+[AuthToken](../interfaces/AuthToken.md).[scope](../interfaces/AuthToken.md#scope)
 
 ___
 

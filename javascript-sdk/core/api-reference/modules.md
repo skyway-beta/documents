@@ -20,14 +20,18 @@
 - [SkyWayChannel](classes/SkyWayChannel.md)
 - [SkyWayConfig](classes/SkyWayConfig.md)
 - [SkyWayContext](classes/SkyWayContext.md)
+- [SkyWayError](classes/SkyWayError.md)
 
 ### Interfaces
 
+- [AppScope](interfaces/AppScope.md)
+- [AuthToken](interfaces/AuthToken.md)
 - [Channel](interfaces/Channel.md)
 - [ChannelClosedEvent](interfaces/ChannelClosedEvent.md)
 - [ChannelInit](interfaces/ChannelInit.md)
 - [ChannelMetadataUpdatedEvent](interfaces/ChannelMetadataUpdatedEvent.md)
 - [ChannelQuery](interfaces/ChannelQuery.md)
+- [ChannelScope](interfaces/ChannelScope.md)
 - [Codec](interfaces/Codec.md)
 - [DataStreamOptions](interfaces/DataStreamOptions.md)
 - [EncodingParameters](interfaces/EncodingParameters.md)
@@ -38,12 +42,14 @@
 - [MemberJoinedEvent](interfaces/MemberJoinedEvent.md)
 - [MemberLeftEvent](interfaces/MemberLeftEvent.md)
 - [MemberMetadataUpdatedEvent](interfaces/MemberMetadataUpdatedEvent.md)
+- [MemberScope](interfaces/MemberScope.md)
 - [MembershipChangedEvent](interfaces/MembershipChangedEvent.md)
 - [PlayableStream](interfaces/PlayableStream.md)
 - [Publication](interfaces/Publication.md)
 - [PublicationChangedEvent](interfaces/PublicationChangedEvent.md)
 - [PublicationMetadataUpdatedEvent](interfaces/PublicationMetadataUpdatedEvent.md)
 - [PublicationOptions](interfaces/PublicationOptions.md)
+- [PublicationScope](interfaces/PublicationScope.md)
 - [RemoteMember](interfaces/RemoteMember.md)
 - [RtcRpcApiConfig](interfaces/RtcRpcApiConfig.md)
 - [SignalEvent](interfaces/SignalEvent.md)
@@ -56,22 +62,30 @@
 - [StreamUnsubscribedEvent](interfaces/StreamUnsubscribedEvent.md)
 - [Subscription](interfaces/Subscription.md)
 - [SubscriptionChangedEvent](interfaces/SubscriptionChangedEvent.md)
+- [SubscriptionScope](interfaces/SubscriptionScope.md)
 
 ### Type aliases
 
+- [AppAction](modules.md#appaction)
 - [AudioMediaTrackConstraints](modules.md#audiomediatrackconstraints)
+- [ChannelAction](modules.md#channelaction)
 - [ChannelStatus](modules.md#channelstatus)
 - [ContentType](modules.md#contenttype)
 - [DataType](modules.md#datatype)
+- [HttpResponse](modules.md#httpresponse)
 - [LocalStream](modules.md#localstream)
+- [LogLevel](modules.md#loglevel)
+- [MemberAction](modules.md#memberaction)
 - [MemberSide](modules.md#memberside)
 - [MemberStatus](modules.md#memberstatus)
 - [MemberType](modules.md#membertype)
+- [PublicationAction](modules.md#publicationaction)
 - [PublicationStatus](modules.md#publicationstatus)
 - [RemotePerson](modules.md#remoteperson)
 - [RemoteStream](modules.md#remotestream)
 - [RtcApiConfig](modules.md#rtcapiconfig)
 - [StreamSide](modules.md#streamside)
+- [SubscriptionAction](modules.md#subscriptionaction)
 - [SubscriptionStatus](modules.md#subscriptionstatus)
 - [TurnCredential](modules.md#turncredential)
 - [TurnPolicy](modules.md#turnpolicy)
@@ -80,6 +94,7 @@
 ### Variables
 
 - [SkyWayMediaDevices](modules.md#skywaymediadevices)
+- [logLevelTypes](modules.md#logleveltypes)
 
 ### Functions
 
@@ -87,9 +102,21 @@
 
 ## Type aliases
 
+### AppAction
+
+Ƭ **AppAction**: ``"listChannels"`` \| ``"read"`` \| ``"write"``
+
+___
+
 ### AudioMediaTrackConstraints
 
 Ƭ **AudioMediaTrackConstraints**: `Omit`<`MediaTrackConstraints`, ``"aspectRatio"`` \| ``"facingMode"`` \| ``"frameRate"`` \| ``"height"`` \| ``"width"``\>
+
+___
+
+### ChannelAction
+
+Ƭ **ChannelAction**: ``"read"`` \| ``"write"`` \| ``"create"`` \| ``"delete"`` \| ``"updateMetadata"``
 
 ___
 
@@ -111,9 +138,27 @@ ___
 
 ___
 
+### HttpResponse
+
+Ƭ **HttpResponse**: `AxiosResponse` & { `message`: `string`  }
+
+___
+
 ### LocalStream
 
 Ƭ **LocalStream**: [`LocalAudioStream`](classes/LocalAudioStream.md) \| [`LocalVideoStream`](classes/LocalVideoStream.md) \| [`LocalDataStream`](classes/LocalDataStream.md)
+
+___
+
+### LogLevel
+
+Ƭ **LogLevel**: typeof [`logLevelTypes`](modules.md#logleveltypes)[`number`]
+
+___
+
+### MemberAction
+
+Ƭ **MemberAction**: ``"create"`` \| ``"write"`` \| ``"delete"`` \| ``"updateMetadata"``
 
 ___
 
@@ -132,6 +177,12 @@ ___
 ### MemberType
 
 Ƭ **MemberType**: ``"person"`` \| ``"bot"``
+
+___
+
+### PublicationAction
+
+Ƭ **PublicationAction**: ``"write"`` \| ``"create"`` \| ``"delete"`` \| ``"mute"`` \| ``"unmute"``
 
 ___
 
@@ -162,6 +213,12 @@ ___
 ### StreamSide
 
 Ƭ **StreamSide**: ``"remote"`` \| ``"local"``
+
+___
+
+### SubscriptionAction
+
+Ƭ **SubscriptionAction**: ``"write"`` \| ``"create"`` \| ``"delete"`` \| ``"unmute"`` \| ``"mute"``
 
 ___
 
@@ -201,6 +258,12 @@ ___
 ### SkyWayMediaDevices
 
 • **SkyWayMediaDevices**: [`MediaDeviceManager`](classes/MediaDeviceManager.md)
+
+___
+
+### logLevelTypes
+
+• **logLevelTypes**: readonly [``"error"``, ``"warn"``, ``"debug"``, ``"disable"``]
 
 ## Functions
 

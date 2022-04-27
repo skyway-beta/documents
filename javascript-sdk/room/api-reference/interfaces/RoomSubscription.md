@@ -67,7 +67,7 @@ ___
 
 ### subscriber
 
-• **subscriber**: [`RoomMember`](RoomMember.md)
+• **subscriber**: [`RemoteRoomMember`](RemoteRoomMember.md)
 
 ## Methods
 

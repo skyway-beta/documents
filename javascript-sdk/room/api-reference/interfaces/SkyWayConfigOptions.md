@@ -6,6 +6,7 @@
 
 ### Properties
 
+- [debug](SkyWayConfigOptions.md#debug)
 - [iceParamServer](SkyWayConfigOptions.md#iceparamserver)
 - [logLevel](SkyWayConfigOptions.md#loglevel)
 - [messageService](SkyWayConfigOptions.md#messageservice)
@@ -14,6 +15,18 @@
 - [token](SkyWayConfigOptions.md#token)
 
 ## Properties
+
+### debug
+
+• **debug**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `disableDPlane?` | `boolean` |
+
+___
 
 ### iceParamServer
 

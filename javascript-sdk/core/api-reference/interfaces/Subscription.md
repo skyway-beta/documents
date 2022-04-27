@@ -83,7 +83,7 @@ ___
 
 ### subscriber
 
-• **subscriber**: [`Member`](Member.md)
+• **subscriber**: [`RemoteMember`](RemoteMember.md)
 
 ## Methods
 

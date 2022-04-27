@@ -16,22 +16,28 @@
 - [RemoteVideoStream](classes/RemoteVideoStream.md)
 - [SkyWayAuthToken](classes/SkyWayAuthToken.md)
 - [SkyWayContext](classes/SkyWayContext.md)
+- [SkyWayError](classes/SkyWayError.md)
 - [SkyWayRoom](classes/SkyWayRoom.md)
 
 ### Interfaces
 
+- [AppScope](interfaces/AppScope.md)
+- [AuthToken](interfaces/AuthToken.md)
+- [ChannelScope](interfaces/ChannelScope.md)
 - [LocalP2PRoomMember](interfaces/LocalP2PRoomMember.md)
 - [LocalRoomMember](interfaces/LocalRoomMember.md)
 - [LocalSFURoomMember](interfaces/LocalSFURoomMember.md)
 - [MemberJoinedEvent](interfaces/MemberJoinedEvent.md)
 - [MemberLeftEvent](interfaces/MemberLeftEvent.md)
 - [MemberMetadataUpdatedEvent](interfaces/MemberMetadataUpdatedEvent.md)
+- [MemberScope](interfaces/MemberScope.md)
 - [MembershipChangedEvent](interfaces/MembershipChangedEvent.md)
 - [P2PRoom](interfaces/P2PRoom.md)
 - [P2PRoomInit](interfaces/P2PRoomInit.md)
 - [PublicationChangedEvent](interfaces/PublicationChangedEvent.md)
 - [PublicationMetadataUpdatedEvent](interfaces/PublicationMetadataUpdatedEvent.md)
 - [PublicationOptions](interfaces/PublicationOptions.md)
+- [PublicationScope](interfaces/PublicationScope.md)
 - [RemoteRoomMember](interfaces/RemoteRoomMember.md)
 - [Room](interfaces/Room.md)
 - [RoomClosedEvent](interfaces/RoomClosedEvent.md)
@@ -52,14 +58,21 @@
 - [StreamUnpublishedEvent](interfaces/StreamUnpublishedEvent.md)
 - [StreamUnsubscribedEvent](interfaces/StreamUnsubscribedEvent.md)
 - [SubscriptionChangedEvent](interfaces/SubscriptionChangedEvent.md)
+- [SubscriptionScope](interfaces/SubscriptionScope.md)
 
 ### Type aliases
 
+- [AppAction](modules.md#appaction)
+- [ChannelAction](modules.md#channelaction)
 - [ChannelStatus](modules.md#channelstatus)
+- [HttpResponse](modules.md#httpresponse)
 - [LocalStream](modules.md#localstream)
+- [LogLevel](modules.md#loglevel)
+- [MemberAction](modules.md#memberaction)
 - [MemberSide](modules.md#memberside)
 - [MemberStatus](modules.md#memberstatus)
 - [MemberType](modules.md#membertype)
+- [PublicationAction](modules.md#publicationaction)
 - [PublicationStatus](modules.md#publicationstatus)
 - [RemoteStream](modules.md#remotestream)
 - [RoomInit](modules.md#roominit)
@@ -71,12 +84,14 @@
 - [RtcApiConfig](modules.md#rtcapiconfig)
 - [SfuClientPluginOptions](modules.md#sfuclientpluginoptions)
 - [SfuRoomOptions](modules.md#sfuroomoptions)
+- [SubscriptionAction](modules.md#subscriptionaction)
 - [SubscriptionStatus](modules.md#subscriptionstatus)
 - [TurnPolicy](modules.md#turnpolicy)
 
 ### Variables
 
 - [SkyWayMediaDevices](modules.md#skywaymediadevices)
+- [logLevelTypes](modules.md#logleveltypes)
 - [roomTypes](modules.md#roomtypes)
 
 ### Functions
@@ -85,15 +100,45 @@
 
 ## Type aliases
 
+### AppAction
+
+Ƭ **AppAction**: ``"listChannels"`` \| ``"read"`` \| ``"write"``
+
+___
+
+### ChannelAction
+
+Ƭ **ChannelAction**: ``"read"`` \| ``"write"`` \| ``"create"`` \| ``"delete"`` \| ``"updateMetadata"``
+
+___
+
 ### ChannelStatus
 
 Ƭ **ChannelStatus**: ``"created"`` \| ``"opened"`` \| ``"closed"``
 
 ___
 
+### HttpResponse
+
+Ƭ **HttpResponse**: `AxiosResponse` & { `message`: `string`  }
+
+___
+
 ### LocalStream
 
 Ƭ **LocalStream**: [`LocalAudioStream`](classes/LocalAudioStream.md) \| [`LocalVideoStream`](classes/LocalVideoStream.md) \| [`LocalDataStream`](classes/LocalDataStream.md)
+
+___
+
+### LogLevel
+
+Ƭ **LogLevel**: typeof [`logLevelTypes`](modules.md#logleveltypes)[`number`]
+
+___
+
+### MemberAction
+
+Ƭ **MemberAction**: ``"create"`` \| ``"write"`` \| ``"delete"`` \| ``"updateMetadata"``
 
 ___
 
@@ -112,6 +157,12 @@ ___
 ### MemberType
 
 Ƭ **MemberType**: ``"person"`` \| ``"bot"``
+
+___
+
+### PublicationAction
+
+Ƭ **PublicationAction**: ``"write"`` \| ``"create"`` \| ``"delete"`` \| ``"mute"`` \| ``"unmute"``
 
 ___
 
@@ -187,6 +238,12 @@ ___
 
 ___
 
+### SubscriptionAction
+
+Ƭ **SubscriptionAction**: ``"write"`` \| ``"create"`` \| ``"delete"`` \| ``"unmute"`` \| ``"mute"``
+
+___
+
 ### SubscriptionStatus
 
 Ƭ **SubscriptionStatus**: ``"created"`` \| ``"subscribed"`` \| ``"canceled"``
@@ -202,6 +259,12 @@ ___
 ### SkyWayMediaDevices
 
 • **SkyWayMediaDevices**: [`MediaDeviceManager`](classes/MediaDeviceManager.md)
+
+___
+
+### logLevelTypes
+
+• **logLevelTypes**: readonly [``"error"``, ``"warn"``, ``"debug"``, ``"disable"``]
 
 ___
 
