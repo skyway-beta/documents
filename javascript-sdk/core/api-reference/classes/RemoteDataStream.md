@@ -13,6 +13,7 @@
 ### Properties
 
 - [\_datachannel](RemoteDataStream.md#_datachannel)
+- [codec](RemoteDataStream.md#codec)
 - [contentType](RemoteDataStream.md#contenttype)
 - [id](RemoteDataStream.md#id)
 - [label](RemoteDataStream.md#label)
@@ -24,6 +25,16 @@
 ### \_datachannel
 
 • **\_datachannel**: `RTCDataChannel`
+
+___
+
+### codec
+
+• **codec**: [`Codec`](../interfaces/Codec.md)
+
+#### Inherited from
+
+RemoteStreamBase.codec
 
 ___
 

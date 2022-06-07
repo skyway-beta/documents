@@ -34,6 +34,7 @@
 
 ### Methods
 
+- [filterConnections](LocalPerson.md#filterconnections)
 - [getConnections](LocalPerson.md#getconnections)
 - [leave](LocalPerson.md#leave)
 - [publish](LocalPerson.md#publish)
@@ -112,13 +113,13 @@ ___
 
 ### onPublicationChanged
 
-• **onPublicationChanged**: [`Event`](../classes/Event.md)<`void`\>
+• `Readonly` **onPublicationChanged**: [`Event`](../classes/Event.md)<`void`\>
 
 ___
 
 ### onStreamPublished
 
-• **onStreamPublished**: [`Event`](../classes/Event.md)<{ `publication`: [`Publication`](Publication.md)<[`LocalStream`](../modules.md#localstream)\>  }\>
+• `Readonly` **onStreamPublished**: [`Event`](../classes/Event.md)<{ `publication`: [`Publication`](Publication.md)<[`LocalStream`](../modules.md#localstream)\>  }\>
 
 **`description`** {japanese} このPersonがStreamをPublishしたときに発火するイベント
 
@@ -126,7 +127,7 @@ ___
 
 ### onStreamSubscribed
 
-• **onStreamSubscribed**: [`Event`](../classes/Event.md)<{ `stream`: [`RemoteStream`](../modules.md#remotestream) ; `subscription`: [`Subscription`](Subscription.md)<[`RemoteStream`](../modules.md#remotestream)\>  }\>
+• `Readonly` **onStreamSubscribed**: [`Event`](../classes/Event.md)<{ `stream`: [`RemoteStream`](../modules.md#remotestream) ; `subscription`: [`Subscription`](Subscription.md)<[`RemoteStream`](../modules.md#remotestream)\>  }\>
 
 **`description`** {japanese} このPersonがStreamをSubscribeしたときに発火するイベント
 
@@ -134,7 +135,7 @@ ___
 
 ### onStreamUnpublished
 
-• **onStreamUnpublished**: [`Event`](../classes/Event.md)<{ `publication`: [`Publication`](Publication.md)<[`LocalStream`](../modules.md#localstream)\>  }\>
+• `Readonly` **onStreamUnpublished**: [`Event`](../classes/Event.md)<{ `publication`: [`Publication`](Publication.md)<[`LocalStream`](../modules.md#localstream)\>  }\>
 
 **`description`** {japanese} このPersonがStreamをUnpublishしたときに発火するイベント
 
@@ -142,7 +143,7 @@ ___
 
 ### onStreamUnsubscribed
 
-• **onStreamUnsubscribed**: [`Event`](../classes/Event.md)<{ `subscription`: [`Subscription`](Subscription.md)<[`RemoteStream`](../modules.md#remotestream)\>  }\>
+• `Readonly` **onStreamUnsubscribed**: [`Event`](../classes/Event.md)<{ `subscription`: [`Subscription`](Subscription.md)<[`RemoteStream`](../modules.md#remotestream)\>  }\>
 
 **`description`** {japanese} このPersonがStreamをUnsubscribeしたときに発火するイベント
 
@@ -150,7 +151,7 @@ ___
 
 ### onSubscriptionChanged
 
-• **onSubscriptionChanged**: [`Event`](../classes/Event.md)<`void`\>
+• `Readonly` **onSubscriptionChanged**: [`Event`](../classes/Event.md)<`void`\>
 
 ___
 
@@ -214,6 +215,22 @@ Person.type
 
 ## Methods
 
+### filterConnections
+
+▸ **filterConnections**(`query`): [`SkyWayConnection`](SkyWayConnection.md)[]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `query` | [`Publication`](Publication.md)<[`LocalStream`](../modules.md#localstream)\> \| [`Subscription`](Subscription.md)<[`RemoteStream`](../modules.md#remotestream)\> |
+
+#### Returns
+
+[`SkyWayConnection`](SkyWayConnection.md)[]
+
+___
+
 ### getConnections
 
 ▸ **getConnections**(): [`SkyWayConnection`](SkyWayConnection.md)[]
@@ -261,7 +278,7 @@ ___
 
 ### subscribe
 
-▸ **subscribe**<`T`\>(`publicationId`): `Promise`<{ `stream`: `T` ; `subscription`: [`Subscription`](Subscription.md)<`T`\>  }\>
+▸ **subscribe**<`T`\>(`publication`): `Promise`<{ `stream`: `T` ; `subscription`: [`Subscription`](Subscription.md)<`T`\>  }\>
 
 **`description`** {japanese} StreamのPublicationをSubscribeする
 
@@ -275,7 +292,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `publicationId` | `string` |
+| `publication` | `string` \| [`Publication`](Publication.md)<[`LocalStream`](../modules.md#localstream)\> |
 
 #### Returns
 
@@ -285,7 +302,7 @@ ___
 
 ### unpublish
 
-▸ **unpublish**(`publicationId`): `Promise`<`void`\>
+▸ **unpublish**(`publication`): `Promise`<`void`\>
 
 **`description`** {japanese} StreamのPublicationをUnpublishする
 
@@ -293,7 +310,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `publicationId` | `string` |
+| `publication` | `string` \| [`Publication`](Publication.md)<[`LocalStream`](../modules.md#localstream)\> |
 
 #### Returns
 
@@ -303,7 +320,7 @@ ___
 
 ### unsubscribe
 
-▸ **unsubscribe**(`subscriptionId`): `Promise`<`void`\>
+▸ **unsubscribe**(`subscription`): `Promise`<`void`\>
 
 **`description`** {japanese} StreamのSubscriptionをUnsubscribeする
 
@@ -311,7 +328,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `subscriptionId` | `string` |
+| `subscription` | `string` \| [`Subscription`](Subscription.md)<[`RemoteStream`](../modules.md#remotestream)\> |
 
 #### Returns
 

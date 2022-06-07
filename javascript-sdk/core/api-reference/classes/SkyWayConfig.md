@@ -18,14 +18,6 @@
 - [rtcConfig](SkyWayConfig.md#rtcconfig)
 - [token](SkyWayConfig.md#token)
 
-### Accessors
-
-- [get](SkyWayConfig.md#get)
-
-### Methods
-
-- [initialize](SkyWayConfig.md#initialize)
-
 ## Properties
 
 ### debug
@@ -95,29 +87,3 @@ ___
 #### Implementation of
 
 [SkyWayConfigOptions](../interfaces/SkyWayConfigOptions.md).[token](../interfaces/SkyWayConfigOptions.md#token)
-
-## Accessors
-
-### get
-
-• `Static` `get` **get**(): [`SkyWayConfig`](SkyWayConfig.md)
-
-#### Returns
-
-[`SkyWayConfig`](SkyWayConfig.md)
-
-## Methods
-
-### initialize
-
-▸ `Static` **initialize**(`options?`): [`SkyWayConfig`](SkyWayConfig.md)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `options` | `Partial`<[`SkyWayConfigOptions`](../interfaces/SkyWayConfigOptions.md)\> |
-
-#### Returns
-
-[`SkyWayConfig`](SkyWayConfig.md)

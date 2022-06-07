@@ -8,10 +8,6 @@
 
 ## Table of contents
 
-### Constructors
-
-- [constructor](P2PConnection.md#constructor)
-
 ### Properties
 
 - [channelId](P2PConnection.md#channelid)
@@ -27,28 +23,7 @@
 
 ### Methods
 
-- [close](P2PConnection.md#close)
 - [getStats](P2PConnection.md#getstats)
-- [startPublishing](P2PConnection.md#startpublishing)
-- [startSubscribing](P2PConnection.md#startsubscribing)
-- [stopPublishing](P2PConnection.md#stoppublishing)
-- [stopSubscribing](P2PConnection.md#stopsubscribing)
-
-## Constructors
-
-### constructor
-
-• **new P2PConnection**(`_iceManager`, `_messenger`, `channelId`, `localPersonId`, `remoteMember`)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `_iceManager` | `IceManager` |
-| `_messenger` | `P2PMessenger` |
-| `channelId` | `string` |
-| `localPersonId` | `string` |
-| `remoteMember` | `Pick`<[`Member`](../interfaces/Member.md), ``"name"`` \| ``"id"``\> |
 
 ## Properties
 
@@ -136,20 +111,6 @@ ___
 
 ## Methods
 
-### close
-
-▸ **close**(): `void`
-
-#### Returns
-
-`void`
-
-#### Implementation of
-
-[SkyWayConnection](../interfaces/SkyWayConnection.md).[close](../interfaces/SkyWayConnection.md#close)
-
-___
-
 ### getStats
 
 ▸ **getStats**(`content`): `Promise`<`RTCStatsReport`\>
@@ -163,83 +124,3 @@ ___
 #### Returns
 
 `Promise`<`RTCStatsReport`\>
-
-___
-
-### startPublishing
-
-▸ **startPublishing**(`publication`): `Promise`<`void`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `publication` | `PublicationImpl`<[`LocalStream`](../modules.md#localstream)\> |
-
-#### Returns
-
-`Promise`<`void`\>
-
-#### Implementation of
-
-[SkyWayConnection](../interfaces/SkyWayConnection.md).[startPublishing](../interfaces/SkyWayConnection.md#startpublishing)
-
-___
-
-### startSubscribing
-
-▸ **startSubscribing**(`subscription`): `Promise`<`void`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `subscription` | `SubscriptionImpl`<[`RemoteStream`](../modules.md#remotestream)\> |
-
-#### Returns
-
-`Promise`<`void`\>
-
-#### Implementation of
-
-[SkyWayConnection](../interfaces/SkyWayConnection.md).[startSubscribing](../interfaces/SkyWayConnection.md#startsubscribing)
-
-___
-
-### stopPublishing
-
-▸ **stopPublishing**(`publication`): `Promise`<`void`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `publication` | [`Publication`](../interfaces/Publication.md)<[`LocalStream`](../modules.md#localstream)\> |
-
-#### Returns
-
-`Promise`<`void`\>
-
-#### Implementation of
-
-[SkyWayConnection](../interfaces/SkyWayConnection.md).[stopPublishing](../interfaces/SkyWayConnection.md#stoppublishing)
-
-___
-
-### stopSubscribing
-
-▸ **stopSubscribing**(`subscription`): `Promise`<`void`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `subscription` | [`Subscription`](../interfaces/Subscription.md)<[`RemoteStream`](../modules.md#remotestream)\> |
-
-#### Returns
-
-`Promise`<`void`\>
-
-#### Implementation of
-
-[SkyWayConnection](../interfaces/SkyWayConnection.md).[stopSubscribing](../interfaces/SkyWayConnection.md#stopsubscribing)

@@ -37,7 +37,7 @@
 
 ### codecCapabilities
 
-• `Readonly` **codecCapabilities**: `Codec`[]
+• `Readonly` **codecCapabilities**: [`Codec`](Codec.md)[]
 
 ___
 
@@ -67,13 +67,13 @@ ___
 
 ### onMetadataUpdated
 
-• `Readonly` **onMetadataUpdated**: [`Event`](../classes/Event.md)<`string`\>
+• `Readonly` **onMetadataUpdated**: [`Event`](../classes/Event.md)<{ `metadata`: `string`  }\>
 
 ___
 
 ### onSubscribed
 
-• `Readonly` **onSubscribed**: [`Event`](../classes/Event.md)<`void`\>
+• `Readonly` **onSubscribed**: [`Event`](../classes/Event.md)<[`StreamSubscribedEvent`](StreamSubscribedEvent.md)\>
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 ### onUnsubscribed
 
-• `Readonly` **onUnsubscribed**: [`Event`](../classes/Event.md)<`void`\>
+• `Readonly` **onUnsubscribed**: [`Event`](../classes/Event.md)<[`StreamUnsubscribedEvent`](StreamUnsubscribedEvent.md)\>
 
 ___
 

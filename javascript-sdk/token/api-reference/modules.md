@@ -15,7 +15,7 @@
 - [PublicationScope](interfaces/PublicationScope.md)
 - [SubscriptionScope](interfaces/SubscriptionScope.md)
 
-### Type aliases
+### Type Aliases
 
 - [AppAction](modules.md#appaction)
 - [ChannelAction](modules.md#channelaction)
@@ -27,7 +27,7 @@
 
 - [uuidV4](modules.md#uuidv4)
 
-## Type aliases
+## Type Aliases
 
 ### AppAction
 
@@ -43,13 +43,13 @@ ___
 
 ### MemberAction
 
-Ƭ **MemberAction**: ``"create"`` \| ``"write"`` \| ``"delete"`` \| ``"updateMetadata"``
+Ƭ **MemberAction**: ``"create"`` \| ``"write"`` \| ``"delete"`` \| ``"updateMetadata"`` \| ``"signal"``
 
 ___
 
 ### PublicationAction
 
-Ƭ **PublicationAction**: ``"write"`` \| ``"create"`` \| ``"delete"`` \| ``"mute"`` \| ``"unmute"``
+Ƭ **PublicationAction**: ``"write"`` \| ``"create"`` \| ``"delete"`` \| ``"mute"`` \| ``"updateMetadata"`` \| ``"unmute"``
 
 ___
 
@@ -61,7 +61,7 @@ ___
 
 ### uuidV4
 
-▸ `Const` **uuidV4**<`T`\>(`options`, `buffer`, `offset?`): `T`
+▸ **uuidV4**<`T`\>(`options`, `buffer`, `offset?`): `T`
 
 #### Type parameters
 
@@ -81,7 +81,7 @@ ___
 
 `T`
 
-▸ `Const` **uuidV4**(`options?`): `string`
+▸ **uuidV4**(`options?`): `string`
 
 #### Parameters
 

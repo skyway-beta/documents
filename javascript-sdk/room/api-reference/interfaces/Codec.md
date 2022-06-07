@@ -1,4 +1,4 @@
-[@skyway-sdk/core](../README.md) / [Exports](../modules.md) / Codec
+[@skyway-sdk/room](../README.md) / [Exports](../modules.md) / Codec
 
 # Interface: Codec
 

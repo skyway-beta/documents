@@ -16,16 +16,11 @@
 
 ### Properties
 
-- [\_context](SfuClientPlugin.md#_context)
-- [\_onContextAttached](SfuClientPlugin.md#_oncontextattached)
-- [\_whenCreateLocalPerson](SfuClientPlugin.md#_whencreatelocalperson)
-- [\_whenDisposeLocalPerson](SfuClientPlugin.md#_whendisposelocalperson)
 - [options](SfuClientPlugin.md#options)
 - [subtype](SfuClientPlugin.md#subtype)
 
 ### Methods
 
-- [\_attachContext](SfuClientPlugin.md#_attachcontext)
 - [createBot](SfuClientPlugin.md#createbot)
 - [deleteBot](SfuClientPlugin.md#deletebot)
 
@@ -47,74 +42,6 @@ SkyWayPlugin.constructor
 
 ## Properties
 
-### \_context
-
-• **\_context**: `SkyWayContext`
-
-#### Inherited from
-
-SkyWayPlugin.\_context
-
-___
-
-### \_onContextAttached
-
-• **\_onContextAttached**: `Event`<`void`\>
-
-#### Inherited from
-
-SkyWayPlugin.\_onContextAttached
-
-___
-
-### \_whenCreateLocalPerson
-
-• `Optional` **\_whenCreateLocalPerson**: (`member`: `LocalPersonImpl`) => `Promise`<`void`\>
-
-#### Type declaration
-
-▸ (`member`): `Promise`<`void`\>
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `member` | `LocalPersonImpl` |
-
-##### Returns
-
-`Promise`<`void`\>
-
-#### Inherited from
-
-SkyWayPlugin.\_whenCreateLocalPerson
-
-___
-
-### \_whenDisposeLocalPerson
-
-• `Optional` **\_whenDisposeLocalPerson**: (`member`: `LocalPersonImpl`) => `Promise`<`void`\>
-
-#### Type declaration
-
-▸ (`member`): `Promise`<`void`\>
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `member` | `LocalPersonImpl` |
-
-##### Returns
-
-`Promise`<`void`\>
-
-#### Inherited from
-
-SkyWayPlugin.\_whenDisposeLocalPerson
-
-___
-
 ### options
 
 • `Readonly` **options**: [`SfuClientPluginOptions`](../modules.md#sfuclientpluginoptions)
@@ -130,26 +57,6 @@ ___
 SkyWayPlugin.subtype
 
 ## Methods
-
-### \_attachContext
-
-▸ **_attachContext**(`context`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `context` | `SkyWayContext` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-SkyWayPlugin.\_attachContext
-
-___
 
 ### createBot
 

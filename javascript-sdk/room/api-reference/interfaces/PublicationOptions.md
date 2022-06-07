@@ -14,7 +14,7 @@
 
 ### codecCapabilities
 
-• `Optional` **codecCapabilities**: `Codec`[]
+• `Optional` **codecCapabilities**: [`Codec`](Codec.md)[]
 
 ___
 

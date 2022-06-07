@@ -7,16 +7,9 @@
 ### Properties
 
 - [maxSubscribers](SfuRoomPublicationOptions.md#maxsubscribers)
-- [policy](SfuRoomPublicationOptions.md#policy)
 
 ## Properties
 
 ### maxSubscribers
 
 • `Optional` **maxSubscribers**: `number`
-
-___
-
-### policy
-
-• `Optional` **policy**: ``"tile"`` \| ``"normal"``

@@ -16,6 +16,7 @@
 
 ### Properties
 
+- [codec](RemoteVideoStream.md#codec)
 - [contentType](RemoteVideoStream.md#contenttype)
 - [id](RemoteVideoStream.md#id)
 - [label](RemoteVideoStream.md#label)
@@ -28,6 +29,16 @@
 - [detach](RemoteVideoStream.md#detach)
 
 ## Properties
+
+### codec
+
+• **codec**: [`Codec`](../interfaces/Codec.md)
+
+#### Inherited from
+
+RemoteStreamBase.codec
+
+___
 
 ### contentType
 
