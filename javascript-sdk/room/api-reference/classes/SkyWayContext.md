@@ -8,14 +8,15 @@
 
 - [appId](SkyWayContext.md#appid)
 - [authToken](SkyWayContext.md#authtoken)
+- [config](SkyWayContext.md#config)
 - [disposed](SkyWayContext.md#disposed)
+- [onFatalError](SkyWayContext.md#onfatalerror)
 - [onTokenExpired](SkyWayContext.md#ontokenexpired)
 - [onTokenUpdateReminder](SkyWayContext.md#ontokenupdatereminder)
 
 ### Accessors
 
 - [authTokenString](SkyWayContext.md#authtokenstring)
-- [config](SkyWayContext.md#config)
 
 ### Methods
 
@@ -38,9 +39,21 @@ ___
 
 ___
 
+### config
+
+• **config**: `SkyWayConfig`
+
+___
+
 ### disposed
 
 • **disposed**: `boolean`
+
+___
+
+### onFatalError
+
+• `Readonly` **onFatalError**: [`Event`](Event.md)<[`SkyWayError`](SkyWayError.md)<`Record`<`string`, `any`\>\>\>
 
 ___
 
@@ -63,16 +76,6 @@ ___
 #### Returns
 
 `string`
-
-___
-
-### config
-
-• `get` **config**(): `SkyWayConfig`
-
-#### Returns
-
-`SkyWayConfig`
 
 ## Methods
 

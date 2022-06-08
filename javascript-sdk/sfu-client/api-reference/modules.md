@@ -14,16 +14,16 @@
 - [ForwardingConfigure](interfaces/ForwardingConfigure.md)
 - [SfuApiOptions](interfaces/SfuApiOptions.md)
 
-### Type aliases
+### Type Aliases
 
-- [ForwardingState](modules.md#forwardingstate)
+- [ForwardingStatus](modules.md#forwardingstatus)
 - [SfuClientPluginOptions](modules.md#sfuclientpluginoptions)
 
-## Type aliases
+## Type Aliases
 
-### ForwardingState
+### ForwardingStatus
 
-Ƭ **ForwardingState**: ``"started"`` \| ``"stopped"``
+Ƭ **ForwardingStatus**: ``"started"`` \| ``"stopped"``
 
 ___
 

@@ -68,13 +68,13 @@ ___
 
 ### onMetadataUpdated
 
-• **onMetadataUpdated**: [`Event`](../classes/Event.md)<`string`\>
+• **onMetadataUpdated**: [`Event`](../classes/Event.md)<{ `metadata`: `string`  }\>
 
 ___
 
 ### onSubscribed
 
-• **onSubscribed**: [`Event`](../classes/Event.md)<`void`\>
+• **onSubscribed**: [`Event`](../classes/Event.md)<[`StreamSubscribedEvent`](StreamSubscribedEvent.md)\>
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 ### onUnsubscribed
 
-• **onUnsubscribed**: [`Event`](../classes/Event.md)<`void`\>
+• **onUnsubscribed**: [`Event`](../classes/Event.md)<[`StreamUnsubscribedEvent`](StreamUnsubscribedEvent.md)\>
 
 ___
 

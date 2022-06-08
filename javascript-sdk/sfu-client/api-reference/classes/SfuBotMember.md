@@ -16,7 +16,6 @@
 
 ### Properties
 
-- [\_events](SfuBotMember.md#_events)
 - [channel](SfuBotMember.md#channel)
 - [id](SfuBotMember.md#id)
 - [name](SfuBotMember.md#name)
@@ -28,7 +27,7 @@
 - [side](SfuBotMember.md#side)
 - [subtype](SfuBotMember.md#subtype)
 - [type](SfuBotMember.md#type)
-- [subtype](SfuBotMember.md#subtype)
+- [subtype](SfuBotMember.md#subtype-1)
 
 ### Accessors
 
@@ -46,16 +45,6 @@
 - [IsSfuBotMember](SfuBotMember.md#issfubotmember)
 
 ## Properties
-
-### \_events
-
-• `Readonly` **\_events**: `Events`
-
-#### Inherited from
-
-MemberImpl.\_events
-
-___
 
 ### channel
 
@@ -101,7 +90,7 @@ ___
 
 ### onForwardingStarted
 
-• `Readonly` **onForwardingStarted**: `Event`<[`Forwarding`](Forwarding.md)\>
+• `Readonly` **onForwardingStarted**: `Event`<{ `forwarding`: [`Forwarding`](Forwarding.md)  }\>
 
 ___
 
@@ -113,7 +102,7 @@ ___
 
 ### onForwardingStopped
 
-• `Readonly` **onForwardingStopped**: `Event`<[`Forwarding`](Forwarding.md)\>
+• `Readonly` **onForwardingStopped**: `Event`<{ `forwarding`: [`Forwarding`](Forwarding.md)  }\>
 
 ___
 
@@ -286,7 +275,7 @@ ___
 
 ### stopForwarding
 
-▸ **stopForwarding**(`forwardingId`): `Promise`<`void`\>
+▸ **stopForwarding**(`target`): `Promise`<`void`\>
 
 **`description`** {japanese} Forwardingを停止する
 
@@ -294,7 +283,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `forwardingId` | `string` |
+| `target` | `string` \| [`Forwarding`](Forwarding.md) |
 
 #### Returns
 

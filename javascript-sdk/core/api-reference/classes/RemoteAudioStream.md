@@ -16,6 +16,7 @@
 
 ### Properties
 
+- [codec](RemoteAudioStream.md#codec)
 - [contentType](RemoteAudioStream.md#contenttype)
 - [id](RemoteAudioStream.md#id)
 - [label](RemoteAudioStream.md#label)
@@ -28,6 +29,16 @@
 - [detach](RemoteAudioStream.md#detach)
 
 ## Properties
+
+### codec
+
+• **codec**: [`Codec`](../interfaces/Codec.md)
+
+#### Inherited from
+
+RemoteStreamBase.codec
+
+___
 
 ### contentType
 

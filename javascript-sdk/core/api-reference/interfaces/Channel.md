@@ -43,7 +43,7 @@
 
 ### appId
 
-• **appId**: `string`
+• `Readonly` **appId**: `string`
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 ### id
 
-• **id**: `string`
+• `Readonly` **id**: `string`
 
 ___
 
@@ -77,13 +77,13 @@ ___
 
 ### name
 
-• `Optional` **name**: `string`
+• `Optional` `Readonly` **name**: `string`
 
 ___
 
 ### onClosed
 
-• **onClosed**: [`Event`](../classes/Event.md)<[`ChannelClosedEvent`](ChannelClosedEvent.md)\>
+• `Readonly` **onClosed**: [`Event`](../classes/Event.md)<[`ChannelClosedEvent`](ChannelClosedEvent.md)\>
 
 **`description`** {japanese} このChannelが閉じられた時に発生するイベント
 
@@ -91,7 +91,7 @@ ___
 
 ### onMemberJoined
 
-• **onMemberJoined**: [`Event`](../classes/Event.md)<[`MemberJoinedEvent`](MemberJoinedEvent.md)\>
+• `Readonly` **onMemberJoined**: [`Event`](../classes/Event.md)<[`MemberJoinedEvent`](MemberJoinedEvent.md)\>
 
 **`description`** {japanese} ChannelにMemberが参加した時に発生するイベント
 
@@ -99,7 +99,7 @@ ___
 
 ### onMemberLeft
 
-• **onMemberLeft**: [`Event`](../classes/Event.md)<[`MemberLeftEvent`](MemberLeftEvent.md)\>
+• `Readonly` **onMemberLeft**: [`Event`](../classes/Event.md)<[`MemberLeftEvent`](MemberLeftEvent.md)\>
 
 **`description`** {japanese} ChannelからMemberが退出した時に発生するイベント
 
@@ -107,7 +107,7 @@ ___
 
 ### onMemberMetadataUpdated
 
-• **onMemberMetadataUpdated**: [`Event`](../classes/Event.md)<[`MemberMetadataUpdatedEvent`](MemberMetadataUpdatedEvent.md)\>
+• `Readonly` **onMemberMetadataUpdated**: [`Event`](../classes/Event.md)<[`MemberMetadataUpdatedEvent`](MemberMetadataUpdatedEvent.md)\>
 
 **`description`** {japanese} MemberのMetadataが更新された時に発生するイベント
 
@@ -115,13 +115,13 @@ ___
 
 ### onMembershipChanged
 
-• **onMembershipChanged**: [`Event`](../classes/Event.md)<[`MembershipChangedEvent`](MembershipChangedEvent.md)\>
+• `Readonly` **onMembershipChanged**: [`Event`](../classes/Event.md)<[`MembershipChangedEvent`](MembershipChangedEvent.md)\>
 
 ___
 
 ### onMetadataUpdated
 
-• **onMetadataUpdated**: [`Event`](../classes/Event.md)<[`ChannelMetadataUpdatedEvent`](ChannelMetadataUpdatedEvent.md)\>
+• `Readonly` **onMetadataUpdated**: [`Event`](../classes/Event.md)<[`ChannelMetadataUpdatedEvent`](ChannelMetadataUpdatedEvent.md)\>
 
 **`description`** {japanese} このChannelのMetadataが更新された時に発生するイベント
 
@@ -129,13 +129,13 @@ ___
 
 ### onPublicationChanged
 
-• **onPublicationChanged**: [`Event`](../classes/Event.md)<[`PublicationChangedEvent`](PublicationChangedEvent.md)\>
+• `Readonly` **onPublicationChanged**: [`Event`](../classes/Event.md)<[`PublicationChangedEvent`](PublicationChangedEvent.md)\>
 
 ___
 
 ### onPublicationMetadataUpdated
 
-• **onPublicationMetadataUpdated**: [`Event`](../classes/Event.md)<[`PublicationMetadataUpdatedEvent`](PublicationMetadataUpdatedEvent.md)\>
+• `Readonly` **onPublicationMetadataUpdated**: [`Event`](../classes/Event.md)<[`PublicationMetadataUpdatedEvent`](PublicationMetadataUpdatedEvent.md)\>
 
 **`description`** {japanese} StreamのPublicationのMetadataが更新された時に発生するイベント
 
@@ -143,7 +143,7 @@ ___
 
 ### onStreamPublished
 
-• **onStreamPublished**: [`Event`](../classes/Event.md)<[`StreamPublishedEvent`](StreamPublishedEvent.md)\>
+• `Readonly` **onStreamPublished**: [`Event`](../classes/Event.md)<[`StreamPublishedEvent`](StreamPublishedEvent.md)\>
 
 **`description`** {japanese} ChannelのStreamがPublishされた時に発生するイベント
 
@@ -151,7 +151,7 @@ ___
 
 ### onStreamSubscribed
 
-• **onStreamSubscribed**: [`Event`](../classes/Event.md)<[`StreamSubscribedEvent`](StreamSubscribedEvent.md)\>
+• `Readonly` **onStreamSubscribed**: [`Event`](../classes/Event.md)<[`StreamSubscribedEvent`](StreamSubscribedEvent.md)\>
 
 **`description`** {japanese} ChannelのPublicationがSubscribeされた時に発生するイベント
 
@@ -159,7 +159,7 @@ ___
 
 ### onStreamUnpublished
 
-• **onStreamUnpublished**: [`Event`](../classes/Event.md)<[`StreamUnpublishedEvent`](StreamUnpublishedEvent.md)\>
+• `Readonly` **onStreamUnpublished**: [`Event`](../classes/Event.md)<[`StreamUnpublishedEvent`](StreamUnpublishedEvent.md)\>
 
 **`description`** {japanese} ChannelからStreamがUnpublishされた時に発生するイベント
 
@@ -167,7 +167,7 @@ ___
 
 ### onStreamUnsubscribed
 
-• **onStreamUnsubscribed**: [`Event`](../classes/Event.md)<[`StreamUnsubscribedEvent`](StreamUnsubscribedEvent.md)\>
+• `Readonly` **onStreamUnsubscribed**: [`Event`](../classes/Event.md)<[`StreamUnsubscribedEvent`](StreamUnsubscribedEvent.md)\>
 
 **`description`** {japanese} ChannelのPublicationがUnsubscribeされた時に発生するイベント
 
@@ -175,7 +175,7 @@ ___
 
 ### onSubscriptionChanged
 
-• **onSubscriptionChanged**: [`Event`](../classes/Event.md)<[`SubscriptionChangedEvent`](SubscriptionChangedEvent.md)\>
+• `Readonly` **onSubscriptionChanged**: [`Event`](../classes/Event.md)<[`SubscriptionChangedEvent`](SubscriptionChangedEvent.md)\>
 
 ___
 

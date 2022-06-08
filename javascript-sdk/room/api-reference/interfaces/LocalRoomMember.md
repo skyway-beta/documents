@@ -38,6 +38,8 @@
 
 ### Methods
 
+- [filterConnections](LocalRoomMember.md#filterconnections)
+- [getConnections](LocalRoomMember.md#getconnections)
 - [leave](LocalRoomMember.md#leave)
 - [subscribe](LocalRoomMember.md#subscribe)
 - [unpublish](LocalRoomMember.md#unpublish)
@@ -222,6 +224,32 @@ ___
 
 ## Methods
 
+### filterConnections
+
+▸ **filterConnections**(`query`): `SkyWayConnection`[]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `query` | [`RoomPublication`](RoomPublication.md)<[`LocalStream`](../modules.md#localstream)\> \| [`RoomSubscription`](RoomSubscription.md)<[`RemoteStream`](../modules.md#remotestream)\> |
+
+#### Returns
+
+`SkyWayConnection`[]
+
+___
+
+### getConnections
+
+▸ **getConnections**(): `SkyWayConnection`[]
+
+#### Returns
+
+`SkyWayConnection`[]
+
+___
+
 ### leave
 
 ▸ **leave**(): `Promise`<`void`\>
@@ -248,7 +276,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `publicationId` | `string` |
+| `publicationId` | `string` \| [`RoomPublication`](RoomPublication.md)<[`LocalStream`](../modules.md#localstream)\> |
 
 #### Returns
 
@@ -266,7 +294,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `publicationId` | `string` |
+| `publicationId` | `string` \| [`RoomPublication`](RoomPublication.md)<[`LocalStream`](../modules.md#localstream)\> |
 
 #### Returns
 
@@ -284,7 +312,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `subscriptionId` | `string` |
+| `subscriptionId` | `string` \| [`RoomSubscription`](RoomSubscription.md)<[`RemoteStream`](../modules.md#remotestream)\> |
 
 #### Returns
 

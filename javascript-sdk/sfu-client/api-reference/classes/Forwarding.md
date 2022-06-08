@@ -4,50 +4,28 @@
 
 ## Table of contents
 
-### Constructors
-
-- [constructor](Forwarding.md#constructor)
-
 ### Properties
 
 - [configure](Forwarding.md#configure)
-- [id](Forwarding.md#id)
 - [onStopped](Forwarding.md#onstopped)
 - [originPublication](Forwarding.md#originpublication)
 - [relayingPublication](Forwarding.md#relayingpublication)
-- [state](Forwarding.md#state)
+- [status](Forwarding.md#status)
+
+### Accessors
+
+- [id](Forwarding.md#id)
 
 ### Methods
 
 - [stop](Forwarding.md#stop)
 - [toJSON](Forwarding.md#tojson)
 
-## Constructors
-
-### constructor
-
-• **new Forwarding**(`id`, `configure`, `originPublication`, `relayingPublication`)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `id` | `string` |
-| `configure` | [`ForwardingConfigure`](../interfaces/ForwardingConfigure.md) |
-| `originPublication` | `Publication`<`LocalStream`\> |
-| `relayingPublication` | `Publication`<`LocalStream`\> |
-
 ## Properties
 
 ### configure
 
 • `Readonly` **configure**: [`ForwardingConfigure`](../interfaces/ForwardingConfigure.md)
-
-___
-
-### id
-
-• `Readonly` **id**: `string`
 
 ___
 
@@ -69,9 +47,19 @@ ___
 
 ___
 
-### state
+### status
 
-• **state**: [`ForwardingState`](../modules.md#forwardingstate) = `'started'`
+• **status**: [`ForwardingStatus`](../modules.md#forwardingstatus) = `'started'`
+
+## Accessors
+
+### id
+
+• `get` **id**(): `string`
+
+#### Returns
+
+`string`
 
 ## Methods
 
