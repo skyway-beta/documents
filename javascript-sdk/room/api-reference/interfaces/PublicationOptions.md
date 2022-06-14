@@ -20,7 +20,7 @@ ___
 
 ### encodings
 
-• `Optional` **encodings**: `EncodingParameters`[]
+• `Optional` **encodings**: [`EncodingParameters`](EncodingParameters.md)[]
 
 ___
 

@@ -43,7 +43,7 @@
 - [dispose](Room.md#dispose)
 - [join](Room.md#join)
 - [leave](Room.md#leave)
-- [memberMoveFromOtherRoom](Room.md#membermovefromotherroom)
+- [moveRoom](Room.md#moveroom)
 - [updateMetadata](Room.md#updatemetadata)
 
 ## Properties
@@ -256,9 +256,11 @@ ___
 
 ___
 
-### memberMoveFromOtherRoom
+### moveRoom
 
-▸ **memberMoveFromOtherRoom**(`member`): `Promise`<[`LocalRoomMember`](LocalRoomMember.md)\>
+▸ **moveRoom**(`member`): `Promise`<[`LocalRoomMember`](LocalRoomMember.md)\>
+
+**`description`** {japanese} 別のRoomのMemberを移動させる
 
 #### Parameters
 

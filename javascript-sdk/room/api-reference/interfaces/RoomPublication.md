@@ -43,13 +43,13 @@ ___
 
 ### contentType
 
-• `Readonly` **contentType**: `ContentType`
+• `Readonly` **contentType**: [`ContentType`](../modules.md#contenttype)
 
 ___
 
 ### encodings
 
-• **encodings**: `EncodingParameters`[]
+• **encodings**: [`EncodingParameters`](EncodingParameters.md)[]
 
 ___
 
@@ -144,7 +144,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `encodings` | `EncodingParameters`[] |
+| `encodings` | [`EncodingParameters`](EncodingParameters.md)[] |
 
 #### Returns
 

@@ -11,16 +11,22 @@
 - [AppScope](interfaces/AppScope.md)
 - [AuthToken](interfaces/AuthToken.md)
 - [ChannelScope](interfaces/ChannelScope.md)
+- [ForwardingScope](interfaces/ForwardingScope.md)
 - [MemberScope](interfaces/MemberScope.md)
 - [PublicationScope](interfaces/PublicationScope.md)
+- [SfuScope](interfaces/SfuScope.md)
+- [SfuSubscriptionScope](interfaces/SfuSubscriptionScope.md)
 - [SubscriptionScope](interfaces/SubscriptionScope.md)
 
 ### Type Aliases
 
 - [AppAction](modules.md#appaction)
 - [ChannelAction](modules.md#channelaction)
+- [ForwardingAction](modules.md#forwardingaction)
 - [MemberAction](modules.md#memberaction)
 - [PublicationAction](modules.md#publicationaction)
+- [SfuBotAction](modules.md#sfubotaction)
+- [SfuSubscriptionAction](modules.md#sfusubscriptionaction)
 - [SubscriptionAction](modules.md#subscriptionaction)
 
 ### Functions
@@ -41,6 +47,12 @@ ___
 
 ___
 
+### ForwardingAction
+
+Ƭ **ForwardingAction**: ``"create"`` \| ``"write"`` \| ``"delete"``
+
+___
+
 ### MemberAction
 
 Ƭ **MemberAction**: ``"create"`` \| ``"write"`` \| ``"delete"`` \| ``"updateMetadata"`` \| ``"signal"``
@@ -50,6 +62,18 @@ ___
 ### PublicationAction
 
 Ƭ **PublicationAction**: ``"write"`` \| ``"create"`` \| ``"delete"`` \| ``"mute"`` \| ``"updateMetadata"`` \| ``"unmute"``
+
+___
+
+### SfuBotAction
+
+Ƭ **SfuBotAction**: ``"create"`` \| ``"write"`` \| ``"delete"``
+
+___
+
+### SfuSubscriptionAction
+
+Ƭ **SfuSubscriptionAction**: ``"create"`` \| ``"write"`` \| ``"delete"``
 
 ___
 

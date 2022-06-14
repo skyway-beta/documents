@@ -36,7 +36,7 @@
 - [dispose](Channel.md#dispose)
 - [join](Channel.md#join)
 - [leave](Channel.md#leave)
-- [memberMoveFromOtherChannel](Channel.md#membermovefromotherchannel)
+- [moveChannel](Channel.md#movechannel)
 - [updateMetadata](Channel.md#updatemetadata)
 
 ## Properties
@@ -270,9 +270,11 @@ ___
 
 ___
 
-### memberMoveFromOtherChannel
+### moveChannel
 
-▸ **memberMoveFromOtherChannel**(`adapter`): `Promise`<`void`\>
+▸ **moveChannel**(`adapter`): `Promise`<`void`\>
+
+**`description`** {japanese} 別のChannelのMemberを移動させる
 
 #### Parameters
 

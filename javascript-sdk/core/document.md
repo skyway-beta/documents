@@ -106,7 +106,7 @@ Plugin はこの Sfu Bot や Recording Bot などの Bot を利用するため�
 
 各 Plugin の使い方は各 Plugin のドキュメントに記載されています。
 
-# クラス一覧
+# 基本機能
 
 - SkyWayContext
 - SkyWayChannel
@@ -200,7 +200,10 @@ const person: LocalPerson = await channel.join({
 ```
 
 追加時に`name`と`metadata`の設定が可能です。(optional)
+
 `name`は Channel 内の他の Member と重複することはできません。
+
+channel に同時に複数の LocalPerson を追加することはできません。
 
 ### Channel の情報にアクセスする
 
@@ -241,6 +244,8 @@ import { SkyWayMediaDevices } from '@skyway-sdk/core';
 
 ...
 
+const person: LocalPerson = await channel.join();
+
 const video = await SkyWayMediaDevices.createCameraVideoStream();
 const publication = await person.publish(video,options);
 ```
@@ -254,6 +259,28 @@ interface Option {
   encodings?: EncodingParameters[];
 }
 ```
+
+#### コーデックの指定方法
+
+メディア通信の際に優先して利用するコーデックを指定することができます。
+
+**サンプルコード**
+
+```ts
+const video = await SkyWayMediaDevices.createCameraVideoStream();
+await person.publish(video, {
+  codecCapabilities: [{ mimeType: 'video/av1' }, { mimeType: 'video/h264' }],
+});
+
+const audio = await SkyWayMediaDevices.createMicrophoneAudioStream();
+await person.publish(audio, {
+  codecCapabilities: [{ mimeType: 'audio/red' }],
+});
+```
+
+codecCapabilities 配列の先頭のコーデックを優先して利用します。
+デバイスが先頭のコーデックに対応していない場合は後ろのコーデックを利用します。
+どのコーデックにも対応していない場合はデバイスが対応している他のコーデックを自動的に利用します。
 
 ### Stream の Unpublish
 
@@ -393,8 +420,38 @@ if (stream.contentType === 'data') {
 
 # Tips
 
-## Member
+## リモートの Member に Publication を Subscribe させる
 
-### リモート/遠隔の Member に Publication を Subscribe させる方法
+Token の members scope を次のように設定することで、リモートの Member に任意の Publication を Subscribe させたり Unsubscribe させることができます。
 
-ホストとゲストに Member のロールが別れているようなユースケースでホストメンバーがゲストメンバーに特定の Publication を Subscribe させたり逆に Unsubscribe させたい場合に取る方法
+```ts
+const members = [
+  {
+    id: '*',
+    name: '*',
+    actions: ['write'],
+    publication: {
+      actions: ['write'],
+    },
+    subscription: {
+      actions: ['write'],
+    },
+  },
+];
+```
+
+**サンプルコード**
+
+```ts
+//...
+
+const person: LocalPerson = await channel.join({ name: 'alice' });
+
+const video = await SkyWayMediaDevices.createCameraVideoStream();
+const publication = await localPerson.publish(video);
+
+const remoteMember = channel.members.find((member) => member.name === 'bob');
+const remoteSubscription = await remoteMember.subscribe(publication);
+```
+
+リモートのメンバーの Subscription の stream を参照することはできません（stream プロパティの中身は常に undefined になります）

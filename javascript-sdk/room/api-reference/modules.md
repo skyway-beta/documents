@@ -9,7 +9,6 @@
 - [LocalAudioStream](classes/LocalAudioStream.md)
 - [LocalDataStream](classes/LocalDataStream.md)
 - [LocalVideoStream](classes/LocalVideoStream.md)
-- [Logger](classes/Logger.md)
 - [MediaDeviceManager](classes/MediaDeviceManager.md)
 - [RemoteAudioStream](classes/RemoteAudioStream.md)
 - [RemoteDataStream](classes/RemoteDataStream.md)
@@ -25,6 +24,8 @@
 - [AuthToken](interfaces/AuthToken.md)
 - [ChannelScope](interfaces/ChannelScope.md)
 - [Codec](interfaces/Codec.md)
+- [EncodingParameters](interfaces/EncodingParameters.md)
+- [ForwardingScope](interfaces/ForwardingScope.md)
 - [LocalP2PRoomMember](interfaces/LocalP2PRoomMember.md)
 - [LocalRoomMember](interfaces/LocalRoomMember.md)
 - [LocalSFURoomMember](interfaces/LocalSFURoomMember.md)
@@ -53,6 +54,8 @@
 - [SfuRoom](interfaces/SfuRoom.md)
 - [SfuRoomInit](interfaces/SfuRoomInit.md)
 - [SfuRoomPublicationOptions](interfaces/SfuRoomPublicationOptions.md)
+- [SfuScope](interfaces/SfuScope.md)
+- [SfuSubscriptionScope](interfaces/SfuSubscriptionScope.md)
 - [SkyWayConfigOptions](interfaces/SkyWayConfigOptions.md)
 - [StreamPublishedEvent](interfaces/StreamPublishedEvent.md)
 - [StreamSubscribedEvent](interfaces/StreamSubscribedEvent.md)
@@ -66,6 +69,8 @@
 - [AppAction](modules.md#appaction)
 - [ChannelAction](modules.md#channelaction)
 - [ChannelStatus](modules.md#channelstatus)
+- [ContentType](modules.md#contenttype)
+- [ForwardingAction](modules.md#forwardingaction)
 - [HttpResponse](modules.md#httpresponse)
 - [LocalStream](modules.md#localstream)
 - [LogLevel](modules.md#loglevel)
@@ -83,15 +88,16 @@
 - [RoomSubscriptionStatus](modules.md#roomsubscriptionstatus)
 - [RoomType](modules.md#roomtype)
 - [RtcApiConfig](modules.md#rtcapiconfig)
+- [SfuBotAction](modules.md#sfubotaction)
 - [SfuClientPluginOptions](modules.md#sfuclientpluginoptions)
 - [SfuRoomOptions](modules.md#sfuroomoptions)
+- [SfuSubscriptionAction](modules.md#sfusubscriptionaction)
 - [SubscriptionAction](modules.md#subscriptionaction)
 - [SubscriptionStatus](modules.md#subscriptionstatus)
 - [TurnPolicy](modules.md#turnpolicy)
 
 ### Variables
 
-- [PACKAGE\_VERSION](modules.md#package_version)
 - [SkyWayMediaDevices](modules.md#skywaymediadevices)
 - [logLevelTypes](modules.md#logleveltypes)
 - [roomTypes](modules.md#roomtypes)
@@ -117,6 +123,18 @@ ___
 ### ChannelStatus
 
 Ƭ **ChannelStatus**: ``"created"`` \| ``"opened"`` \| ``"closed"``
+
+___
+
+### ContentType
+
+Ƭ **ContentType**: ``"audio"`` \| ``"data"`` \| ``"video"``
+
+___
+
+### ForwardingAction
+
+Ƭ **ForwardingAction**: ``"create"`` \| ``"write"`` \| ``"delete"``
 
 ___
 
@@ -222,6 +240,12 @@ ___
 
 ___
 
+### SfuBotAction
+
+Ƭ **SfuBotAction**: ``"create"`` \| ``"write"`` \| ``"delete"``
+
+___
+
 ### SfuClientPluginOptions
 
 Ƭ **SfuClientPluginOptions**: `Omit`<[`SfuApiOptions`](interfaces/SfuApiOptions.md), ``"logLevel"``\> & { `endpointTimeout`: `number`  }
@@ -237,6 +261,12 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `sfu` | `Partial`<[`SfuClientPluginOptions`](modules.md#sfuclientpluginoptions)\> |
+
+___
+
+### SfuSubscriptionAction
+
+Ƭ **SfuSubscriptionAction**: ``"create"`` \| ``"write"`` \| ``"delete"``
 
 ___
 
@@ -257,12 +287,6 @@ ___
 Ƭ **TurnPolicy**: ``"enable"`` \| ``"disable"`` \| ``"turnOnly"``
 
 ## Variables
-
-### PACKAGE\_VERSION
-
-• `Const` **PACKAGE\_VERSION**: ``"0.3.0-beta.1"``
-
-___
 
 ### SkyWayMediaDevices
 

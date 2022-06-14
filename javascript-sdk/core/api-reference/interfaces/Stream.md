@@ -2,6 +2,11 @@
 
 # Interface: Stream
 
+## Implemented by
+
+- [`LocalStreamBase`](../classes/LocalStreamBase.md)
+- [`RemoteStreamBase`](../classes/RemoteStreamBase.md)
+
 ## Table of contents
 
 ### Properties

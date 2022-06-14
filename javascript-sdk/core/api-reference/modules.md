@@ -8,13 +8,14 @@
 - [Events](classes/Events.md)
 - [LocalAudioStream](classes/LocalAudioStream.md)
 - [LocalDataStream](classes/LocalDataStream.md)
+- [LocalStreamBase](classes/LocalStreamBase.md)
 - [LocalVideoStream](classes/LocalVideoStream.md)
-- [Logger](classes/Logger.md)
 - [MediaDevice](classes/MediaDevice.md)
 - [MediaDeviceManager](classes/MediaDeviceManager.md)
 - [P2PConnection](classes/P2PConnection.md)
 - [RemoteAudioStream](classes/RemoteAudioStream.md)
 - [RemoteDataStream](classes/RemoteDataStream.md)
+- [RemoteStreamBase](classes/RemoteStreamBase.md)
 - [RemoteVideoStream](classes/RemoteVideoStream.md)
 - [SkyWayAuthToken](classes/SkyWayAuthToken.md)
 - [SkyWayChannel](classes/SkyWayChannel.md)
@@ -35,6 +36,7 @@
 - [Codec](interfaces/Codec.md)
 - [DataStreamOptions](interfaces/DataStreamOptions.md)
 - [EncodingParameters](interfaces/EncodingParameters.md)
+- [ForwardingScope](interfaces/ForwardingScope.md)
 - [LocalPerson](interfaces/LocalPerson.md)
 - [LocalPlayableStream](interfaces/LocalPlayableStream.md)
 - [Member](interfaces/Member.md)
@@ -44,6 +46,7 @@
 - [MemberMetadataUpdatedEvent](interfaces/MemberMetadataUpdatedEvent.md)
 - [MemberScope](interfaces/MemberScope.md)
 - [MembershipChangedEvent](interfaces/MembershipChangedEvent.md)
+- [Person](interfaces/Person.md)
 - [PlayableStream](interfaces/PlayableStream.md)
 - [Publication](interfaces/Publication.md)
 - [PublicationChangedEvent](interfaces/PublicationChangedEvent.md)
@@ -51,7 +54,11 @@
 - [PublicationOptions](interfaces/PublicationOptions.md)
 - [PublicationScope](interfaces/PublicationScope.md)
 - [RemoteMember](interfaces/RemoteMember.md)
+- [RemotePerson](interfaces/RemotePerson.md)
+- [RemotePersonInterface](interfaces/RemotePersonInterface.md)
 - [RtcRpcApiConfig](interfaces/RtcRpcApiConfig.md)
+- [SfuScope](interfaces/SfuScope.md)
+- [SfuSubscriptionScope](interfaces/SfuSubscriptionScope.md)
 - [SignalEvent](interfaces/SignalEvent.md)
 - [SkyWayConfigOptions](interfaces/SkyWayConfigOptions.md)
 - [SkyWayConnection](interfaces/SkyWayConnection.md)
@@ -72,6 +79,7 @@
 - [ChannelStatus](modules.md#channelstatus)
 - [ContentType](modules.md#contenttype)
 - [DataType](modules.md#datatype)
+- [ForwardingAction](modules.md#forwardingaction)
 - [HttpResponse](modules.md#httpresponse)
 - [LocalStream](modules.md#localstream)
 - [LogLevel](modules.md#loglevel)
@@ -81,9 +89,10 @@
 - [MemberType](modules.md#membertype)
 - [PublicationAction](modules.md#publicationaction)
 - [PublicationStatus](modules.md#publicationstatus)
-- [RemotePerson](modules.md#remoteperson)
 - [RemoteStream](modules.md#remotestream)
 - [RtcApiConfig](modules.md#rtcapiconfig)
+- [SfuBotAction](modules.md#sfubotaction)
+- [SfuSubscriptionAction](modules.md#sfusubscriptionaction)
 - [StreamSide](modules.md#streamside)
 - [SubscriptionAction](modules.md#subscriptionaction)
 - [SubscriptionStatus](modules.md#subscriptionstatus)
@@ -135,6 +144,12 @@ ___
 ### DataType
 
 Ƭ **DataType**: `string` \| `Blob` \| `ArrayBuffer`
+
+___
+
+### ForwardingAction
+
+Ƭ **ForwardingAction**: ``"create"`` \| ``"write"`` \| ``"delete"``
 
 ___
 
@@ -192,12 +207,6 @@ ___
 
 ___
 
-### RemotePerson
-
-Ƭ **RemotePerson**: [`RemoteMember`](interfaces/RemoteMember.md) & `Person` & `RemotePersonInterface`
-
-___
-
 ### RemoteStream
 
 Ƭ **RemoteStream**: [`RemoteDataStream`](classes/RemoteDataStream.md) \| [`RemoteAudioStream`](classes/RemoteAudioStream.md) \| [`RemoteVideoStream`](classes/RemoteVideoStream.md)
@@ -207,6 +216,18 @@ ___
 ### RtcApiConfig
 
 Ƭ **RtcApiConfig**: [`RtcRpcApiConfig`](interfaces/RtcRpcApiConfig.md)
+
+___
+
+### SfuBotAction
+
+Ƭ **SfuBotAction**: ``"create"`` \| ``"write"`` \| ``"delete"``
+
+___
+
+### SfuSubscriptionAction
+
+Ƭ **SfuSubscriptionAction**: ``"create"`` \| ``"write"`` \| ``"delete"``
 
 ___
 

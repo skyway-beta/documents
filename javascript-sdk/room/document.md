@@ -90,7 +90,7 @@ Room 内の Subscription のプロパティを確認することで、どの Mem
 
 Subscription と紐ついている Publication が Unpublish されると Subscription は自動的に Unsubscribe されます。
 
-# クラス一覧
+# 基本機能
 
 - SkyWayContext
 - Room
@@ -186,10 +186,19 @@ API は P2PRoom と SfuRoom で共通しています。
 ### Member の Room への参加
 
 ```ts
-const member: LocalRoomMember = await room.join();
+const member: LocalRoomMember = await room.join({
+  name: 'something',
+  metadata: 'something',
+});
 ```
 
 Room に参加すると LocalRoomMember インスタンスを取得できます。
+
+追加時に`name`と`metadata`の設定が可能です。(optional)
+
+`name`は Room 内の他の Member と重複することはできません。
+
+join を複数回実行して に複数の LocalRoomMember を取得することはできません。
 
 ### Room の情報にアクセスする
 
@@ -279,6 +288,28 @@ const publication = await member.publish(video, {
   ],
 });
 ```
+
+#### コーデックの指定方法
+
+メディア通信の際に優先して利用するコーデックを指定することができます。
+
+**サンプルコード**
+
+```ts
+const video = await SkyWayMediaDevices.createCameraVideoStream();
+await localMember.publish(video, {
+  codecCapabilities: [{ mimeType: 'video/av1' }, { mimeType: 'video/h264' }],
+});
+
+const audio = await SkyWayMediaDevices.createMicrophoneAudioStream();
+await localMember.publish(audio, {
+  codecCapabilities: [{ mimeType: 'audio/red' }],
+});
+```
+
+codecCapabilities 配列の先頭のコーデックを優先して利用します。
+デバイスが先頭のコーデックに対応していない場合は後ろのコーデックを利用します。
+どのコーデックにも対応していない場合はデバイスが対応している他のコーデックを自動的に利用します。
 
 ### Stream の Unpublish
 
@@ -415,3 +446,41 @@ if (stream.contentType === 'data') {
   const track = stream.track;
 }
 ```
+
+# Tips
+
+## リモートの Member に Publication を Subscribe させる
+
+Token の members scope を次のように設定することで、リモートの Member に任意の Publication を Subscribe させたり Unsubscribe させることができます。
+
+```ts
+const members = [
+  {
+    id: '*',
+    name: '*',
+    actions: ['write'],
+    publication: {
+      actions: ['write'],
+    },
+    subscription: {
+      actions: ['write'],
+    },
+  },
+];
+```
+
+**サンプルコード**
+
+```ts
+//...
+
+const localMember: LocalRoomMember = await room.join({ name: 'alice' });
+
+const video = await SkyWayMediaDevices.createCameraVideoStream();
+const publication = await localMember.publish(video);
+
+const remoteMember = room.members.find((member) => member.name === 'bob');
+const remoteSubscription = await remoteMember.subscribe(publication);
+```
+
+リモートのメンバーの Subscription の stream を参照することはできません（stream プロパティの中身は常に undefined になります）

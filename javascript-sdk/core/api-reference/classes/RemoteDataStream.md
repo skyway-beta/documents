@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- `RemoteStreamBase`
+- [`RemoteStreamBase`](RemoteStreamBase.md)
 
   ↳ **`RemoteDataStream`**
 
@@ -34,7 +34,7 @@ ___
 
 #### Inherited from
 
-RemoteStreamBase.codec
+[RemoteStreamBase](RemoteStreamBase.md).[codec](RemoteStreamBase.md#codec)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Overrides
 
-RemoteStreamBase.contentType
+[RemoteStreamBase](RemoteStreamBase.md).[contentType](RemoteStreamBase.md#contenttype)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Inherited from
 
-RemoteStreamBase.id
+[RemoteStreamBase](RemoteStreamBase.md).[id](RemoteStreamBase.md#id)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Inherited from
 
-RemoteStreamBase.label
+[RemoteStreamBase](RemoteStreamBase.md).[label](RemoteStreamBase.md#label)
 
 ___
 
@@ -80,4 +80,4 @@ ___
 
 #### Inherited from
 
-RemoteStreamBase.side
+[RemoteStreamBase](RemoteStreamBase.md).[side](RemoteStreamBase.md#side)

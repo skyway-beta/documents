@@ -21,7 +21,7 @@ ___
 
 ### logLevel
 
-• **logLevel**: ``"error"`` \| ``"warn"`` \| ``"debug"`` \| ``"disable"``
+• **logLevel**: ``"disable"`` \| ``"error"`` \| ``"warn"`` \| ``"debug"``
 
 ___
 
