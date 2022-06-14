@@ -12,8 +12,10 @@
 
 ### Properties
 
+- [codec](RoomSubscription.md#codec)
 - [contentType](RoomSubscription.md#contenttype)
 - [id](RoomSubscription.md#id)
+- [onCanceled](RoomSubscription.md#oncanceled)
 - [onStreamAttached](RoomSubscription.md#onstreamattached)
 - [publication](RoomSubscription.md#publication)
 - [status](RoomSubscription.md#status)
@@ -26,15 +28,27 @@
 
 ## Properties
 
+### codec
+
+• `Optional` **codec**: [`Codec`](Codec.md)
+
+___
+
 ### contentType
 
-• `Readonly` **contentType**: `ContentType`
+• `Readonly` **contentType**: [`ContentType`](../modules.md#contenttype)
 
 ___
 
 ### id
 
 • `Readonly` **id**: `string`
+
+___
+
+### onCanceled
+
+• `Readonly` **onCanceled**: [`Event`](../classes/Event.md)<`void`\>
 
 ___
 

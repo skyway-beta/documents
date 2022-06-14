@@ -6,6 +6,8 @@
 
 - **`Member`**
 
+  ↳ [`Person`](Person.md)
+
   ↳ [`RemoteMember`](RemoteMember.md)
 
 ## Table of contents

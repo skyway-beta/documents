@@ -4,21 +4,11 @@
 
 ## Table of contents
 
-### Constructors
-
-- [constructor](SkyWayRoom.md#constructor)
-
 ### Methods
 
 - [Create](SkyWayRoom.md#create)
 - [Find](SkyWayRoom.md#find)
 - [FindOrCreate](SkyWayRoom.md#findorcreate)
-
-## Constructors
-
-### constructor
-
-• **new SkyWayRoom**()
 
 ## Methods
 

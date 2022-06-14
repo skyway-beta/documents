@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- `LocalStreamBase`
+- [`LocalStreamBase`](LocalStreamBase.md)
 
   ↳ **`LocalDataStream`**
 
@@ -62,7 +62,7 @@ ___
 
 #### Overrides
 
-LocalStreamBase.contentType
+[LocalStreamBase](LocalStreamBase.md).[contentType](LocalStreamBase.md#contenttype)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Inherited from
 
-LocalStreamBase.id
+[LocalStreamBase](LocalStreamBase.md).[id](LocalStreamBase.md#id)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Inherited from
 
-LocalStreamBase.label
+[LocalStreamBase](LocalStreamBase.md).[label](LocalStreamBase.md#label)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Inherited from
 
-LocalStreamBase.side
+[LocalStreamBase](LocalStreamBase.md).[side](LocalStreamBase.md#side)
 
 ## Accessors
 
@@ -120,7 +120,7 @@ LocalStreamBase.muted
 
 #### Inherited from
 
-LocalStreamBase.mute
+[LocalStreamBase](LocalStreamBase.md).[mute](LocalStreamBase.md#mute)
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 #### Inherited from
 
-LocalStreamBase.unmute
+[LocalStreamBase](LocalStreamBase.md).[unmute](LocalStreamBase.md#unmute)
 
 ___
 

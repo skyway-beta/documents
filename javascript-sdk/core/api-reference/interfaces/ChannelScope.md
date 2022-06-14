@@ -40,4 +40,4 @@ ___
 
 ### sfuBots
 
-• `Optional` **sfuBots**: `SfuScope`[]
+• `Optional` **sfuBots**: [`SfuScope`](SfuScope.md)[]

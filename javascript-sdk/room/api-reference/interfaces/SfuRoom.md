@@ -41,7 +41,7 @@
 - [dispose](SfuRoom.md#dispose)
 - [join](SfuRoom.md#join)
 - [leave](SfuRoom.md#leave)
-- [memberMoveFromOtherRoom](SfuRoom.md#membermovefromotherroom)
+- [moveRoom](SfuRoom.md#moveroom)
 - [updateMetadata](SfuRoom.md#updatemetadata)
 
 ## Properties
@@ -356,9 +356,11 @@ ___
 
 ___
 
-### memberMoveFromOtherRoom
+### moveRoom
 
-▸ **memberMoveFromOtherRoom**(`member`): `Promise`<[`LocalRoomMember`](LocalRoomMember.md)\>
+▸ **moveRoom**(`member`): `Promise`<[`LocalRoomMember`](LocalRoomMember.md)\>
+
+**`description`** {japanese} 別のRoomのMemberを移動させる
 
 #### Parameters
 
@@ -372,7 +374,7 @@ ___
 
 #### Inherited from
 
-[Room](Room.md).[memberMoveFromOtherRoom](Room.md#membermovefromotherroom)
+[Room](Room.md).[moveRoom](Room.md#moveroom)
 
 ___
 

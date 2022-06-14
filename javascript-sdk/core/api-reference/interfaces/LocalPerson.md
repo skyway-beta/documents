@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- `Person`
+- [`Person`](Person.md)
 
   ↳ **`LocalPerson`**
 
@@ -34,8 +34,6 @@
 
 ### Methods
 
-- [filterConnections](LocalPerson.md#filterconnections)
-- [getConnections](LocalPerson.md#getconnections)
 - [leave](LocalPerson.md#leave)
 - [publish](LocalPerson.md#publish)
 - [subscribe](LocalPerson.md#subscribe)
@@ -51,7 +49,7 @@
 
 #### Inherited from
 
-Person.channel
+[Person](Person.md).[channel](Person.md#channel)
 
 ___
 
@@ -61,7 +59,7 @@ ___
 
 #### Inherited from
 
-Person.id
+[Person](Person.md).[id](Person.md#id)
 
 ___
 
@@ -77,7 +75,7 @@ ___
 
 #### Inherited from
 
-Person.metadata
+[Person](Person.md).[metadata](Person.md#metadata)
 
 ___
 
@@ -87,7 +85,7 @@ ___
 
 #### Inherited from
 
-Person.name
+[Person](Person.md).[name](Person.md#name)
 
 ___
 
@@ -97,7 +95,7 @@ ___
 
 #### Inherited from
 
-Person.onLeft
+[Person](Person.md).[onLeft](Person.md#onleft)
 
 ___
 
@@ -107,7 +105,7 @@ ___
 
 #### Inherited from
 
-Person.onMetadataUpdated
+[Person](Person.md).[onMetadataUpdated](Person.md#onmetadataupdated)
 
 ___
 
@@ -161,7 +159,7 @@ ___
 
 #### Inherited from
 
-Person.publications
+[Person](Person.md).[publications](Person.md#publications)
 
 ___
 
@@ -171,7 +169,7 @@ ___
 
 #### Inherited from
 
-Person.side
+[Person](Person.md).[side](Person.md#side)
 
 ___
 
@@ -181,7 +179,7 @@ ___
 
 #### Inherited from
 
-Person.status
+[Person](Person.md).[status](Person.md#status)
 
 ___
 
@@ -191,7 +189,7 @@ ___
 
 #### Inherited from
 
-Person.subscriptions
+[Person](Person.md).[subscriptions](Person.md#subscriptions)
 
 ___
 
@@ -201,7 +199,7 @@ ___
 
 #### Inherited from
 
-Person.subtype
+[Person](Person.md).[subtype](Person.md#subtype)
 
 ___
 
@@ -211,35 +209,9 @@ ___
 
 #### Inherited from
 
-Person.type
+[Person](Person.md).[type](Person.md#type)
 
 ## Methods
-
-### filterConnections
-
-▸ **filterConnections**(`query`): [`SkyWayConnection`](SkyWayConnection.md)[]
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `query` | [`Publication`](Publication.md)<[`LocalStream`](../modules.md#localstream)\> \| [`Subscription`](Subscription.md)<[`RemoteStream`](../modules.md#remotestream)\> |
-
-#### Returns
-
-[`SkyWayConnection`](SkyWayConnection.md)[]
-
-___
-
-### getConnections
-
-▸ **getConnections**(): [`SkyWayConnection`](SkyWayConnection.md)[]
-
-#### Returns
-
-[`SkyWayConnection`](SkyWayConnection.md)[]
-
-___
 
 ### leave
 
@@ -354,4 +326,4 @@ ___
 
 #### Inherited from
 
-Person.updateMetadata
+[Person](Person.md).[updateMetadata](Person.md#updatemetadata)

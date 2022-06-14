@@ -34,8 +34,6 @@
 
 ### Methods
 
-- [filterConnections](LocalSFURoomMember.md#filterconnections)
-- [getConnections](LocalSFURoomMember.md#getconnections)
 - [leave](LocalSFURoomMember.md#leave)
 - [publish](LocalSFURoomMember.md#publish)
 - [subscribe](LocalSFURoomMember.md#subscribe)
@@ -252,40 +250,6 @@ ___
 [LocalRoomMember](LocalRoomMember.md).[subscriptions](LocalRoomMember.md#subscriptions)
 
 ## Methods
-
-### filterConnections
-
-▸ **filterConnections**(`query`): `SkyWayConnection`[]
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `query` | [`RoomPublication`](RoomPublication.md)<[`LocalStream`](../modules.md#localstream)\> \| [`RoomSubscription`](RoomSubscription.md)<[`RemoteStream`](../modules.md#remotestream)\> |
-
-#### Returns
-
-`SkyWayConnection`[]
-
-#### Inherited from
-
-[LocalRoomMember](LocalRoomMember.md).[filterConnections](LocalRoomMember.md#filterconnections)
-
-___
-
-### getConnections
-
-▸ **getConnections**(): `SkyWayConnection`[]
-
-#### Returns
-
-`SkyWayConnection`[]
-
-#### Inherited from
-
-[LocalRoomMember](LocalRoomMember.md).[getConnections](LocalRoomMember.md#getconnections)
-
-___
 
 ### leave
 

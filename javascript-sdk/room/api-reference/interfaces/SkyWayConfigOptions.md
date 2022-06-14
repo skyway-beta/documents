@@ -44,7 +44,7 @@ ___
 
 ### logLevel
 
-• `Optional` **logLevel**: ``"error"`` \| ``"warn"`` \| ``"debug"`` \| ``"disable"``
+• `Optional` **logLevel**: ``"disable"`` \| ``"error"`` \| ``"warn"`` \| ``"debug"``
 
 ___
 

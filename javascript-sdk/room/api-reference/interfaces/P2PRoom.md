@@ -41,7 +41,7 @@
 - [dispose](P2PRoom.md#dispose)
 - [join](P2PRoom.md#join)
 - [leave](P2PRoom.md#leave)
-- [memberMoveFromOtherRoom](P2PRoom.md#membermovefromotherroom)
+- [moveRoom](P2PRoom.md#moveroom)
 - [updateMetadata](P2PRoom.md#updatemetadata)
 
 ## Properties
@@ -356,9 +356,11 @@ ___
 
 ___
 
-### memberMoveFromOtherRoom
+### moveRoom
 
-▸ **memberMoveFromOtherRoom**(`member`): `Promise`<[`LocalRoomMember`](LocalRoomMember.md)\>
+▸ **moveRoom**(`member`): `Promise`<[`LocalRoomMember`](LocalRoomMember.md)\>
+
+**`description`** {japanese} 別のRoomのMemberを移動させる
 
 #### Parameters
 
@@ -372,7 +374,7 @@ ___
 
 #### Inherited from
 
-[Room](Room.md).[memberMoveFromOtherRoom](Room.md#membermovefromotherroom)
+[Room](Room.md).[moveRoom](Room.md#moveroom)
 
 ___
 

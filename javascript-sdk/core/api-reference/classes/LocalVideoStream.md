@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
-- `LocalStreamBase`
+- [`LocalStreamBase`](LocalStreamBase.md)
 
   ↳ **`LocalVideoStream`**
 
@@ -64,7 +64,7 @@ LocalStreamBase.constructor
 
 #### Overrides
 
-LocalStreamBase.contentType
+[LocalStreamBase](LocalStreamBase.md).[contentType](LocalStreamBase.md#contenttype)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Inherited from
 
-LocalStreamBase.id
+[LocalStreamBase](LocalStreamBase.md).[id](LocalStreamBase.md#id)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Inherited from
 
-LocalStreamBase.label
+[LocalStreamBase](LocalStreamBase.md).[label](LocalStreamBase.md#label)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Inherited from
 
-LocalStreamBase.side
+[LocalStreamBase](LocalStreamBase.md).[side](LocalStreamBase.md#side)
 
 ___
 
@@ -166,7 +166,7 @@ ___
 
 #### Inherited from
 
-LocalStreamBase.mute
+[LocalStreamBase](LocalStreamBase.md).[mute](LocalStreamBase.md#mute)
 
 ___
 
@@ -200,4 +200,4 @@ ___
 
 #### Inherited from
 
-LocalStreamBase.unmute
+[LocalStreamBase](LocalStreamBase.md).[unmute](LocalStreamBase.md#unmute)
