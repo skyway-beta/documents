@@ -2,12 +2,6 @@
 
 # Interface: RemotePersonInterface
 
-## Hierarchy
-
-- **`RemotePersonInterface`**
-
-  ↳ [`RemotePerson`](RemotePerson.md)
-
 ## Table of contents
 
 ### Properties

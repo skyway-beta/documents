@@ -1,23 +1,23 @@
-[@skyway-sdk/core](../README.md) / [Exports](../modules.md) / MediaDeviceManager
+[@skyway-sdk/core](../README.md) / [Exports](../modules.md) / StreamFactory
 
-# Class: MediaDeviceManager
+# Class: StreamFactory
 
 ## Table of contents
 
 ### Properties
 
-- [onDeviceChange](MediaDeviceManager.md#ondevicechange)
+- [onDeviceChange](StreamFactory.md#ondevicechange)
 
 ### Methods
 
-- [createCameraVideoStream](MediaDeviceManager.md#createcameravideostream)
-- [createDataStream](MediaDeviceManager.md#createdatastream)
-- [createMicrophoneAudioAndCameraStream](MediaDeviceManager.md#createmicrophoneaudioandcamerastream)
-- [createMicrophoneAudioStream](MediaDeviceManager.md#createmicrophoneaudiostream)
-- [enumerateDevices](MediaDeviceManager.md#enumeratedevices)
-- [enumerateInputAudioDevices](MediaDeviceManager.md#enumerateinputaudiodevices)
-- [enumerateInputVideoDevices](MediaDeviceManager.md#enumerateinputvideodevices)
-- [enumerateOutputAudioDevices](MediaDeviceManager.md#enumerateoutputaudiodevices)
+- [createCameraVideoStream](StreamFactory.md#createcameravideostream)
+- [createDataStream](StreamFactory.md#createdatastream)
+- [createMicrophoneAudioAndCameraStream](StreamFactory.md#createmicrophoneaudioandcamerastream)
+- [createMicrophoneAudioStream](StreamFactory.md#createmicrophoneaudiostream)
+- [enumerateDevices](StreamFactory.md#enumeratedevices)
+- [enumerateInputAudioDevices](StreamFactory.md#enumerateinputaudiodevices)
+- [enumerateInputVideoDevices](StreamFactory.md#enumerateinputvideodevices)
+- [enumerateOutputAudioDevices](StreamFactory.md#enumerateoutputaudiodevices)
 
 ## Properties
 

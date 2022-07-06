@@ -10,8 +10,6 @@
 
   ↳↳ [`LocalPerson`](LocalPerson.md)
 
-  ↳↳ [`RemotePerson`](RemotePerson.md)
-
 ## Table of contents
 
 ### Properties

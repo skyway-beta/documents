@@ -9,6 +9,7 @@
 - [appId](Channel.md#appid)
 - [bots](Channel.md#bots)
 - [id](Channel.md#id)
+- [localPerson](Channel.md#localperson)
 - [members](Channel.md#members)
 - [metadata](Channel.md#metadata)
 - [name](Channel.md#name)
@@ -25,7 +26,6 @@
 - [onStreamUnpublished](Channel.md#onstreamunpublished)
 - [onStreamUnsubscribed](Channel.md#onstreamunsubscribed)
 - [onSubscriptionChanged](Channel.md#onsubscriptionchanged)
-- [persons](Channel.md#persons)
 - [publications](Channel.md#publications)
 - [status](Channel.md#status)
 - [subscriptions](Channel.md#subscriptions)
@@ -58,6 +58,14 @@ ___
 ### id
 
 • `Readonly` **id**: `string`
+
+___
+
+### localPerson
+
+• `Optional` **localPerson**: [`LocalPerson`](LocalPerson.md)
+
+**`description`** {japanese} Channel中のLocalPersonを取得する
 
 ___
 
@@ -176,14 +184,6 @@ ___
 ### onSubscriptionChanged
 
 • `Readonly` **onSubscriptionChanged**: [`Event`](../classes/Event.md)<[`SubscriptionChangedEvent`](SubscriptionChangedEvent.md)\>
-
-___
-
-### persons
-
-• **persons**: [`LocalPerson`](LocalPerson.md)[]
-
-**`description`** {japanese} Channel中のLocalPersonの一覧を取得する
 
 ___
 

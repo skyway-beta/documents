@@ -25,15 +25,6 @@
 - [label](LocalStreamBase.md#label)
 - [side](LocalStreamBase.md#side)
 
-### Accessors
-
-- [muted](LocalStreamBase.md#muted)
-
-### Methods
-
-- [mute](LocalStreamBase.md#mute)
-- [unmute](LocalStreamBase.md#unmute)
-
 ## Properties
 
 ### contentType
@@ -73,33 +64,3 @@ ___
 #### Implementation of
 
 [Stream](../interfaces/Stream.md).[side](../interfaces/Stream.md#side)
-
-## Accessors
-
-### muted
-
-• `get` **muted**(): `boolean`
-
-#### Returns
-
-`boolean`
-
-## Methods
-
-### mute
-
-▸ **mute**(): `void`
-
-#### Returns
-
-`void`
-
-___
-
-### unmute
-
-▸ **unmute**(): `void`
-
-#### Returns
-
-`void`

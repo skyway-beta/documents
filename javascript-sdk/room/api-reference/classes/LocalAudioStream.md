@@ -27,17 +27,12 @@
 - [side](LocalAudioStream.md#side)
 - [track](LocalAudioStream.md#track)
 
-### Accessors
-
-- [muted](LocalAudioStream.md#muted)
-
 ### Methods
 
 - [attach](LocalAudioStream.md#attach)
 - [detach](LocalAudioStream.md#detach)
-- [mute](LocalAudioStream.md#mute)
+- [release](LocalAudioStream.md#release)
 - [replaceTrack](LocalAudioStream.md#replacetrack)
-- [unmute](LocalAudioStream.md#unmute)
 
 ## Constructors
 
@@ -102,20 +97,6 @@ ___
 
 • `Readonly` **track**: `MediaStreamTrack`
 
-## Accessors
-
-### muted
-
-• `get` **muted**(): `boolean`
-
-#### Returns
-
-`boolean`
-
-#### Inherited from
-
-LocalStreamBase.muted
-
 ## Methods
 
 ### attach
@@ -156,17 +137,17 @@ PlayableStream.detach
 
 ___
 
-### mute
+### release
 
-▸ **mute**(): `void`
+▸ **release**(): `void`
 
 #### Returns
 
 `void`
 
-#### Inherited from
+#### Implementation of
 
-LocalStreamBase.mute
+LocalPlayableStream.release
 
 ___
 
@@ -187,17 +168,3 @@ ___
 #### Implementation of
 
 LocalPlayableStream.replaceTrack
-
-___
-
-### unmute
-
-▸ **unmute**(): `void`
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-LocalStreamBase.unmute

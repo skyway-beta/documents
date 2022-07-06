@@ -11,7 +11,7 @@
 ### Properties
 
 - [closed](SkyWayConnection.md#closed)
-- [localPersonId](SkyWayConnection.md#localpersonid)
+- [localPerson](SkyWayConnection.md#localperson)
 - [onClose](SkyWayConnection.md#onclose)
 - [onDisconnect](SkyWayConnection.md#ondisconnect)
 - [remoteMember](SkyWayConnection.md#remotemember)
@@ -33,9 +33,9 @@
 
 ___
 
-### localPersonId
+### localPerson
 
-• `Readonly` **localPersonId**: `string`
+• `Readonly` **localPerson**: `LocalPersonImpl`
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 ### remoteMember
 
-• `Readonly` **remoteMember**: `Pick`<[`Member`](Member.md), ``"name"`` \| ``"id"``\>
+• `Readonly` **remoteMember**: `Pick`<[`Member`](Member.md), ``"id"`` \| ``"name"``\>
 
 ___
 

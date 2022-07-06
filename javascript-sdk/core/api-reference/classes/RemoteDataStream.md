@@ -70,7 +70,7 @@ ___
 
 ### onData
 
-• `Readonly` **onData**: [`Event`](Event.md)<`Record`<`string`, `any`\>\>
+• `Readonly` **onData**: [`Event`](Event.md)<[`DataStreamMessageType`](../modules.md#datastreammessagetype)\>
 
 ___
 

@@ -102,6 +102,8 @@ ___
 
 • `Readonly` **onClosed**: [`Event`](../classes/Event.md)<[`RoomClosedEvent`](RoomClosedEvent.md)\>
 
+**`description`** {japanese} Roomが閉じられたときに発火するイベント
+
 #### Inherited from
 
 [Room](Room.md).[onClosed](Room.md#onclosed)
@@ -157,6 +159,8 @@ ___
 ### onMetadataUpdated
 
 • `Readonly` **onMetadataUpdated**: [`Event`](../classes/Event.md)<[`RoomMetadataUpdatedEvent`](RoomMetadataUpdatedEvent.md)\>
+
+**`description`** {japanese} RoomのMetadataが更新されたときに発火するイベント
 
 #### Inherited from
 
@@ -292,6 +296,8 @@ ___
 
 ▸ **close**(): `Promise`<`void`\>
 
+**`description`** {japanese} Roomを閉じる
+
 #### Returns
 
 `Promise`<`void`\>
@@ -340,6 +346,8 @@ ___
 
 ▸ **leave**(`member`): `Promise`<`void`\>
 
+**`description`** {japanese} RoomからMemberを退室させる
+
 #### Parameters
 
 | Name | Type |
@@ -381,6 +389,8 @@ ___
 ### updateMetadata
 
 ▸ **updateMetadata**(`metadata`): `Promise`<`void`\>
+
+**`description`** {japanese} metadataを更新する
 
 #### Parameters
 

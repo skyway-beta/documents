@@ -22,14 +22,8 @@
 - [label](LocalDataStream.md#label)
 - [side](LocalDataStream.md#side)
 
-### Accessors
-
-- [muted](LocalDataStream.md#muted)
-
 ### Methods
 
-- [mute](LocalDataStream.md#mute)
-- [unmute](LocalDataStream.md#unmute)
 - [write](LocalDataStream.md#write)
 
 ## Constructors
@@ -94,59 +88,17 @@ ___
 
 LocalStreamBase.side
 
-## Accessors
-
-### muted
-
-• `get` **muted**(): `boolean`
-
-#### Returns
-
-`boolean`
-
-#### Inherited from
-
-LocalStreamBase.muted
-
 ## Methods
-
-### mute
-
-▸ **mute**(): `void`
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-LocalStreamBase.mute
-
-___
-
-### unmute
-
-▸ **unmute**(): `void`
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-LocalStreamBase.unmute
-
-___
 
 ### write
 
-▸ **write**(`object`): `void`
+▸ **write**(`data`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `object` | `Object` |
+| `data` | `DataStreamMessageType` |
 
 #### Returns
 

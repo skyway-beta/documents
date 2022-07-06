@@ -11,7 +11,6 @@
 - [LocalStreamBase](classes/LocalStreamBase.md)
 - [LocalVideoStream](classes/LocalVideoStream.md)
 - [MediaDevice](classes/MediaDevice.md)
-- [MediaDeviceManager](classes/MediaDeviceManager.md)
 - [P2PConnection](classes/P2PConnection.md)
 - [RemoteAudioStream](classes/RemoteAudioStream.md)
 - [RemoteDataStream](classes/RemoteDataStream.md)
@@ -22,6 +21,7 @@
 - [SkyWayConfig](classes/SkyWayConfig.md)
 - [SkyWayContext](classes/SkyWayContext.md)
 - [SkyWayError](classes/SkyWayError.md)
+- [StreamFactory](classes/StreamFactory.md)
 
 ### Interfaces
 
@@ -54,7 +54,6 @@
 - [PublicationOptions](interfaces/PublicationOptions.md)
 - [PublicationScope](interfaces/PublicationScope.md)
 - [RemoteMember](interfaces/RemoteMember.md)
-- [RemotePerson](interfaces/RemotePerson.md)
 - [RemotePersonInterface](interfaces/RemotePersonInterface.md)
 - [RtcRpcApiConfig](interfaces/RtcRpcApiConfig.md)
 - [SfuScope](interfaces/SfuScope.md)
@@ -78,10 +77,12 @@
 - [ChannelAction](modules.md#channelaction)
 - [ChannelStatus](modules.md#channelstatus)
 - [ContentType](modules.md#contenttype)
+- [DataStreamMessageType](modules.md#datastreammessagetype)
 - [DataType](modules.md#datatype)
 - [ForwardingAction](modules.md#forwardingaction)
 - [HttpResponse](modules.md#httpresponse)
 - [LocalStream](modules.md#localstream)
+- [LogFormat](modules.md#logformat)
 - [LogLevel](modules.md#loglevel)
 - [MemberAction](modules.md#memberaction)
 - [MemberSide](modules.md#memberside)
@@ -89,6 +90,7 @@
 - [MemberType](modules.md#membertype)
 - [PublicationAction](modules.md#publicationaction)
 - [PublicationStatus](modules.md#publicationstatus)
+- [RemotePerson](modules.md#remoteperson)
 - [RemoteStream](modules.md#remotestream)
 - [RtcApiConfig](modules.md#rtcapiconfig)
 - [SfuBotAction](modules.md#sfubotaction)
@@ -102,11 +104,14 @@
 
 ### Variables
 
-- [SkyWayMediaDevices](modules.md#skywaymediadevices)
+- [SkyWayStreamFactory](modules.md#skywaystreamfactory)
 - [logLevelTypes](modules.md#logleveltypes)
+- [objectFlag](modules.md#objectflag)
 
 ### Functions
 
+- [isSafari](modules.md#issafari)
+- [setEncodingParams](modules.md#setencodingparams)
 - [uuidV4](modules.md#uuidv4)
 
 ## Type Aliases
@@ -119,7 +124,7 @@ ___
 
 ### AudioMediaTrackConstraints
 
-Ƭ **AudioMediaTrackConstraints**: `Omit`<`MediaTrackConstraints`, ``"aspectRatio"`` \| ``"facingMode"`` \| ``"frameRate"`` \| ``"height"`` \| ``"width"``\>
+Ƭ **AudioMediaTrackConstraints**: `Pick`<`MediaTrackConstraintSet`, ``"autoGainControl"`` \| ``"channelCount"`` \| ``"echoCancellation"`` \| ``"latency"`` \| ``"noiseSuppression"`` \| ``"sampleRate"`` \| ``"sampleSize"`` \| ``"suppressLocalAudioPlayback"``\> & { `volume?`: `number`  }
 
 ___
 
@@ -138,6 +143,12 @@ ___
 ### ContentType
 
 Ƭ **ContentType**: ``"audio"`` \| ``"data"`` \| ``"video"``
+
+___
+
+### DataStreamMessageType
+
+Ƭ **DataStreamMessageType**: `string` \| `ArrayBuffer` \| `object`
 
 ___
 
@@ -162,6 +173,12 @@ ___
 ### LocalStream
 
 Ƭ **LocalStream**: [`LocalAudioStream`](classes/LocalAudioStream.md) \| [`LocalVideoStream`](classes/LocalVideoStream.md) \| [`LocalDataStream`](classes/LocalDataStream.md)
+
+___
+
+### LogFormat
+
+Ƭ **LogFormat**: ``"object"`` \| ``"string"``
 
 ___
 
@@ -204,6 +221,12 @@ ___
 ### PublicationStatus
 
 Ƭ **PublicationStatus**: ``"created"`` \| ``"published"`` \| ``"canceled"``
+
+___
+
+### RemotePerson
+
+Ƭ **RemotePerson**: `RemoteMemberImplInterface` & [`Person`](interfaces/Person.md) & [`RemotePersonInterface`](interfaces/RemotePersonInterface.md)
 
 ___
 
@@ -272,13 +295,13 @@ ___
 
 ### VideoMediaTrackConstraints
 
-Ƭ **VideoMediaTrackConstraints**: `Omit`<`MediaTrackConstraints`, ``"autoGainControl"`` \| ``"channelCount"`` \| ``"echoCancellation"`` \| ``"latency"`` \| ``"noiseSuppression"`` \| ``"sampleRate"`` \| ``"sampleSize"`` \| ``"suppressLocalAudioPlayback"`` \| ``"volume"``\>
+Ƭ **VideoMediaTrackConstraints**: `Pick`<`MediaTrackConstraintSet`, ``"aspectRatio"`` \| ``"facingMode"`` \| ``"frameRate"`` \| ``"height"`` \| ``"width"``\>
 
 ## Variables
 
-### SkyWayMediaDevices
+### SkyWayStreamFactory
 
-• `Const` **SkyWayMediaDevices**: [`MediaDeviceManager`](classes/MediaDeviceManager.md)
+• `Const` **SkyWayStreamFactory**: [`StreamFactory`](classes/StreamFactory.md)
 
 ___
 
@@ -286,7 +309,40 @@ ___
 
 • `Const` **logLevelTypes**: readonly [``"error"``, ``"warn"``, ``"debug"``, ``"disable"``]
 
+___
+
+### objectFlag
+
+• `Const` **objectFlag**: ``"skyway_object:"``
+
 ## Functions
+
+### isSafari
+
+▸ **isSafari**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+___
+
+### setEncodingParams
+
+▸ **setEncodingParams**(`sender`, `newEncodings`): `Promise`<`void`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `sender` | `RTCRtpSender` |
+| `newEncodings` | `RTCRtpEncodingParameters`[] |
+
+#### Returns
+
+`Promise`<`void`\>
+
+___
 
 ### uuidV4
 

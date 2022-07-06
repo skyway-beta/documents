@@ -11,9 +11,23 @@
 
 ### Methods
 
+- [release](LocalPlayableStream.md#release)
 - [replaceTrack](LocalPlayableStream.md#replacetrack)
 
 ## Methods
+
+### release
+
+▸ **release**(): `void`
+
+**`description`** {japanese} Streamを解放します。
+カメラやマイクなどのデバイスを解放するためにはそのデバイスに関連するすべてのStreamを解放する必要があります
+
+#### Returns
+
+`void`
+
+___
 
 ### replaceTrack
 
