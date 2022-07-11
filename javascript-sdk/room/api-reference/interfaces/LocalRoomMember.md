@@ -19,6 +19,7 @@
 - [id](LocalRoomMember.md#id)
 - [metadata](LocalRoomMember.md#metadata)
 - [name](LocalRoomMember.md#name)
+- [onFatalError](LocalRoomMember.md#onfatalerror)
 - [onLeft](LocalRoomMember.md#onleft)
 - [onMetadataUpdated](LocalRoomMember.md#onmetadataupdated)
 - [onPublicationChanged](LocalRoomMember.md#onpublicationchanged)
@@ -73,6 +74,14 @@ ___
 #### Inherited from
 
 [RoomMember](RoomMember.md).[name](RoomMember.md#name)
+
+___
+
+### onFatalError
+
+• `Readonly` **onFatalError**: [`Event`](../classes/Event.md)<[`SkyWayError`](../classes/SkyWayError.md)<`Record`<`string`, `any`\>\>\>
+
+**`description`** {japanese} 回復不能なエラー。このインスタンスは継続して利用できない。
 
 ___
 
@@ -225,6 +234,8 @@ ___
 ### leave
 
 ▸ **leave**(): `Promise`<`void`\>
+
+**`description`** {japanese} Roomから退室する
 
 #### Returns
 

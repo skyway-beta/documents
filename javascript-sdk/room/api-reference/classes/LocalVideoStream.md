@@ -27,17 +27,12 @@
 - [side](LocalVideoStream.md#side)
 - [track](LocalVideoStream.md#track)
 
-### Accessors
-
-- [muted](LocalVideoStream.md#muted)
-
 ### Methods
 
 - [attach](LocalVideoStream.md#attach)
 - [detach](LocalVideoStream.md#detach)
-- [mute](LocalVideoStream.md#mute)
+- [release](LocalVideoStream.md#release)
 - [replaceTrack](LocalVideoStream.md#replacetrack)
-- [unmute](LocalVideoStream.md#unmute)
 
 ## Constructors
 
@@ -102,20 +97,6 @@ ___
 
 • `Readonly` **track**: `MediaStreamTrack`
 
-## Accessors
-
-### muted
-
-• `get` **muted**(): `boolean`
-
-#### Returns
-
-`boolean`
-
-#### Inherited from
-
-LocalStreamBase.muted
-
 ## Methods
 
 ### attach
@@ -156,17 +137,17 @@ PlayableStream.detach
 
 ___
 
-### mute
+### release
 
-▸ **mute**(): `void`
+▸ **release**(): `void`
 
 #### Returns
 
 `void`
 
-#### Inherited from
+#### Implementation of
 
-LocalStreamBase.mute
+LocalPlayableStream.release
 
 ___
 
@@ -187,17 +168,3 @@ ___
 #### Implementation of
 
 LocalPlayableStream.replaceTrack
-
-___
-
-### unmute
-
-▸ **unmute**(): `void`
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-LocalStreamBase.unmute

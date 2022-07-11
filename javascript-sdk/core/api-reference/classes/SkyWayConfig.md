@@ -12,7 +12,7 @@
 
 - [debug](SkyWayConfig.md#debug)
 - [iceParamServer](SkyWayConfig.md#iceparamserver)
-- [logLevel](SkyWayConfig.md#loglevel)
+- [log](SkyWayConfig.md#log)
 - [messageService](SkyWayConfig.md#messageservice)
 - [rtcApi](SkyWayConfig.md#rtcapi)
 - [rtcConfig](SkyWayConfig.md#rtcconfig)
@@ -40,13 +40,13 @@ ___
 
 ___
 
-### logLevel
+### log
 
-• **logLevel**: ``"disable"`` \| ``"error"`` \| ``"warn"`` \| ``"debug"`` = `'error'`
+• **log**: `Required`<`Partial`<{ `format`: [`LogFormat`](../modules.md#logformat) ; `level`: ``"disable"`` \| ``"error"`` \| ``"warn"`` \| ``"debug"``  }\>\>
 
 #### Implementation of
 
-[SkyWayConfigOptions](../interfaces/SkyWayConfigOptions.md).[logLevel](../interfaces/SkyWayConfigOptions.md#loglevel)
+[SkyWayConfigOptions](../interfaces/SkyWayConfigOptions.md).[log](../interfaces/SkyWayConfigOptions.md#log)
 
 ___
 

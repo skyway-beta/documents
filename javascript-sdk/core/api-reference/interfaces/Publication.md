@@ -14,9 +14,12 @@
 
 - [codecCapabilities](Publication.md#codeccapabilities)
 - [contentType](Publication.md#contenttype)
+- [enabled](Publication.md#enabled)
 - [encodings](Publication.md#encodings)
 - [id](Publication.md#id)
 - [metadata](Publication.md#metadata)
+- [onDisabled](Publication.md#ondisabled)
+- [onEnabled](Publication.md#onenabled)
 - [onMetadataUpdated](Publication.md#onmetadataupdated)
 - [onSubscribed](Publication.md#onsubscribed)
 - [onSubscriptionChanged](Publication.md#onsubscriptionchanged)
@@ -31,6 +34,8 @@
 ### Methods
 
 - [cancel](Publication.md#cancel)
+- [disable](Publication.md#disable)
+- [enable](Publication.md#enable)
 - [updateEncodings](Publication.md#updateencodings)
 - [updateMetadata](Publication.md#updatemetadata)
 
@@ -45,6 +50,12 @@ ___
 ### contentType
 
 • `Readonly` **contentType**: [`ContentType`](../modules.md#contenttype)
+
+___
+
+### enabled
+
+• **enabled**: `boolean`
 
 ___
 
@@ -63,6 +74,18 @@ ___
 ### metadata
 
 • `Optional` **metadata**: `string`
+
+___
+
+### onDisabled
+
+• **onDisabled**: [`Event`](../classes/Event.md)<`void`\>
+
+___
+
+### onEnabled
+
+• **onEnabled**: [`Event`](../classes/Event.md)<`void`\>
 
 ___
 
@@ -138,6 +161,26 @@ ___
 #### Returns
 
 `Promise`<`void`\>
+
+___
+
+### disable
+
+▸ **disable**(): `void`
+
+#### Returns
+
+`void`
+
+___
+
+### enable
+
+▸ **enable**(): `void`
+
+#### Returns
+
+`void`
 
 ___
 

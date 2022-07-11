@@ -20,6 +20,7 @@
 
 - [message](SkyWayError.md#message)
 - [name](SkyWayError.md#name)
+- [path](SkyWayError.md#path)
 - [payload](SkyWayError.md#payload)
 - [stack](SkyWayError.md#stack)
 - [type](SkyWayError.md#type)
@@ -50,6 +51,12 @@ ___
 #### Inherited from
 
 Error.name
+
+___
+
+### path
+
+• `Optional` **path**: `string`
 
 ___
 

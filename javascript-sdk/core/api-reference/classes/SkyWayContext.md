@@ -55,17 +55,23 @@ ___
 
 • `Readonly` **onFatalError**: [`Event`](Event.md)<[`SkyWayError`](SkyWayError.md)<`Record`<`string`, `any`\>\>\>
 
+**`description`** {japanese} 回復不能なエラー。インターネット接続状況を確認した上で別のインスタンスを作り直す必要がある
+
 ___
 
 ### onTokenExpired
 
 • `Readonly` **onTokenExpired**: [`Event`](Event.md)<`void`\>
 
+**`description`** {japanese} トークンの期限切れ。トークンを更新するまでサービスを利用できない
+
 ___
 
 ### onTokenUpdateReminder
 
 • `Readonly` **onTokenUpdateReminder**: [`Event`](Event.md)<`void`\>
+
+**`description`** {japanese} トークンの期限がまもなく切れる
 
 ## Accessors
 
@@ -93,6 +99,8 @@ ___
 
 ▸ **registerPlugin**(`plugin`): `void`
 
+**`description`** {japanese} プラグインの登録
+
 #### Parameters
 
 | Name | Type |
@@ -108,6 +116,8 @@ ___
 ### updateAuthToken
 
 ▸ **updateAuthToken**(`token`): `void`
+
+**`description`** {japanese} トークンの更新
 
 #### Parameters
 

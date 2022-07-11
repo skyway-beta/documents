@@ -7,7 +7,7 @@
 ### Properties
 
 - [domain](SfuApiOptions.md#domain)
-- [logLevel](SfuApiOptions.md#loglevel)
+- [log](SfuApiOptions.md#log)
 - [secure](SfuApiOptions.md#secure)
 - [version](SfuApiOptions.md#version)
 
@@ -19,9 +19,16 @@
 
 ___
 
-### logLevel
+### log
 
-• **logLevel**: ``"error"`` \| ``"warn"`` \| ``"debug"`` \| ``"disable"``
+• **log**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `format` | `LogFormat` |
+| `level` | ``"disable"`` \| ``"error"`` \| ``"warn"`` \| ``"debug"`` |
 
 ___
 

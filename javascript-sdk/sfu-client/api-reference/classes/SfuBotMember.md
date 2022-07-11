@@ -10,7 +10,7 @@
 
 ## Implements
 
-- `RemoteMember`
+- `RemoteMemberImplInterface`
 
 ## Table of contents
 
@@ -31,6 +31,7 @@
 
 ### Accessors
 
+- [forwardings](SfuBotMember.md#forwardings)
 - [metadata](SfuBotMember.md#metadata)
 - [publications](SfuBotMember.md#publications)
 - [status](SfuBotMember.md#status)
@@ -52,7 +53,7 @@
 
 #### Implementation of
 
-RemoteMember.channel
+RemoteMemberImplInterface.channel
 
 #### Inherited from
 
@@ -66,7 +67,7 @@ ___
 
 #### Implementation of
 
-RemoteMember.id
+RemoteMemberImplInterface.id
 
 #### Inherited from
 
@@ -80,7 +81,7 @@ ___
 
 #### Implementation of
 
-RemoteMember.name
+RemoteMemberImplInterface.name
 
 #### Inherited from
 
@@ -112,7 +113,7 @@ ___
 
 #### Implementation of
 
-RemoteMember.onLeft
+RemoteMemberImplInterface.onLeft
 
 #### Inherited from
 
@@ -126,7 +127,7 @@ ___
 
 #### Implementation of
 
-RemoteMember.onMetadataUpdated
+RemoteMemberImplInterface.onMetadataUpdated
 
 #### Inherited from
 
@@ -140,7 +141,7 @@ ___
 
 #### Implementation of
 
-RemoteMember.side
+RemoteMemberImplInterface.side
 
 #### Overrides
 
@@ -154,7 +155,7 @@ ___
 
 #### Implementation of
 
-RemoteMember.subtype
+RemoteMemberImplInterface.subtype
 
 #### Overrides
 
@@ -168,7 +169,7 @@ ___
 
 #### Implementation of
 
-RemoteMember.type
+RemoteMemberImplInterface.type
 
 #### Overrides
 
@@ -182,6 +183,16 @@ ___
 
 ## Accessors
 
+### forwardings
+
+• `get` **forwardings**(): [`Forwarding`](Forwarding.md)[]
+
+#### Returns
+
+[`Forwarding`](Forwarding.md)[]
+
+___
+
 ### metadata
 
 • `get` **metadata**(): `undefined` \| `string`
@@ -192,7 +203,7 @@ ___
 
 #### Implementation of
 
-RemoteMember.metadata
+RemoteMemberImplInterface.metadata
 
 #### Inherited from
 
@@ -210,7 +221,7 @@ ___
 
 #### Implementation of
 
-RemoteMember.publications
+RemoteMemberImplInterface.publications
 
 #### Inherited from
 
@@ -228,7 +239,7 @@ ___
 
 #### Implementation of
 
-RemoteMember.status
+RemoteMemberImplInterface.status
 
 #### Inherited from
 
@@ -246,7 +257,7 @@ ___
 
 #### Implementation of
 
-RemoteMember.subscriptions
+RemoteMemberImplInterface.subscriptions
 
 #### Inherited from
 
@@ -264,7 +275,7 @@ MemberImpl.subscriptions
 
 | Name | Type |
 | :------ | :------ |
-| `publication` | `Publication`<`LocalVideoStream` \| `LocalAudioStream`\> |
+| `publication` | `Publication`<`LocalAudioStream` \| `LocalVideoStream`\> |
 | `configure` | [`ForwardingConfigure`](../interfaces/ForwardingConfigure.md) |
 
 #### Returns
@@ -299,6 +310,10 @@ ___
 
 `Member`
 
+#### Implementation of
+
+RemoteMemberImplInterface.toJSON
+
 #### Inherited from
 
 MemberImpl.toJSON
@@ -321,7 +336,7 @@ ___
 
 #### Implementation of
 
-RemoteMember.updateMetadata
+RemoteMemberImplInterface.updateMetadata
 
 #### Inherited from
 

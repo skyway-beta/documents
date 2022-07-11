@@ -17,6 +17,7 @@
 - [keepaliveIntervalSec](LocalPerson.md#keepaliveintervalsec)
 - [metadata](LocalPerson.md#metadata)
 - [name](LocalPerson.md#name)
+- [onFatalError](LocalPerson.md#onfatalerror)
 - [onLeft](LocalPerson.md#onleft)
 - [onMetadataUpdated](LocalPerson.md#onmetadataupdated)
 - [onPublicationChanged](LocalPerson.md#onpublicationchanged)
@@ -86,6 +87,14 @@ ___
 #### Inherited from
 
 [Person](Person.md).[name](Person.md#name)
+
+___
+
+### onFatalError
+
+• `Readonly` **onFatalError**: [`Event`](../classes/Event.md)<[`SkyWayError`](../classes/SkyWayError.md)<`Record`<`string`, `any`\>\>\>
+
+**`description`** {japanese} 回復不能なエラー。このインスタンスは継続して利用できない。
 
 ___
 

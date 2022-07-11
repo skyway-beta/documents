@@ -12,7 +12,7 @@
 
 - [channelId](SFUConnection.md#channelid)
 - [closed](SFUConnection.md#closed)
-- [localPersonId](SFUConnection.md#localpersonid)
+- [localPerson](SFUConnection.md#localperson)
 - [onClose](SFUConnection.md#onclose)
 - [onDisconnect](SFUConnection.md#ondisconnect)
 - [remoteMember](SFUConnection.md#remotemember)
@@ -36,13 +36,13 @@ SkyWayConnection.closed
 
 ___
 
-### localPersonId
+### localPerson
 
-• `Readonly` **localPersonId**: `string`
+• `Readonly` **localPerson**: `LocalPersonImpl`
 
 #### Implementation of
 
-SkyWayConnection.localPersonId
+SkyWayConnection.localPerson
 
 ___
 

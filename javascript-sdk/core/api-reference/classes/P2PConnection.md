@@ -13,7 +13,7 @@
 - [channelId](P2PConnection.md#channelid)
 - [closed](P2PConnection.md#closed)
 - [disconnected](P2PConnection.md#disconnected)
-- [localPersonId](P2PConnection.md#localpersonid)
+- [localPerson](P2PConnection.md#localperson)
 - [onClose](P2PConnection.md#onclose)
 - [onDisconnect](P2PConnection.md#ondisconnect)
 - [receiver](P2PConnection.md#receiver)
@@ -49,13 +49,13 @@ ___
 
 ___
 
-### localPersonId
+### localPerson
 
-• `Readonly` **localPersonId**: `string`
+• `Readonly` **localPerson**: `LocalPersonImpl`
 
 #### Implementation of
 
-[SkyWayConnection](../interfaces/SkyWayConnection.md).[localPersonId](../interfaces/SkyWayConnection.md#localpersonid)
+[SkyWayConnection](../interfaces/SkyWayConnection.md).[localPerson](../interfaces/SkyWayConnection.md#localperson)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 ### remoteMember
 
-• `Readonly` **remoteMember**: `Pick`<[`Member`](../interfaces/Member.md), ``"name"`` \| ``"id"``\>
+• `Readonly` **remoteMember**: `Pick`<[`Member`](../interfaces/Member.md), ``"id"`` \| ``"name"``\>
 
 #### Implementation of
 

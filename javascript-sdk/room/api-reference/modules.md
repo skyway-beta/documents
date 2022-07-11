@@ -9,7 +9,6 @@
 - [LocalAudioStream](classes/LocalAudioStream.md)
 - [LocalDataStream](classes/LocalDataStream.md)
 - [LocalVideoStream](classes/LocalVideoStream.md)
-- [MediaDeviceManager](classes/MediaDeviceManager.md)
 - [RemoteAudioStream](classes/RemoteAudioStream.md)
 - [RemoteDataStream](classes/RemoteDataStream.md)
 - [RemoteVideoStream](classes/RemoteVideoStream.md)
@@ -17,6 +16,7 @@
 - [SkyWayContext](classes/SkyWayContext.md)
 - [SkyWayError](classes/SkyWayError.md)
 - [SkyWayRoom](classes/SkyWayRoom.md)
+- [StreamFactory](classes/StreamFactory.md)
 
 ### Interfaces
 
@@ -73,6 +73,7 @@
 - [ForwardingAction](modules.md#forwardingaction)
 - [HttpResponse](modules.md#httpresponse)
 - [LocalStream](modules.md#localstream)
+- [LogFormat](modules.md#logformat)
 - [LogLevel](modules.md#loglevel)
 - [MemberAction](modules.md#memberaction)
 - [MemberSide](modules.md#memberside)
@@ -98,7 +99,8 @@
 
 ### Variables
 
-- [SkyWayMediaDevices](modules.md#skywaymediadevices)
+- [PACKAGE\_VERSION](modules.md#package_version)
+- [SkyWayStreamFactory](modules.md#skywaystreamfactory)
 - [logLevelTypes](modules.md#logleveltypes)
 - [roomTypes](modules.md#roomtypes)
 
@@ -147,6 +149,12 @@ ___
 ### LocalStream
 
 Ƭ **LocalStream**: [`LocalAudioStream`](classes/LocalAudioStream.md) \| [`LocalVideoStream`](classes/LocalVideoStream.md) \| [`LocalDataStream`](classes/LocalDataStream.md)
+
+___
+
+### LogFormat
+
+Ƭ **LogFormat**: ``"object"`` \| ``"string"``
 
 ___
 
@@ -288,9 +296,15 @@ ___
 
 ## Variables
 
-### SkyWayMediaDevices
+### PACKAGE\_VERSION
 
-• `Const` **SkyWayMediaDevices**: [`MediaDeviceManager`](classes/MediaDeviceManager.md)
+• `Const` **PACKAGE\_VERSION**: ``"0.4.0-beta.0"``
+
+___
+
+### SkyWayStreamFactory
+
+• `Const` **SkyWayStreamFactory**: [`StreamFactory`](classes/StreamFactory.md)
 
 ___
 
