@@ -89,6 +89,11 @@ ___
 
 ▸ **dispose**(): `void`
 
+**`description`** {japanese} Contextの利用を終了し次のリソースを解放する
+- イベントリスナー
+- バックエンドサーバとの通信
+- Contextを参照する全Channelインスタンス
+
 #### Returns
 
 `void`

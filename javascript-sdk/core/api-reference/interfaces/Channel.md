@@ -213,7 +213,7 @@ ___
 
 ▸ **close**(): `Promise`<`void`\>
 
-**`description`** {japanese} Channelを閉じる
+**`description`** {japanese} Channelを閉じる。
 
 #### Returns
 
@@ -224,6 +224,11 @@ ___
 ### dispose
 
 ▸ **dispose**(): `void`
+
+**`description`** {japanese} Channelを閉じずにChannelインスタンスの利用を終了し次のリソースを解放する。
+- サーバとの通信
+- イベントリスナー
+- LocalPersonのインスタンス
 
 #### Returns
 
