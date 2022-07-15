@@ -99,7 +99,7 @@ Subscription と紐ついている Publication が Unpublish されると Subscr
 - Member
   - LocalRoomMember
   - RemoteRoomMember
-- SkyWayMediaDevices
+- SkyWayStreamFactory
 - RoomPublication
 - RoomSubscription
 
@@ -235,11 +235,11 @@ Stream の Publish、Subscribe などを行うことが出来ます。
 Room に Stream を Publish することができます。
 
 ```ts
-import { SkyWayMediaDevices } from '@skyway-sdk/room';
+import { SkyWayStreamFactory } from '@skyway-sdk/room';
 
 ...
 
-const video = await SkyWayMediaDevices.createCameraVideoStream();
+const video = await SkyWayStreamFactory.createCameraVideoStream();
 const publication = await member.publish(video,options);
 ```
 
@@ -279,7 +279,7 @@ maxSubscribers では Publish した Stream を Subscribe できる数の上限�
 VideoStream を Publish する際に複数のエンコード設定を指定することで、受信側クライアントデバイスが通信品質に合わせて自動的に最適なエンコード設定の映像を受け取る機能を利用できます。
 
 ```ts
-const video = await SkyWayMediaDevices.createCameraVideoStream();
+const video = await SkyWayStreamFactory.createCameraVideoStream();
 const publication = await member.publish(video, {
   encodings: [
     // 複数のパラメータをセットする
@@ -296,12 +296,12 @@ const publication = await member.publish(video, {
 **サンプルコード**
 
 ```ts
-const video = await SkyWayMediaDevices.createCameraVideoStream();
+const video = await SkyWayStreamFactory.createCameraVideoStream();
 await localMember.publish(video, {
   codecCapabilities: [{ mimeType: 'video/av1' }, { mimeType: 'video/h264' }],
 });
 
-const audio = await SkyWayMediaDevices.createMicrophoneAudioStream();
+const audio = await SkyWayStreamFactory.createMicrophoneAudioStream();
 await localMember.publish(audio, {
   codecCapabilities: [{ mimeType: 'audio/red' }],
 });
@@ -344,20 +344,20 @@ Member に紐付いた Metadata を更新することができます
 await member.updateMetadata('metadata');
 ```
 
-## SkyWayMediaDevices
+## SkyWayStreamFactory
 
 各種 Stream の取得が出来ます。
 
 ### マイク
 
 ```ts
-const audio = await SkyWayMediaDevices.createMicrophoneAudioStream(options);
+const audio = await SkyWayStreamFactory.createMicrophoneAudioStream(options);
 ```
 
 ### カメラ
 
 ```ts
-const video = await SkyWayMediaDevices.createCameraVideoStream(options);
+const video = await SkyWayStreamFactory.createCameraVideoStream(options);
 ```
 
 ### DataChannel
@@ -365,7 +365,7 @@ const video = await SkyWayMediaDevices.createCameraVideoStream(options);
 ※SFU Room では使用できません。
 
 ```ts
-const data = await SkyWayMediaDevices.createDataStream();
+const data = await SkyWayStreamFactory.createDataStream();
 ```
 
 ### MediaStreamTrack から AudioStream / VideoStream を作成する
@@ -476,7 +476,7 @@ const members = [
 
 const localMember: LocalRoomMember = await room.join({ name: 'alice' });
 
-const video = await SkyWayMediaDevices.createCameraVideoStream();
+const video = await SkyWayStreamFactory.createCameraVideoStream();
 const publication = await localMember.publish(video);
 
 const remoteMember = room.members.find((member) => member.name === 'bob');

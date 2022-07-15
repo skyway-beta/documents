@@ -111,7 +111,7 @@ Plugin はこの Sfu Bot や Recording Bot などの Bot を利用するため�
 - SkyWayContext
 - SkyWayChannel
 - LocalPerson
-- SkyWayMediaDevices
+- SkyWayStreamFactory
 - Publication
 - Subscription
 
@@ -240,13 +240,13 @@ Stream の Publish、Subscribe などを行うことが出来ます。
 Channel に Stream を Publish することができます。
 
 ```ts
-import { SkyWayMediaDevices } from '@skyway-sdk/core';
+import { SkyWayStreamFactory } from '@skyway-sdk/core';
 
 ...
 
 const person: LocalPerson = await channel.join();
 
-const video = await SkyWayMediaDevices.createCameraVideoStream();
+const video = await SkyWayStreamFactory.createCameraVideoStream();
 const publication = await person.publish(video,options);
 ```
 
@@ -267,12 +267,12 @@ interface Option {
 **サンプルコード**
 
 ```ts
-const video = await SkyWayMediaDevices.createCameraVideoStream();
+const video = await SkyWayStreamFactory.createCameraVideoStream();
 await person.publish(video, {
   codecCapabilities: [{ mimeType: 'video/av1' }, { mimeType: 'video/h264' }],
 });
 
-const audio = await SkyWayMediaDevices.createMicrophoneAudioStream();
+const audio = await SkyWayStreamFactory.createMicrophoneAudioStream();
 await person.publish(audio, {
   codecCapabilities: [{ mimeType: 'audio/red' }],
 });
@@ -315,7 +315,7 @@ Member に紐付いた Metadata を更新することができます
 await person.updateMetadata('metadata');
 ```
 
-## SkyWayMediaDevices
+## SkyWayStreamFactory
 
 各種 Stream の取得が出来ます。
 
@@ -323,20 +323,20 @@ await person.updateMetadata('metadata');
 
 ```ts
 const audio: LocalAudioStream =
-  await SkyWayMediaDevices.createMicrophoneAudioStream(options);
+  await SkyWayStreamFactory.createMicrophoneAudioStream(options);
 ```
 
 **カメラ**
 
 ```ts
 const video: LocalVideoStream =
-  await SkyWayMediaDevices.createCameraVideoStream(options);
+  await SkyWayStreamFactory.createCameraVideoStream(options);
 ```
 
 **DataChannel**
 
 ```ts
-const data: LocalDataStream = await SkyWayMediaDevices.createDataStream();
+const data: LocalDataStream = await SkyWayStreamFactory.createDataStream();
 ```
 
 ### MediaStreamTrack から AudioStream / VideoStream を作成する
@@ -447,7 +447,7 @@ const members = [
 
 const person: LocalPerson = await channel.join({ name: 'alice' });
 
-const video = await SkyWayMediaDevices.createCameraVideoStream();
+const video = await SkyWayStreamFactory.createCameraVideoStream();
 const publication = await localPerson.publish(video);
 
 const remoteMember = channel.members.find((member) => member.name === 'bob');

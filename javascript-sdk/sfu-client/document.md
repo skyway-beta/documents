@@ -85,7 +85,7 @@ channel.onStreamPublished.add(({ publication }) => {
 VideoStream を Publish する際に複数のエンコード設定を指定することで、受信側クライアントデバイスが通信品質に合わせて自動的に最適なエンコード設定の映像を受け取る機能を利用できます。
 
 ```ts
-const video = await SkyWayMediaDevices.createCameraVideoStream();
+const video = await SkyWayStreamFactory.createCameraVideoStream();
 const publication = await person.publish(video, {
   encodings: [
     // 複数のパラメータをセットする
